@@ -1,0 +1,166 @@
+           
+
+
+R16069b 
+Overclocking
+Enuntul Problemei - Radu Diaconu 
+
+Sugerata prin însusi numele sau, overclocking-ul este operatiunea prin care putem creste 
+artificial frecventa de functionare a unui procesor peste valoarea sa nominala cu mai multe
+ procente, fara sa ne coste, si mai ales fara sa riscam nimic, daca stim exact cum sa 
+procedam. În ciuda dezaprobarii oficiale unanime de catre producatorii de procesoare, 
+overclocking-ul a devenit practic un hobby al multor pasionati de calculatoare.
+Aceasta "mica moda" a aparut, fireste, odata cu aparitia posibilitatii tehnice de a realiza
+ overclocking-ul, care nu este straina de dezvoltarea microprocesorului de-a lungul 
+timpului. Au existat mai multe etape "istorice" ale fenomenului, fiecare din acestea având 
+originea într-o inovatie a generatiilor de procesoare.
+Specialistii au semnalat pentru prima data posibilitatea "supraturarii" unui procesor cu
+ ocazia lansarii mai multor variante de 80286, tactate diferit si, evident, la preturi
+ diferite. Din cauze ce tin de microelectronica, frecventa de lucru a microprocesorului va
+ fi cea setata de placa de baza si nu cea din denumirea comerciala a procesorului. Astfel, 
+placile de baza ale epocii aveau implementate dispozitive de selectare a frecventei de 
+lucru de catre cel care asambla PC-ul, în vederea recunoasterii tipului de procesor 
+achizitionat. Probabil ca prima persoana care a introdus un procesor 286 de 8 MHz într-o 
+placa de baza setata la 10 MHz si a observat ca procesorul functioneaza stabil la 10 MHz, 
+a strigat "Evrika!". Dar sa detaliem putin de ce este acest fenomen realizabil, si de ce 
+un producator de procesoare nu face singur acelasi lucru, cum, firesc, din ratiuni 
+comerciale, ar trebui sa-l faca.
+Nici unul dintre producatorii de procesoare nu detine linii de fabricatie diferite pentru 
+fiecare frecventa în parte, în cadrul aceleiasi game de CPU-uri. Înainte de a fi marcat la 
+frecventa la care produsul va fi vândut, procesorul este supus unor teste (care sa reflecte 
+cele mai vitrege conditii din realitate), iar exemplarele care reusesc sa le ruleze stabil 
+la o anumita frecventa de tact, sunt marcate corespunzator. În caz contrar, testul se repeta
+ la o frecventa mai joasa si asa mai departe, pâna la atingerea minimului stabil. 
+Aici intervine sansa overclocker-ului: daca producatorul testeaza procesorul dupa un 
+standard dus la extrem, înseamna ca în realitate procesorul va putea rula si la o frecventa
+ mai mare decât cea inscriptionata, perfect stabil, într-un PC obisnuit, unde sansele sa se 
+reproduca acel test extrem (si în consecinta blocarea) sunt aproape nule. Pe lânga aceasta
+ marja generoasa de eroare, utilizatorul mai beneficiaza si de avantajele unui marketing 
+mai neobisnuit, si anume daca cererea pietei este mai mare pentru o anumita frecventa, mai 
+joasa decât maximul suportat, acel procesor este marcat la un numar de MegaHertzi mai mic 
+decât ar putea el rula, el fiind în realitate "apt" de o frecventa superioara, daca îl
+ setam manual ca atare. Astfel, marea atractie oferita de overclocking are la baza faptul 
+ca utilizatorul va plati mai putin pe un produs echivalent cu unul mai scump.
+În cazul generatiilor de PC-uri 286 si 386, era suficienta setarea unei frecvente 
+superioare cu ajutorul jumperilor speciali de pe placa de baza. În curând a aparut si 
+posibilitatea setarii manuale a voltajului, tot de pe motherboard, iar cineva a observat
+ ca în cazul unui procesor devenit instabil din cauza overclocking-ului, sansele ca 
+acesta sa redevina stabil la acea frecventa cresc daca i se mareste si tensiunea.
+Al treilea factor poate ajuta la realizarea overclocking-ului a aparut odata cu 
+introducerea procesorului 486 DX2, la care exista un decalaj între frecventa de bus a 
+placii de baza (FSB) si frecventa procesorului, raportul dintre acestea fiind fixat de un 
+coeficient de multiplicare. Deoarece frecventa finala a procesorului este rezultatul 
+înmultirii dintre frecventa FSB si multiplicator, overclocking-ul se putea acum realiza 
+jonglând cu cele doua valori pe rând sau simultan, la care se adauga si cresterea voltajului
+. Astfel, acest procedeu a început sa fie din ce în ce mai raspândit, Intel asistând 
+neputincios la fortarea seriilor 486 DX4 si Pentium. Din cauza amploarei luate de fenomenul
+ piratajului procesoarelor sale (anumite firme reinscriptionând originalele la frecvente 
+superioare si vânzându-le astfel cu un profit deloc neglijabil, lasându-l pe Intel sa se 
+descurce cu eventualele scandaluri generate de exemplarele instabile), fabricantul a hotarât
+ sa puna capat acestei practici cu orice pret, introducând pentru prima data blocarea din 
+fabrica a multiplicatorului procesorului la noua generatie Pentium II, în august 1998 
+(primele stepping-uri fabricate pâna în acel moment nefiind afectate). Deoarece acest 
+multiplicator era inscriptionat definitiv într-un circuit special din procesor, 
+overclocker-ii au trebuit sa se multumeasca numai cu cresterea FSB si cu ajustarea
+ voltajului. Coeficientul fix de multiplicare s-a mentinut pe tot restul gamei sale de 
+produse pâna în zilele noastre.
+Schimbarea FSB, singura solutie ramasa, nu era tocmai cea ideala, din doua motive: în primul
+ rând, nu toate placile de baza detin un FSB superior; în al doilea rând, din cauza 
+arhitecturii interne a chipset-ului, cresterea FSB este urmata în majoritatea cazurilor de 
+cresterea frecventei de functionare a bus-ului PCI (standard 33 MHz) si ISA, cu un procent 
+identic, de la un anumit punct acesta începând sa genereze erori ori pe controller-ul IDE 
+ori datorita cedarii diferitelor placi de extensie instalate în sloturile PCI. Nici bus-ul 
+AGP, introdus mai târziu, nu e scutit de probleme în cazul overclocking-ului, si frecventa 
+sa (66 MHz) crescând corespunzator cu FSB, pâna la un punct la care placa grafica cedeaza, 
+aparând artefacte sau blocând sistemul.
+O solutie ce a compensat aceste neajunsuri a oferit-o în premiera fabricantul de placi de 
+baza Abit, care a introdus posibilitatea selectarii din BIOS a FSB-ului, cu valori din 1 în
+ 1 MHz, si apoi a divizorului manual pentru PCI, respectiv AGP. Astfel, oricât de mult se 
+crestea FSB-ul, bus-urile PCI si AGP puteau functiona cu aproximatie la frecventele lor 
+initiale. Un exemplu elocvent ar fi cazul unei placi de baza cu chipset Intel 440BX, 
+desemnat sa lucreze cu bus de 100 MHz. Daca am fi norocosii posesori ai unui procesor
+ Pentium III de 450 MHz (cu bus de 100 MHz si cu multiplicator blocat din fabrica la 4.5) 
+care ar putea functiona la 600 MHz, ar fi trebuit sa crestem FSB de la 100 la 133 MHz, dar 
+în acelasi timp ar creste si bus-ul PCI si AGP de la 33 la 44 MHz respectiv de la 66 la 88 
+MHz. Daca generatiile mai noi de placi video pot suporta usor frecventa bus-ului AGP de 88
+ MHz (uneori cu crestere notabila de performante), marea majoritate a dispozitivelor care 
+se instaleaza în sloturile PCI (placi de sunet, modem-uri, placi de retea, TV-tunere etc.) 
+nu ar rezista la 44 MHz. Însa setarea manuala a divizorului PCI de la 1/3 la 1/4 (din FSB) 
+ne va permite pastrarea frecventei de 33 MHz pentru PCI, asigurând astfel succesul obtinerii 
+celor 600 MHz. E bine de stiut ca pe lânga cresterea FSB-ului mai creste 
+(în afara de ISA, PCI si AGP) si frecventa memoriei RAM, care în ultima vreme e cea mai 
+des întâlnita limitare. În exemplul anterior succesul ar fi fost asigurat numai prin 
+prezenta memoriei PC133, foarte greu de gasit la vremea aparitiei procesorului P III 450.
+Spuneam ca aceasta operatiune este lipsita de risc daca stim cum s-o realizam, deoarece în
+ cel mai rau caz, când se atinge frecventa la care efectiv nu mai poate functiona, 
+procesorul începe sa provoace erori în operare si blocari ale sistemului. Cum acestea sunt 
+reversibile, nu avem decât sa selectam ultima frecventa la care procesorul a rulat stabil 
+si obtinem astfel un salt de performanta gratuit.
+Înainte de orice sugestie, tinem sa precizam ca în cazul overclocking-ului, cuvântul de 
+ordine este precautia. Sa nu credeti ca se poate pune un procesor de 100 MHz la 200 MHz, sa
+ nu credeti ca dublând sau triplând voltajul procesorului acesta va rula mai repede si 
+stabil. În aceste doua cazuri riscul arderii procesorului e mare, singur sau cu tot cu
+ placa de baza. La un overclocking, totul se rezuma la caldura disipata de procesor, 
+atingerea unei valori prea ridicate blocând procesorul, sau în cazuri extreme, arzându-l 
+iremediabil. Este nevoie de cunostinte tehnice privind calculatoarele, pentru aprecierea 
+corecta a unei valori teoretice maxime la care ar rezista procesorul. Factorii ce asigura 
+un overclocking reusit sunt numerosi, noi vom încerca sa-i prezentam succint, pe rând.
+În primul rând exista o diferenta notabila între procesoare fabricate de producatori 
+diferiti. Pe primul loc a fost si se afla Intel, din mai multe motive. Primul ar fi acela 
+ca testele sale în vederea stabilirii frecventei de lucru finale a procesorului sunt cele
+ mai severe, asta însemnând alegerea unei marje mari de siguranta între ultima frecventa 
+la care procesorul a rulat stabil si frecventa cu care va fi vândut. În al doilea rând 
+Intel a produs întotdeauna procesoare care disipau un minim de caldura. Cum cresterea
+ fortata a frecventei implica o temperatura de functionare mai mare, procesoarele Intel 
+beneficiaza astfel de înca o marja de siguranta, utilizatorul nefiind nevoit sa adopte 
+masuri costisitoare de racire activa. În al treilea rând, Intel detinând întotdeauna cea 
+mai mare parte din volumul vânzarilor, si-a permis relaxat vânzarea procesoarelor
+ subtactate, din diferite motive de marketing ale momentului. Concurentul lui direct, AMD,
+ pe lânga faptul ca nu si-a permis aceasta jonglerie din simplul motiv ca era constant 
+depasit în frecventa de catre Intel (cu exceptia unei perioade de un an, între 1999-2000),
+ era si este nevoit sa adopte marje minime la marcarea procesoarelor, sansa unui 
+overclocking de amploare scazând drastic. AMD a introdus la rândul sau coeficientul de 
+multiplicare blocat, odata cu Athlon, însa s-a dovedit ca procesoarele pe Socket A pot fi 
+deblocate foarte usor, operatie imposibil de realizat la produsele Intel. Pe al treilea loc
+ s-a situat cândva Cyrix, mai mult, prima serie 6x86+ fiind total contraindicata 
+overclocking-ului, din cauza problemelor grave de caldura disipata, deja prezente, la acea 
+generatie.
+Al doilea reper ca importanta îl constituie locul respectivului procesor în cadrul familiei
+ sale. Astfel, cu cât frecventa sa este mai mica, sansele unui overclocking mai mare cresc,
+ cel putin teoretic. Cu cât creste frecventa unei serii de procesoare, cu atât scade
+ posibilitatea cresterii ulterioare, deoarece se apropie mai mult de limita superioara a 
+tehnologiei de fabricatie, peste care nu se poate trece din motive exclusiv tehnice. 
+Ultimele exemplare dintr-o anumita familie, pe anumita tehnologie, ating întotdeauna 
+temperaturile cele mai mari, iar succesoarele lor, ce inaugureaza o tehnica de gravura mai
+ fina, vor fi degaja mult mai putina caldura si vor avea mai multe resurse de crestere a 
+frecventei. Acest lucru explica succesul primelor procesoare din gama lor, adevarati
+ "campioni ai overclocking-ului", cum ar fi Pentium 166 MMX, Celeron 300A, Celeron 533A,
+ Pentium III Katmai 450, Coppermine 500, Duron 600, Tualatin 1 GHz, Pentium 4 1.6A. 
+De asemenea, daca într-o familie exista versiuni cu FSB diferit, cele mai mari sanse de 
+overclocking le vor avea versiunile cu FSB inferior, deoarece în cazul versiunii cu FSB 
+mai mare, pe lânga frecventa nominala mai ridicata, care implica automat o posibilitate 
+mai mica de fortare, nu vom mai dispune de divizor PCI/AGP, (re)aparând limitarea data 
+de bus-ul PCI ca si limitarea datorata memoriilor folosite.
+Mai trebuie mentionat ca toti acesti factori prezentati sunt statistici, în fiecare caz 
+fiind necesar în primul rând norocul achizitionarii unui procesor care sa aiba resurse bune
+ de overclocking, deoarece acest lucru nu-l putem comanda la magazin, si exista, evident, 
+si exemplare care pot produce o mare dezamagire unui pasionat.
+Overclocking-ul este un fenomen destul de disputat, având partizani totali, ca si critici
+ înversunati. Este o operatiune ce trezeste subiectivismul din fiecare proprietar de PC, 
+de aceea noi, pe lânga informarea exacta asupra fenomenului, nu putem face nici o 
+recomandare de overclocking. Însa daca doriti sa încercati, nu va trebuie decât o placa de
+ baza buna, un radiator si un ventilator adecvat, pasta termoconductoare, memorie 
+certificata pentru frecvente cât mai mari, multa cumpatare, rabdare, si un pic de noroc.
+-Bogdan Hunea
+22.05.2003
+
+
+
+Raspuns 1  - Viorel Petre 
+Raspuns 2  - Anonymous 
+Raspuns 4  - T-Bryce 
+Raspuns 5  - Sandu Marian 
+
+    
+ 
+    
