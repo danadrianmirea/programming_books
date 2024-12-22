@@ -1,0 +1,7 @@
+Un alt utilitar foarte interesant este www.podien.onlinehome.de. 
+Acesta permite overclocking-ul procesorului prin modificarea frecventei FSB-ului. 
+Pe langa lista de placi de baza suportate, acest utilitar ofera si celor care au 
+alte placi sa il poata utiliza, prin selectarea manuala a generatorului de frecventa. 
+Pentru aceasta insa trebuie sa poti deschide carcasa calculatorului si sa identifici
+ cipul cu pricina. Nu te speria insa, pe site-ul programului vei gasi si explicatii
+ despre cum poti gasi cipul cu pricina. 
