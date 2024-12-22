@@ -1,0 +1,11 @@
+Memorie 
+Daca in cazul procesorului se pot ajusta chiar si parametrii referitori la 
+viteza de lucru, in cazul memoriei acest lucru nu se poate face in mod direct.
+ Setarile la procesor afecteaza in mod conex si parametrii memoriei. Totusi, 
+cantitatea limitata de memorie de care dispune calculatorul tau poate fi mai 
+bine utilizata cu ajutorului programului www.outertech.com. Acest program iti 
+permite sa accesezi o serie de parametrii cum ar fi cantitatea de memorie alocata 
+ca cache pentru citire/scriere de pe discuri. Tot el monitorizeaza nivelul de
+ ocupare a memoriei, si atunci cand este cazul, elibereaza memoria incarcata inutil.
+ In acest fel aplicatiile tale vor avea loc mai mult sa se desfasoare si nu va mai
+ fi atat de necesara activitatea hard disk-ului pentru a compensa lipsa de memorie. 
