@@ -1,0 +1,2228 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="tppmsgs/msgs0.htm#58" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/Excel5_files/filelist.xml">
+<link rel=Edit-Time-Data href="tppmsgs/msgs0.htm#59" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/Excel5_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Proceduri de analizã a datelor</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Valentin Clocotici</o:Author>
+  <o:LastAuthor>Valentin Clocotici</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>576</o:TotalTime>
+  <o:Created>1997-06-14T17:14:00Z</o:Created>
+  <o:LastSaved>1997-06-22T08:12:00Z</o:LastSaved>
+  <o:Pages>14</o:Pages>
+  <o:Words>4072</o:Words>
+  <o:Characters>23213</o:Characters>
+  <o:Company>Informatica</o:Company>
+  <o:Lines>193</o:Lines>
+  <o:Paragraphs>46</o:Paragraphs>
+  <o:CharactersWithSpaces>28507</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:16792199 0 0 0 65791 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l0 level1 lfo2;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	color:darkred;
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l0 level2 lfo2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	color:darkblue;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	mso-list:l0 level3 lfo2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	color:darkgreen;
+	font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	mso-list:l0 level4 lfo2;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	color:darkcyan;
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	mso-list:l0 level5 lfo2;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+h6
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	mso-list:l0 level6 lfo2;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	mso-list:l0 level7 lfo2;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	mso-list:l0 level8 lfo2;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	mso-list:l0 level9 lfo2;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{margin-top:0in;
+	margin-right:1.0in;
+	margin-bottom:6.0pt;
+	margin-left:1.0in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.ecuatie, li.ecuatie, div.ecuatie
+	{mso-style-name:ecuatie;
+	mso-style-next:Normal;
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-indent:.5in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.ecuatienum, li.ecuatienum, div.ecuatienum
+	{mso-style-name:ecuatie_num;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.figura, li.figura, div.figura
+	{mso-style-name:figura;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.functie, li.functie, div.functie
+	{mso-style-name:functie;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.IO, li.IO, div.IO
+	{mso-style-name:IO;
+	mso-style-parent:"Plain Text";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	letter-spacing:1.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.Observatie, li.Observatie, div.Observatie
+	{mso-style-name:Observatie;
+	mso-style-parent:"Block Text";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:.5in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.parafttab, li.parafttab, div.parafttab
+	{mso-style-name:par_aft_tab;
+	mso-style-next:"Plain Text";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.parbeftab, li.parbeftab, div.parbeftab
+	{mso-style-name:par_bef_tab;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.parbettab, li.parbettab, div.parbettab
+	{mso-style-name:par_bet_tab;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.PlainTextexpanded, li.PlainTextexpanded, div.PlainTextexpanded
+	{mso-style-name:"Plain Text expanded";
+	mso-style-parent:"Plain Text";
+	mso-style-next:"Plain Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.primul, li.primul, div.primul
+	{mso-style-name:primul;
+	mso-style-parent:"Plain Text";
+	mso-style-next:"Plain Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.zona, li.zona, div.zona
+	{mso-style-name:zona;
+	mso-style-parent:"Plain Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.25in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.codVBA, li.codVBA, div.codVBA
+	{mso-style-name:codVBA;
+	mso-style-parent:primul;
+	mso-style-next:primul;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:601911388;
+	mso-list-template-ids:1356081294;}
+@list l0:level1
+	{mso-level-start-at:3;
+	mso-level-number-format:roman-upper;
+	mso-level-style-link:"Heading 1";
+	mso-level-suffix:space;
+	mso-level-text:"Capitolul %1";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level2
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 2";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level3
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 3";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level4
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 4";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level5
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 5";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level6
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 6";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level7
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 7";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level8
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 8";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level9
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 9";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l1
+	{mso-list-id:849685854;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:989139129;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:1689138145;
+	mso-list-template-ids:67698721;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F076;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	margin-left:.5in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A8;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	margin-left:1.5in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	margin-left:2.0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A8;
+	mso-level-tab-stop:2.25in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:1750271879;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:1885798686;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:1967271741;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1045"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1 style='line-height:14.0pt;mso-line-height-rule:exactly;mso-list:none'>Proceduri
+de analizã a datelor</h1>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Marea
+putere a aplicatiei Microsoft Excel constã în multiplele posibilitãti de
+analizã a datelor. Aceste proceduri contin componente pentru gestionarea
+datelor, analiza statisticã a datelor, concentrarea datelor, reprezentãri
+grafice etc. O mare parte dintre aceste proceduri sunt prezentate în
+continuare. </p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Trebuie
+remarcat cã, datoritã posibilitãtii de programare în Visual Basic, procedurile
+de analizã a datelor sunt practiv nelimitate, o serie întreagã de companii
+dezvoltatoare de software fiind axate pe creare unor noi componente.</p>
+
+<a name="liste"></a>
+<h2 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Liste</h2>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Prin <b
+style='mso-bidi-font-weight:normal'>listã</b> se întelege o serie de linii
+succesive într-o foaie de calcul, fiecare coloanã din listã continând date cu
+aceeasi semnificatie logicã. De exemplu, o listã de clienti poate contine o
+coloanã cu numele, o coloanã cu prenumele, o coloanã cu numãrul de telefon si o
+coloanã cu valoarea comenzii.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Prima
+linie a unei liste este interpretatã drept antetul listei si este recomandabil
+ca ea sã continã denumirile coloanelor.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Microsoft
+Excel dispune de proceduri prin care informatia dintr-o listã poate fi lo­ca­lizatã
+dupã anumite criterii (de exemplu gãsirea numãrului de telefon al unui client),
+poate fi ordo­natã (de exemplu ordonarea alfabeticã a listei clientilor), poate
+fi totalizatã (de exemplu calcularea automatã a totalului comenzilor unui
+client) etc. Din acest punct de vedere, multe dintre opera­tiu­nile elementare
+asupra unei baze de date pot fi efectuate pentru o listã Excel. </p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>O
+listã este de altfel recunoscutã automat drept o bazã de date prin</p>
+
+<p class=primul style='margin-left:.75in;text-indent:-.25in;line-height:14.0pt;
+mso-line-height-rule:exactly;mso-list:l2 level1 lfo4;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Coloanele listei sunt câmpuri ale bazei de date</p>
+
+<p class=primul style='margin-left:.75in;text-indent:-.25in;line-height:14.0pt;
+mso-line-height-rule:exactly;mso-list:l2 level1 lfo4;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Etichetele de coloane sunt denumirile câmpurilor</p>
+
+<p class=primul style='margin-left:.75in;text-indent:-.25in;line-height:14.0pt;
+mso-line-height-rule:exactly;mso-list:l2 level1 lfo4;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Fiecare linie din listã (cu exceptia primei linii) este
+o înregistrare.</p>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Pentru
+ca o zonã dreptunghiularã cu date sã fie recunoscutã drept listã trebuie (sau
+este recomandabil) ca:</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l1 level1 lfo6;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Liniile si coloanele listei trebuie sã fie adiacente,
+cu alte cuvinte se va evita lãsarea unor linii sau coloane libere.</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l1 level1 lfo6;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Domeniul listei trebuie sã fie înconjurat de linii si
+coloane libere (în caz contrar se va considera cã lista include si informatia
+adiacentã, care, de regulã, este altfel structu­ratã) </p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l1 level1 lfo6;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Linia de antet se va diferentia prin format (culoare,
+fundal, font) si nu prin separarea cu o linie goalã.</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l1 level1 lfo6;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Este recomandat ca o foaie de calcul sã continã o
+sigurã listã (anumite operatiuni nu se pot efectua simultan pe mai multe liste
+din aceeasi foaie, dar se pot efectua simultan pe liste din foi diferite).</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l1 level1 lfo6;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Datele importante se vor plasa în coloanele din
+interiorul listei si nu pe extremitãti.</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l1 level1 lfo6;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>La introducerea informatiilor text se va evita tastarea
+unor spatii initiale sau finale, în caz contrar sortarea si cautarea pot sã nu
+producã rezultatele dorite (un spatiu este considerat ca apartinând unei
+constante text).</p>
+
+<h3 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Selectarea unei liste</h3>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Pentru
+a aplica o operatiune specificã, lista trebuie sã fie selectatã în prealabil.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Selectarea
+se poate efectua total, prin procedeul uzual, dar acest fapt nu este necesar.
+Este însã suficient ca celula activã sã fie în interiorul listei pentru ca
+domeniul listei sã fie identificat în mod corect.</p>
+
+<h3 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Sortarea unei liste</h3>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Ordonarea
+unei liste dupã anumite criterii este o operatiune utilã atât în analiza
+datelor cât si pentru prezentarea datelor. Se pot ordona liniile
+(înregistrãrile) listei sau coloanele (operatiune mai rarã în practicã) potrivit
+valorilor din coloane, respectiv linii specificate de utilizator. </p>
+
+<p class=MsoNormal style='line-height:14.0pt;mso-line-height-rule:exactly'>Este
+posibilã, de asemenea, ordonarea valorilor dintr-o linie sau coloanã,
+independent de datele adiacente, dacã în prealabil se selecteazã total celulele
+respective si se rãspunde adecvat la dialogul afisat în acest caz de Excel
+(întrebarea este dacã sã se extindã selectia la datele adiacente si se va
+rãspunde negativ pentru o sortare partialã).</p>
+
+<h4 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Ordinea de sortare</h4>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Datele
+pot fi sortate în ordine alfabeticã, numericã (dupa valoare) sau
+calendaristicã, în ordine crescãtoare sau descrescãtoare, dupã una sau mai
+multe coloane.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>La
+sortarea informatiilor de tip text, Microsoft Excel ordoneazã de la stânga la
+dreapta, caracter dupã caracter. </p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Sortarea
+ascendentã a textului este bazatã pe ordinea</p>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>0 1 2 3
+4 5 6 7 8 9 ' - (spatiu) ! &quot; # $ % &amp; ( ) * , . / : ; ? @ [ \ ] ^ _ ` {
+| } ~ + &lt; = &gt; </p>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>A B C D
+E F G H I J K L M N O P Q R S T U V W X Y Z </p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Sortarea
+ascendentã a numerelor este de la cel mai mic numãr negativ la cel mai mare
+pozitiv.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Ordinea
+valorilor logice este FALSE TRUE.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Valorile
+eroare sunt egale (indiferent de tipul erorii).</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Celulele
+goale sunt întotdeauna ordonate ultimele (indiferent de ordinea crescãtoare sau
+descrescãtoare).</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Este
+posibil sã se aleagã, pentru informatii cu semnificatii locale, ordinea datã de
+o listã creatã de utilizator (meniul <b style='mso-bidi-font-weight:normal'>Tools</b>,
+<b style='mso-bidi-font-weight:normal'>Options</b>, <b style='mso-bidi-font-weight:
+normal'>Custom lists</b>, vezi explicatiile date anterior).</p>
+
+<h4 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Optiunile de sortare</h4>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Sortarea
+este condusã de parametrii fixati în dialogul <b style='mso-bidi-font-weight:
+normal'>Sort Options</b> (afisat prin comanda <b style='mso-bidi-font-weight:
+normal'>Sort</b> din meniul <b style='mso-bidi-font-weight:normal'>Data</b> si
+actionarea butonului <b style='mso-bidi-font-weight:normal'>Options</b>, vezi
+dialogul <b style='mso-bidi-font-weight:normal'>Sort</b> explicat mai departe).</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1026" type="#_x0000_t75" style='position:absolute;
+ left:0;text-align:left;margin-left:175.25pt;margin-top:6.95pt;width:215.25pt;
+ height:129.75pt;z-index:1;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:imagedata src="sortoptions.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/sortoptions.jpg"/>
+ <w:wrap type="square" side="largest" anchorx="page"/>
+</v:shape><![endif]--><![if !vml]><img width=287 height=173
+src="sortoptions.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/sortoptions.jpg" align=right hspace=12 v:shapes="_x0000_s1026"><![endif]><span
+style="mso-spacerun: yes"> </span><i style='mso-bidi-font-style:normal'>First
+key sort order</i> – în lista derulantã se selecteazã ordinea de sortare
+(Normal sau dupã o listã definitã de utilizator),</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><i
+style='mso-bidi-font-style:normal'>Case sensitive</i> – se marcheazã dacã
+ordonarea face diferenta între litere mari si mici,</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><i
+style='mso-bidi-font-style:normal'>Orientation</i> – se fixeazã sortarea
+liniilor (Sort top to bottom) sau coloanelor (Sort left to right).</p>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Dupã
+fixarea optiunilor, acestea rãmân valabile pânã la urmãtoarea modificare.
+Optiunile sunt permise doar pentru prima cheie de sortare (cheuia principalã).</p>
+
+<h4 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Ordonarea crescãtoare/descrescãtoare dupã o coloanã</h4>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Aranjarea
+listei dupã valorile dintr-o coloanã (se modificã totusi ordinea tuturor
+liniilor, cu pãstrarea alinierilor pe orizontalã) se poate realiza prin actionarea
+uneltelor dedicate:</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l6 level1 lfo8;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Click pe o celulã din coloana doritã</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+12.0pt;mso-list:l6 level1 lfo8;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Click Sort Ascending <img width=21 height=20
+id="_x0000_i1025" src="sortascend.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/sortascend.jpg"><span style="mso-spacerun:
+yes"> </span>sau Sort Descending <img width=21 height=20 id="_x0000_i1026"
+src="sortdescend.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/sortdescend.jpg">,</p>
+
+<h4 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly;mso-list:l0 level4 lfo9'>Ordonarea liniilor dupã douã sau mai multe
+coloane</h4>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Ordonarea
+poate fi efectuatã dupã mai multe coloane (chei de sortare). În acest tip de
+sortare este importantã fixarea prioritãtilor pentru coloane: liniile vor fi
+ordonate dupã prima coloanã indicatã, în caz de egalitate dupã prima coloanã se
+ordoneazã dupã a doua coloanã indicatã, în caz de egalitate dupã primele douã
+coloane se ordoneazã dupã a treia coloanã.</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l4 level1 lfo11;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1027" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:164.75pt;
+ margin-top:3.1pt;width:204.75pt;height:211.5pt;z-index:2;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f">
+ <v:imagedata src="datasort.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/datasort.jpg"/>
+ <w:wrap type="square" side="largest" anchorx="page"/>
+</v:shape><![endif]--><![if !vml]><img width=273 height=282 src="datasort.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/datasort.jpg"
+align=right hspace=12 v:shapes="_x0000_s1027"><![endif]>Se selecteazã lista
+(eventual doar prin pozitionarea celulei active în listã)</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l4 level1 lfo11;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Se dã comanda <b style='mso-bidi-font-weight:normal'>Sort</b>
+din meniul <b style='mso-bidi-font-weight:normal'>Data</b>. Este afisat
+dialogul <b style='mso-bidi-font-weight:normal'>Sort</b> prezentat în
+continuare.</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l4 level1 lfo11;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>În listele derulante <b style='mso-bidi-font-weight:
+normal'>Sort by</b> si <b style='mso-bidi-font-weight:normal'>Then by</b> se
+aleg, în ordine, coloanele (câmpurile) de sortare.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Pentru
+fiecare cheie de sortare se fixeazã în grupul de butoane radio alãturat ordinea
+de sortare: crescãtoare (<b style='mso-bidi-font-weight:normal'>Ascending</b>)
+sau descrescãtor (<b style='mso-bidi-font-weight:normal'>Descending</b>). Nu
+este necesar ca ordinea sã fie aceeasi pentru toate câmpurile.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>În
+grupul <b style='mso-bidi-font-weight:normal'>My list has</b> se specificã dacã
+lista are linie antet (linia cu denumirile câmpurilor – <b style='mso-bidi-font-weight:
+normal'>Header row</b>) sau nu dispune de antet (<b style='mso-bidi-font-weight:
+normal'>No header row</b>). În primul caz se vor sorta doar înregistrãrile
+reale (liniile 2 – …) din listã.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Butonul
+<b style='mso-bidi-font-weight:normal'>Options</b> afiseazã dialogul <b
+style='mso-bidi-font-weight:normal'>Sort Options</b> (explicat anterior).</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Observatie 1</b>. Dacã se doreste sortarea
+listei dupã mai mult de trei coloane se alege urmãtorul mecanism:</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+se stabileste ordinea de prioritate a cheilor de sortare (de la cea mai
+importantã la cea mai putin importantã);</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+se efectueazã sortarea dupã cele mai putin importante trei coloane;</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+se continuã cu urmãtoarele trei coloane de prioritate micã s.a.m.d.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Observatie 2</b>. Dacã liniile sortate
+apartin unui outline (vezi subiectul respectiv), atunci sortarea pãstreazã
+grupãrile existente.</p>
+
+<h4 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Sortarea coloanelor dupã continutul liniilor</h4>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>La
+sortare se poate inversa rolul liniilor si al coloanelor. Tot ceea ce s-a spus
+la ordonarea liniilor se pãstreazã, schimbând &quot;linii&quot; în
+&quot;coloane&quot; si invers, dacã se marcheazã în <b style='mso-bidi-font-weight:
+normal'>Sort Options </b>caseta de control <i style='mso-bidi-font-style:normal'>Sort
+left to right</i>, dupã care se fixeazã analog liniile care au rolul de chei de
+sortare.</p>
+
+<h4 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Sortarea dupã date calendaristice (luni, zile) sau liste proprii</h4>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Deoarece
+anumite informatii care se prezintã drept texte (de exemplu: luni, marti,
+miercuri, joi etc.) nu pot fi ordonate ca text, neproducând ordinea corectã, se
+alege ordonarea dupã liste implicite sau create de utilizator.</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l5 level1 lfo13;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Se selecteazã lista.</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l5 level1 lfo13;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Se dã comanda <b style='mso-bidi-font-weight:normal'>Sort</b>
+din meniul <b style='mso-bidi-font-weight:normal'>Data</b>.</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l5 level1 lfo13;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Click <b style='mso-bidi-font-weight:normal'>Options</b>.</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l5 level1 lfo13;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Sub <b style='mso-bidi-font-weight:normal'>First key
+sort order</b> se alege lista care dã ordinea doritã si apoi <b
+style='mso-bidi-font-weight:normal'>OK</b>.</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l5 level1 lfo13;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Se continuã în mod uzual cu fixarea celorlalte chei de
+sortare.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Observatie</b>. Ordinea listei selectate în
+First key sort order se aplicã doar coloanei mentionate în zona Sort by. Pentru
+a aplica ordini definite la mai multe coloane, fiecare coloanã va fi ordonatã
+separat, în ordinea inversã a prioritãtilor.</p>
+
+<h3 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Filtrarea informatiilor dintr-o listã</h3>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Întelegem
+prin operatiunea de <b style='mso-bidi-font-weight:normal'>filtrare </b>a
+informatiilor procesul prin care se selecteazã dintr-o listã doar acele
+înregistrãri care satisfac anumite conditii impuse de utilizator. Procesul
+este, în bunã parte, similar procesului de interogare a unei baze de date.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Comanda
+principalã este <b style='mso-bidi-font-weight:normal'>Filter</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Data</b>, dar sectiunile urmãtoare vor mai
+trata subiecte care se pot înscrie în acelasi proces de filtrare (comanda <b
+style='mso-bidi-font-weight:normal'>Form</b>, comanda <b style='mso-bidi-font-weight:
+normal'>Outline</b> etc.).</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Trebuie
+retinut cã o operatiune de filtrare presupune stabilirea unor criterii de
+selectie, care se pot defini ca o entitate distinctã (într-o zonã separatã a
+foii de calcul) sau se pot selecta dintr-o suitã de criterii creatã în mod
+automat de cãtre Microsoft Excel prin analiza informatiilor din listã.</p>
+
+<h4 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Comanda Filter</h4>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Accesul
+la principalele instrumente de selectare a informatiilor se realizeazã prin
+comanda <b style='mso-bidi-font-weight:normal'>Filter</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Data</b>. Submeniul afisat dispune de trei
+noi comenzi</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+<b style='mso-bidi-font-weight:normal'>AutoFilter</b>, explicatã în continuare.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+<b style='mso-bidi-font-weight:normal'>Show All</b>, prin care se afiseazã
+toate înregistrãrile listei (anuleazã filtrãrile active).</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+<b style='mso-bidi-font-weight:normal'>Advanced Filter</b>, explicatã în
+continuare.</p>
+
+<h4 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Comanda AutoFilter</h4>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1028" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:126.5pt;margin-top:28.7pt;width:166.5pt;height:57.75pt;
+ z-index:3;mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f">
+ <v:imagedata src="autofilter.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/autofilter.jpg"/>
+ <w:wrap type="square" side="largest" anchorx="page"/>
+</v:shape><![endif]--><![if !vml]><img width=222 height=77 src="autofilter.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/autofilter.jpg"
+align=right hspace=12 v:shapes="_x0000_s1028"><![endif]>Operatiunea cea mai
+rapidã de regãsire a unor informatii dintr-o listã se realizeazã prin
+succesiunea de comenzi <b style='mso-bidi-font-weight:normal'>Filter</b> (din
+meniul <b style='mso-bidi-font-weight:normal'>Data</b>) urmatã de <b
+style='mso-bidi-font-weight:normal'>AutoFilter</b> (din submeniul afisat). Ca
+urmare a comenzii, fiecare denumire de câmp apare pe foaia de calcul însotit de
+un buton de listã derulantã, ca în figura alãturatã. </p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Prin
+actionarea butonului de derulare apare o listã de optiuni, primele trei fiind
+standard: (All), (Top 10…), (Custom…), urmate de lista valorilor existente în
+coloana respectivã a listei. </p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Selectarea
+unei valori din lista derulantã produce afisarea doar a acelor înregistrãri
+care au ca valoare a câmpului valoarea selectatã (în acest mod se realizeazã
+filtrarea). </p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Selectarea
+intrãrii (All) produce afisarea tuturor înregistrãrilor (anularea filtrãrii
+pentru câmpul respectiv).</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Selectarea
+intrãrii (Top 10…) este posibilã pentru câmpuri numerice si aratã doar primele
+înregistrãri, în ordinea crescãtoare sau descrescãtoare a valorilor, ordinea
+fiind fixatã într-un dialog intermediar. Se poate alege si numãrul înregistrãrilor
+afisate (nu este obligatoriu 10).</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="_x0000_s1029" type="#_x0000_t75" style='position:absolute;left:0;
+  text-align:left;margin-left:68.2pt;margin-top:0;width:310.5pt;height:144.75pt;
+  z-index:4;mso-wrap-distance-top:7.2pt;mso-wrap-distance-bottom:7.2pt;
+  mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+  o:allowincell="f">
+  <v:imagedata src="customfilter.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/customfilter.jpg"/>
+  <w:wrap type="topAndBottom" side="largest" anchorx="page"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=91 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=414 height=193 src="customfilter.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/customfilter.jpg" v:shapes="_x0000_s1029"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+Selectarea intrãrii (Custom…) afiseazã un dialog care permite stabilirea unei
+conditii de filtrare mai complexe (de exemplu doar înregistrãrile cu salariatii
+care au salariu mai mic de 1000000 de lei dar mai mare sau egal cu 700000 de
+lei). Un asemenea dialog este în figura urmãtoare</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>În
+primul grup de optiuni se fixeazã prima conditie prin alegerea operatorului în
+prima zonã si valorii de comparatie în a doua zonã. Se alege operatorul logic
+dintre conditii (dacã existã o a doua conditie) prin butoanele radio, dupã care
+se fixeazã a doua conditie.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Conditia
+compusã realizatã astfel se aplicã doar câmpului pe care se stabileste
+filtrarea curentã.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Observatie</b>. Pentru a realiza o filtrare
+care implicã mai multe câmpuri (de exemplu angajatii care au salariu mai mic de
+un milion de lei si au mai mult de doi copii) se stabileste câte un filtru pe
+fiecare câmp. Actiunea comunã produce selectarea doritã (o datã aplicat filtrul
+pentru o coloanã, orice altã filtrare ulterioarã se aplicã doar înregistrãrilor
+deja selectate).</p>
+
+<h4 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Comanda Advanced Filter</h4>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Prin
+comanda Advanced Filter este posibil ca înregistrãrile selectate sã fie copiate
+în altã locatie din foaia de calcul. Un alt avantaj este acela al vizibilitãtii
+conditiilor prin faptul cã se defineste o zonã, numitã în general<i
+style='mso-bidi-font-style:normal'> Criteria</i>, care contine conditiile de
+filtrare pentru toate coloanele dorite. Lista trebuie sã aibã obligatoriu
+etichete de coloane pentru a aplica aceastã procedurã. Pasii urmati sunt</p>
+
+<p class=MsoPlainText style='margin-left:.25in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l3 level1 lfo15;tab-stops:list .25in'><![if !supportLists]><span
+style='font-family:Wingdings'>v<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Definirea criteriilor de filtrare.</p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l3 level2 lfo15;tab-stops:list .5in'><![if !supportLists]><span
+style='font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Se copie etichetele coloanelor implicate în filtrare</p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l3 level2 lfo15;tab-stops:list .5in'><![if !supportLists]><span
+style='font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Se alipesc într-o primã linie a zonei care va fi zona
+Criteria.</p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l3 level2 lfo15;tab-stops:list .5in'><![if !supportLists]><span
+style='font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>În liniile urmãtoare se scriu conditiile de filtrare
+(vezi explicatiile care urmeazã).</p>
+
+<p class=MsoPlainText style='margin-left:.25in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l3 level1 lfo15;tab-stops:list .25in'><![if !supportLists]><span
+style='font-family:Wingdings'>v<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Comanda Advanced Filter.</p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l3 level2 lfo15;tab-stops:list .5in'><![if !supportLists]><span
+style='font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Se selecteazã lista (eventual doar prin pozitionarea
+celulei active în listã).</p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l3 level2 lfo15;tab-stops:list .5in'><![if !supportLists]><span
+style='font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Comanda Filter din meniul Data si apoi Advanced Filter.</p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l3 level2 lfo15;tab-stops:list .5in'><![if !supportLists]><span
+style='font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Se aleg optiunile dorite (vezi figura care urmeazã).</p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;line-height:
+14.0pt;mso-line-height-rule:exactly;mso-list:l3 level2 lfo15;tab-stops:list .5in'><![if !supportLists]><span
+style='font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Se actioneazã OK.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Este
+obligatoriu ca zona de criterii sã fie separatã prin cel putin o linie
+(coloanã) goalã de lista propriu-zisã (altfel identificarea automatã a listei
+este gresitã).</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Este
+recomandabil ca zona de criterii sã fie sub listã. Aranjarea criteriilor pe
+linii comune cu lista poate produce neajunsuri prin ascunderea în urma
+filtrãrii a acestor linii.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="_x0000_s1030" type="#_x0000_t75" style='position:absolute;left:0;
+  text-align:left;margin-left:105.65pt;margin-top:0;width:249pt;height:148.5pt;
+  z-index:5;mso-wrap-distance-top:7.2pt;mso-wrap-distance-bottom:7.2pt;
+  mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+  o:allowincell="f">
+  <v:imagedata src="advancedfilter.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/advancedfilter.jpg"/>
+  <w:wrap type="topAndBottom" side="largest" anchorx="page"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=141 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=332 height=198 src="advancedfilter.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/advancedfilter.jpg" v:shapes="_x0000_s1030"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+Dialogul Advanced Filter este prezentat în figura urmãtoare.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>În
+grupul <b style='mso-bidi-font-weight:normal'>Action</b> se alege modul de
+efectuare a filtrãrii: <i style='mso-bidi-font-style:normal'>Filter the list,
+in-place</i> produce filtrarea listei pe loc (prin ascunderea liniilor
+neselectate), <i style='mso-bidi-font-style:normal'>Copy to another location</i>
+produce copierea înregistrãrilor selectate în altã zonã a foii de calcul.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>În
+<b style='mso-bidi-font-weight:normal'>List range</b> se specificã domeniul
+ocupat de listã. De regulã acest domeniu este stabilit automat, dar este
+posibil sã se specifice un subdomeniu, dacã nu se doreste filtrarea întregii
+liste.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>În
+<b style='mso-bidi-font-weight:normal'>Criteria range</b> se specificã domeniul
+ocupat de criteriile de filtrare. Dacã în foaie existã o zonã denumitã <b
+style='mso-bidi-font-weight:normal'>Criteria</b>, adresa zonei apare automat în
+<b style='mso-bidi-font-weight:normal'>Criteria range</b>.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>În
+<b style='mso-bidi-font-weight:normal'>Copy to </b>se specificã domeniul în
+care se copie înregistrãrile selectate (dacã este marcatã optiunea <i
+style='mso-bidi-font-style:normal'>Copy to another location</i>. Este suficient
+sã se indice doar coltul din stânga sus al zonei receptoare.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Caseta
+de control <b style='mso-bidi-font-weight:normal'>Unique records only</b> se
+marcheazã dacã se doreste ca selectia obtinutã în urma filtrãrii sã continã
+înregistrãri unice.</p>
+
+<h4 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Exemple de criterii pentru Advanced Filter</h4>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Conditiile
+de filtrare se aranjeazã într-o listã având ca linie de antet denumirile
+coloanelor (câmpurilor), din lista care se filtreazã, pentru care se definesc
+conditiile. Pentru o conditie creatã ca rezultat al unei formule nu trebuie sã
+existe, totusi, denumire.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Toate
+conditiile scrise pe aceeasi coloanã se referã la coloana cu denumirea din
+antet.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Conditii
+care se scriu pe aceeasi linie trebuie sã fie îndeplinite simultan (operatorul
+logic &quot;si&quot;).</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Conditiile
+care se scriu pe linii diferite se considerã legate prin operatorul logic
+&quot;sau&quot; (deci sunt selectate înregistrãrile care îndeplinesc cel putin
+o linie de conditie din criterii). </p>
+
+<h5 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Exemplul 1. Trei sau mai multe conditii pentru o coloanã</h5>
+
+<table border=1 cellspacing=0 cellpadding=0 style='margin-left:63.9pt;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=90 valign=top style='width:67.5pt;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'><b style='mso-bidi-font-weight:normal'>Nume<o:p></o:p></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=90 valign=top style='width:67.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Beethoven</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=90 valign=top style='width:67.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Berlioz</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=90 valign=top style='width:67.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Bach</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:14.0pt;mso-line-height-rule:exactly'>Sunt
+selectate înregistrãrile care au în coloana Nume una dintre valorile Beethoven,
+Berlioz, Bach. Este de observat cã douã valori se pot indica si în <b
+style='mso-bidi-font-weight:normal'>Auto Filter</b>.</p>
+
+<h5 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Exemplul 2. Conditii simultane pentru mai multe coloane</h5>
+
+<table border=1 cellspacing=0 cellpadding=0 style='margin-left:63.9pt;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=90 valign=top style='width:67.5pt;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'><b style='mso-bidi-font-weight:normal'>Nume<o:p></o:p></b></p>
+  </td>
+  <td width=90 valign=top style='width:67.5pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'><b style='mso-bidi-font-weight:normal'>Simfonii<o:p></o:p></b></p>
+  </td>
+  <td width=90 valign=top style='width:67.5pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'><b style='mso-bidi-font-weight:normal'>Anul<o:p></o:p></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=90 valign=top style='width:67.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Beethoven</p>
+  </td>
+  <td width=90 valign=top style='width:67.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>&gt;5</p>
+  </td>
+  <td width=90 valign=top style='width:67.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>&lt;1900</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Se
+obtin înregistrãrile care contin la Nume valoarea Beethoven, care la Simfonii
+au o valoare mai mare decât 5 si care are Anul mai mic de 1900. Se observã cã
+între conditii existã cuvântul &quot;si&quot;, semnificând îndeplinirea
+simultanã a conditiilor.</p>
+
+<h5 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly;mso-list:l0 level5 lfo16'>Exemplul 3. Conditii alternative pentru mai
+multe coloane</h5>
+
+<table border=1 cellspacing=0 cellpadding=0 style='margin-left:63.9pt;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=90 valign=top style='width:67.5pt;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'><b style='mso-bidi-font-weight:normal'>Nume<o:p></o:p></b></p>
+  </td>
+  <td width=90 valign=top style='width:67.5pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'><b style='mso-bidi-font-weight:normal'>Simfonii<o:p></o:p></b></p>
+  </td>
+  <td width=90 valign=top style='width:67.5pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'><b style='mso-bidi-font-weight:normal'>Anul<o:p></o:p></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=90 valign=top style='width:67.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Beethoven</p>
+  </td>
+  <td width=90 valign=top style='width:67.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+  <td width=90 valign=top style='width:67.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=90 valign=top style='width:67.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+  <td width=90 valign=top style='width:67.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>&gt;5</p>
+  </td>
+  <td width=90 valign=top style='width:67.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=90 valign=top style='width:67.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+  <td width=90 valign=top style='width:67.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+  <td width=90 valign=top style='width:67.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>&lt;1900</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:14.0pt;mso-line-height-rule:exactly'>Sunt
+selectate înregistrãrile care au la Nume valoarea Beethoven, cele care au la
+Simfonii o valoare mai mare decât 5 si cele care au Anul mai mic decât 1900. </p>
+
+<h5 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Exemplul 4. Conditii create ca rezultat al unei formule</h5>
+
+<table border=1 cellspacing=0 cellpadding=0 style='margin-left:63.9pt;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=270 valign=top style='width:202.5pt;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'><![if !supportEmptyParas]>&nbsp;<![endif]><b style='mso-bidi-font-weight:
+  normal'><o:p></o:p></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=270 valign=top style='width:202.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>=Anul&gt;1900</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Se
+pot utiliza denumirile coloanelor din listã, se remarcã lipsa denumirii în
+antetul coloanei din zona de criterii. Rezultatul filtrãrii este corect chiar
+dacã în foaia de calcul apare o eroare (#NAME?) la scrierea conditiei deoarece
+anumite denumiri nu sunt definite prin <b style='mso-bidi-font-weight:normal'>Insert
+Names</b>.</p>
+
+<h3 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Formulare de date</h3>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1032" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:152.75pt;margin-top:53.5pt;width:192.75pt;
+ height:233.25pt;z-index:6;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:imagedata src="dataform.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/dataform.jpg"/>
+ <w:wrap type="square" side="largest" anchorx="page"/>
+</v:shape><![endif]--><![if !vml]><img width=257 height=311 src="dataform.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/dataform.jpg"
+align=right hspace=12 v:shapes="_x0000_s1032"><![endif]>Microsoft Excel dispune
+de o componentã dedicatã introducerii dirijate a înregistrãrilor într-o listã
+si a navigãrii între înregistrãrile care îndeplinesc o anumitã conditie. Desi
+pentru liste de mici dimensiuni componenta pare a fi declasatã de operarea
+uzualã din foaia de calcul, utilitatea se vede pentru liste de dimensiuni mai
+mari, care depãsesc, sã spunem, 2 ecrane.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Comanda
+principalã este <b style='mso-bidi-font-weight:normal'>Form</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Data,</b> atunci când lista este selectatã.
+Se afiseazã un dialog construit dinamic de mediul Excel, adaptat la lista
+procesatã. Un exemplu este oferit de figura urmãtoare.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Se
+observã cã în partea din stânga se însiruie zone de editare cu denumirile
+câmpurilor din listã (în cazul exemplului <i style='mso-bidi-font-style:normal'>nume</i>,
+<i style='mso-bidi-font-style:normal'>prenume</i> si <i style='mso-bidi-font-style:
+normal'>telefon</i>), dotate inclusiv cu shortcut-uri.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>În
+partea din dreapta sunt butoanele care permit operatiile uzuale pentru
+înregistrãri, primul mesaj arãtând a câta înregistrare este afisatã din numãrul
+total.</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>New</b> – se furnizeazã o înregistrare
+vidã, ale cãrei câmpuri pot fi completate în zonele respective. Navigarea între
+acestea se poate efectua cu TAB, mouse, shortcut (ALT+litera subliniatã).
+Înregistrarea este creatã atunci când se terminã cu o nouã comandã New sau cu
+ENTER.</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Delete</b> – se sterge îngistrarea curentã
+(cea afisatã).</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Restore</b> – se poate reface starea
+initialã a înregistrãrii dacã s-a modificat vreo valoare. Nu are legãturã cu
+anularea stergerii unei înregistrãri (stergerea este permanentã).</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Find Prev</b> – trece la înregistrarea
+precedentã, dacã existã.</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Find Next</b> – trece la înregistrarea
+urmãtoare, dacã existã.</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1033" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:152.75pt;margin-top:19.25pt;width:192.75pt;
+ height:233.25pt;z-index:7;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:imagedata src="dataformcrit.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/dataformcrit.jpg"/>
+ <w:wrap type="square" side="largest" anchorx="page"/>
+</v:shape><![endif]--><![if !vml]><img width=257 height=311
+src="dataformcrit.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/dataformcrit.jpg" align=right hspace=12 v:shapes="_x0000_s1033"><![endif]><b
+style='mso-bidi-font-weight:normal'>Criteria</b> – permite trecerea
+formularului în starea de filtrare a informatiilor. În aceastã stare, zonele de
+editare devin zone în care se pot scrie sabloane de cãutare (cãutare dupã
+model). Prin butoanele <b style='mso-bidi-font-weight:normal'>Find Prev</b> si <b
+style='mso-bidi-font-weight:normal'>Find Next</b> se poate atunci naviga doar
+între întregistrãrile care îndeplinesc conditiile de filtrare. În figura
+alãturatã este prezentat un exemplu de cãutare. Se observã mesajul <b
+style='mso-bidi-font-weight:normal'>Criteria</b> (pentru starea formularului), <b
+style='mso-bidi-font-weight:normal'>New</b> este inhibatã, <b style='mso-bidi-font-weight:
+normal'>Clear</b> produce anularea sablonului, <b style='mso-bidi-font-weight:
+normal'>Restore, Find Prev </b>si<b style='mso-bidi-font-weight:normal'> Find
+Next </b>au functiile explicate mai sus iar <b style='mso-bidi-font-weight:
+normal'>Form</b> este butonul prin care se revine la starea de formular de
+culegere de date. Exemplul din imagine produce filtrarea si navigarea între
+înregistrãrile care au în câmpul <i style='mso-bidi-font-style:normal'>Nume</i>
+valori care încep cu &quot;Dum&quot;. În cazul în care se completeazã si
+celelalte câmpuri, conditiile se verificã simultan (operatorul logic
+&quot;si&quot;). Dupã stabilirea filtrului, comanda <b style='mso-bidi-font-weight:
+normal'>Find Prev</b> sau <b style='mso-bidi-font-weight:normal'>Find Next</b>
+pozitioneazã formularul pe prima înregistrare care satisface conditia (în sensul
+de parcurgere selectat), trece formularul în starea formular de culegere, dar
+filtrul rãmâne activ pânã când se trece în <b style='mso-bidi-font-weight:normal'>Criteria</b>
+si se dã comanda <b style='mso-bidi-font-weight:normal'>Clear</b> care anuleazã
+filtrul impus.</p>
+
+<h3 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Totaluri partiale</h3>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>În
+analiza datelor sunt foarte frecvente situatiile în care este necesar sã se
+calculeze anumite functii pentru fiecare categorie de înregistrãri ale unei
+liste. De exemplu, </p>
+
+<p class=primul style='text-indent:.5in;line-height:14.0pt;mso-line-height-rule:
+exactly'>– câstigul mediu pentru fiecare compartiment al unei întreprinderi; </p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+numãrul de clienti din fiecare zonã geograficã;</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+valoarea totalã a mãrfurilor din stoc, pe categorii etc.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>În
+asemenea situatie este normal ca un câmp al înregistrãrii sã realizeze
+clasificarea înregistrãrilor (sectia, zona geograficã, categoria de marfã
+etc.), lipsa acestei informatii fãcând imposibilã calcularea automatã a
+functiilor totalizatoare.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Din
+exemplele de mai sus se observã cã o functie totalizatoare poate fi</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+adunarea,</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+numãrarea,</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+media aritmeticã,</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+valoarea extremã (maximã sau minimã),</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+o altã functie statisticã.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Pentru
+a realiza includerea automatã în listã a rezultatelor functiilor totalizatoare
+se parcurg pasii:</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+se ordoneazã lista dupã câmpul clasificator (încât toate înregistrãrile care
+apartin unei categorii sã fie situate grupat);</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+se selecteazã lista;</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1034" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:182.75pt;margin-top:25.7pt;width:222.75pt;
+ height:197.25pt;z-index:8;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:imagedata src="datasubtotals.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/datasubtotals.jpg"/>
+ <w:wrap type="square" side="largest" anchorx="page"/>
+</v:shape><![endif]--><![if !vml]><img width=297 height=263
+src="datasubtotals.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/datasubtotals.jpg" align=right hspace=12 v:shapes="_x0000_s1034"><![endif]>–
+se dã comanda <b style='mso-bidi-font-weight:normal'>Subtotals</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Data</b>. Ca urmare se afiseazã dialogul <b
+style='mso-bidi-font-weight:normal'>Subtotal</b> prezentat în figura alãturatã
+si explicat în continuare.</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>At each change in</b> – se fixeazã pe
+câmpul care realizeazã clasificarea (la fiecare schimbare în valoarea acestui
+câmp se introduce un subtotal. </p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Use function</b> – se selecteazã din lista
+derulantã functia de totalizare.</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Add subtotal to</b> – se marcheazã
+câmpurile pentru care se calculeazã totalizãrile.</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Replace current subtotals</b> – se
+marcheazã dacã lista are deja subtotaluri, care se eliminã.</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Page break between groups</b> – se
+marcheazã dacã, la tipãrire, fiecare grup apare pe o paginã nouã.</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Summary below data</b> – se marcheazã
+pentru includerea unui total general. Acesta este obtinut din înregistrãri si
+nu din subtotalurile intermediare.</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Remove All</b> – actionarea acestui buton
+eliminã toate subtotalurile din lista selectatã.</p>
+
+<p class=MsoNormal style='line-height:14.0pt;mso-line-height-rule:exactly'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1035" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:172.25pt;margin-top:9.1pt;width:212.25pt;height:128.25pt;
+ z-index:9;mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f">
+ <v:imagedata src="exsubtotals.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/exsubtotals.jpg"/>
+ <w:wrap type="square" side="largest" anchorx="page"/>
+</v:shape><![endif]--><![if !vml]><img width=283 height=171
+src="exsubtotals.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/exsubtotals.jpg" align=right hspace=12 v:shapes="_x0000_s1035"><![endif]>Ca
+rezultat al comenzii se restructureazã linii listei prin inserarea liniilor de
+total iar<span style="mso-spacerun: yes">  </span>structura obtinutã este
+dotatã cu instrumentul outline (explicat într-o sectiune separatã). Un exemplu
+este prezentat în figura urmãtoare.</p>
+
+<p class=MsoNormal style='line-height:14.0pt;mso-line-height-rule:exactly'>Se
+observã cã la fiecare schimbare în câmpul nume (selectat în optiunea <b
+style='mso-bidi-font-weight:normal'>At each change in</b>) se calculeazã un
+total pentru câmpul valoare (marcat în <b style='mso-bidi-font-weight:normal'>Add
+subtotal to</b>). La sfârsitul listei a fost calculat si totalul general
+(efectul marcãrii optiunii <b style='mso-bidi-font-weight:normal'>Summary below
+data</b>).</p>
+
+<p class=MsoNormal style='line-height:14.0pt;mso-line-height-rule:exactly'>Este
+de mentionat, în final, cã modificarea înregistrãrilor listei duce în mod
+automat la recalcularea totalurilor.</p>
+
+<a name="outline"></a>
+<h2 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Trasarea datelor (Outline)</h2>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>În
+situatia în care structura datelor dintr-o listã este complicatã prin
+introducerea unor coloane sau linii totalizatoare (de tipul subtotalurilor
+discutate anterior), este utilã, ca instrument de analizã, afisarea, la un
+moment dat, doar a rezultatelor sintetice. Se realizeazã astfel separarea
+informatiilor esentiale de detalii care pot sã îngreuneze receptarea corectã a
+situatiilor prelucrate.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Procedura
+oferitã de Microsoft Excel pentru situatia discutatã este cea de <i
+style='mso-bidi-font-style:normal'>outline </i>si constã în dotarea foii de
+calcul cu o serie de simboluri grafice active prin actionarea cãrora se ascund
+sau se vizualizeazã detalii de un anumit nivel.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><b
+style='mso-bidi-font-weight:normal'>Observatie</b>. Termenul <i
+style='mso-bidi-font-style:normal'>outline</i> poate fi tradus prin trasare,
+conturare, schitare etc., dar pentru a crea (psihologic) imaginea complexitãtii
+operatiunii vom utiliza frecvent termenul original.</p>
+
+<h3 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Trasarea automatã</h3>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Pentru
+a putea fi analizatã în mod automat si a se realiza trasarea, foaia de calcul
+trebuie sã fie organizatã, pe portiunea listei implicate, într-un mod
+sistematic prin includerea unor linii/coloane de totalizare. Formulele care
+compun o linie/coloanã totalizatoare trebuie sã se refere la celule dispuse
+într-un acelasi mod (în aceeasi directie) si sã fie fie plasate într-o aceeasi
+parte fatã de detalii (toate la stânga sau toate la dreapta, toate deasupra sau
+toate sub).</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Un
+outline se poate realiza automat prin:</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+selectarea domeniului prelucrat</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+comanda <b style='mso-bidi-font-weight:normal'>Group and Outline</b> din meniul
+<b style='mso-bidi-font-weight:normal'>Data</b></p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+comanda <b style='mso-bidi-font-weight:normal'>Auto Outline</b> din submeniul
+afisat de comanda precedentã.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Pe
+laturile foii de calcul se afiseazã simbolurile de outline explicate în
+continuare.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1036" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:-21.25pt;margin-top:1.8pt;width:18.75pt;height:53.25pt;
+ z-index:10;mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f">
+ <v:imagedata src="rowlevelbar.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/rowlevelbar.jpg"/>
+ <w:wrap type="square" side="largest" anchorx="page"/>
+</v:shape><![endif]--><![if !vml]><img width=25 height=71 src="rowlevelbar.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/rowlevelbar.jpg"
+align=right hspace=12 v:shapes="_x0000_s1036"><![endif]><b style='mso-bidi-font-weight:
+normal'>Row Level Bar</b> (bara de nivel pentru linii), cu imaginea alãturatã,
+pe care se remarcã o linie în formã de parantezã pãtratã care grupeazã liniile
+detaliu (utilizate în formula totalizatoare) si linia totalizatoare. Liniile
+detaliu sunt indicate prin puncte iar linia totalizatoare este indicatã de
+butonul de control de la extremitatea simbolului. Butonul de control, de tip
+comutator, poate fi actionat cu mouse-ul si contine în forma extinsã semnul
+&quot;–&quot;, care se transformã în &quot;+&quot; pentru forma restrânsã.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1037" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:140pt;margin-top:8.1pt;width:180pt;height:18.75pt;
+ z-index:11;mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f">
+ <v:imagedata src="collevelbar.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/collevelbar.jpg"/>
+ <w:wrap type="square" side="largest" anchorx="page"/>
+</v:shape><![endif]--><![if !vml]><img width=240 height=25 src="collevelbar.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/collevelbar.jpg"
+align=right hspace=12 v:shapes="_x0000_s1037"><![endif]><b style='mso-bidi-font-weight:
+normal'>Column Level Bar</b> (bara de nivel pentru coloane), cu imaginea
+alãturatã, asemãnãtoare barei de nivel pentru linii dar asezatã orizontal.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1039" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:233.75pt;margin-top:34.9pt;width:273.75pt;
+ height:225.75pt;z-index:12;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:imagedata src="exoutline1.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/exoutline1.jpg"/>
+ <w:wrap type="square" side="largest" anchorx="page"/>
+</v:shape><![endif]--><![if !vml]><img width=365 height=301 src="exoutline1.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/exoutline1.jpg"
+align=right hspace=12 v:shapes="_x0000_s1039"><![endif]><b style='mso-bidi-font-weight:
+normal'>Level Symbol</b> (simbol de nivel), grupate pe verticalã si orizontalã
+în coltul stânga sus al foii de calcul, câte un simbol pentru fiecare nivel de
+totalizare. Fiecare simbol este un buton de control, vizibil în figura
+alãturatã, si poate fi actionat cu mouse-ul. Pe fiecare simbol de nivel este
+trecut numãrul nivelului respectiv (1 este pentru nivelul maxim).</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Imaginea
+alãturatã aratã un outline realizat automat. Se remarcã în structura datelor
+detaliile (datele privind vânzãri în fiecare magazin al unei retele), liniile
+si coloanele totalizatoare. </p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Se
+observã cã, pentru simplitate, s-a ales o structurã de date initiale care are
+doar douã nivele: detalii si totaluri. Se pot însã introduce pânã la opt
+niveluri multiple de outline (de exemplu s-ar putea grupa magazinele si pe un
+nivel intermediar al zonei, s-ar pute introduce un supranivel prin apartenenta
+retelei de magazine la un grup comercial cu multiple activitãti etc.). Fiecare
+grup ar dispune atunci de barele de nivel si de simbolurile de nivel proprii.</p>
+
+<h3 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Trasarea manualã</h3>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Pentru
+date structurate în modul prezentat la trasarea automatã, se poate realiza
+gruparea detaliilor prin operatiunile:</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+selectarea liniilor (coloanelor) care contin detaliile,</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+comanda <b style='mso-bidi-font-weight:normal'>Group and Outline</b> din meniul
+<b style='mso-bidi-font-weight:normal'>Data</b>,</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+comanda <b style='mso-bidi-font-weight:normal'>Group</b> din submeniul meniul
+afisat.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Ca
+urmare a procedurii se afiseazã simbolurile de outline respective.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Operatiunea
+se continuã pentru urmãtorul grup s.a.m.d.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Este
+recomandabil sã se efectueze mai întâi gruparea detaliilor pentru obtinerea
+nivelului 2, apoi pentru obtinerea nivelului 3 etc.</p>
+
+<h3 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Parametrii unui outline</h3>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Microsoft
+Excel presupune în mod implicit cã liniile totalizatoare sunt situate
+dedesubtul liniilor cu detalii iar coloanele totalizatoare sunt situate la
+dreapta coloanelor cu detalii. Aceste valori pot fi modificate prin succesiunea
+de comenzi</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+<b style='mso-bidi-font-weight:normal'>Group and Outline</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Data</b>,</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+<b style='mso-bidi-font-weight:normal'>Settings</b> din submeniul afisat.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1040" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:218.75pt;margin-top:5pt;width:258.75pt;height:108pt;
+ z-index:13;mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f">
+ <v:imagedata src="outlinesettings.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/outlinesettings.jpg"/>
+ <w:wrap type="square" side="largest" anchorx="page"/>
+</v:shape><![endif]--><![if !vml]><img width=345 height=144
+src="outlinesettings.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/outlinesettings.jpg" align=right hspace=12 v:shapes="_x0000_s1040"><![endif]>Se
+obtine dialogul Outline Settings în care se pot marca zonele din Direction:</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><i
+style='mso-bidi-font-style:normal'>Summary rows below detail</i> – pentru
+totaluri situate sub liniile de detalii;</p>
+
+<p class=zona style='line-height:14.0pt;mso-line-height-rule:exactly'><i
+style='mso-bidi-font-style:normal'>Summary columns to right of detail</i>&nbsp;–
+pentru totaluri situate la dreapta coloanelor de detalii.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Simbolurile
+grafice de outline pot vizualizate sau ascunse potrivit casetei de control <b
+style='mso-bidi-font-weight:normal'>Outline symbols</b> din fisa <b
+style='mso-bidi-font-weight:normal'>View</b> a dialogului afisat la <b
+style='mso-bidi-font-weight:normal'>Options</b> din meniul <b style='mso-bidi-font-weight:
+normal'>Tools</b>. Se recomandã totusi vizualizarea acestor simboluri pentru o
+mai usoarã operare cu un outline.</p>
+
+<h3 style='margin-left:0in;text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+exactly'>Operarea unui outline</h3>
+
+<p class=primul style='line-height:14.0pt;mso-line-height-rule:exactly'>Un
+outline poate fi în starea extinsã în care sunt vizibile atât detaliile unui
+anumit nivel cât si totalizarea respectivã, sau în starea restrânsã în care
+sunt vizibile doar totalizãrile. Trecerea dintr-o stare în cealaltã se
+realizeazã prin actionarea controalelor din barele/simbolurile de nivel sau
+prin comenzi (meniul <b style='mso-bidi-font-weight:normal'>Data</b>, comanda <b
+style='mso-bidi-font-weight:normal'>Group and Outline</b> etc.).</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Actiunile
+specifice sunt sistematizate în continuare.</p>
+
+<div align=center>
+
+<table border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <thead>
+  <tr>
+   <td width=217 valign=top style='width:162.9pt;border:solid windowtext .5pt;
+   padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+   exactly'><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt'>Pentru
+   a vizualiza<o:p></o:p></span></b></p>
+   </td>
+   <td width=306 valign=top style='width:229.5pt;border:solid windowtext .5pt;
+   border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+   exactly'><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt'>Click/Comandã<o:p></o:p></span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr>
+  <td width=217 valign=top style='width:162.9pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Detaliile dintr-un grup</p>
+  </td>
+  <td width=306 valign=top style='width:229.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Controlul cu &quot;+&quot; de pe bara de nivel respectivã, sau</p>
+  <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Plasarea în grup si comanda <b style='mso-bidi-font-weight:normal'>Show
+  Detail</b> din submeniul afisat prin <b style='mso-bidi-font-weight:normal'>Group
+  and Outline</b> din meniul <b style='mso-bidi-font-weight:normal'>Data</b>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=217 valign=top style='width:162.9pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Un nivel</p>
+  </td>
+  <td width=306 valign=top style='width:229.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Simbolul de nivel respectiv</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=217 valign=top style='width:162.9pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Toate detaliile dintr-un outline</p>
+  </td>
+  <td width=306 valign=top style='width:229.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Simbolul de nivel corespunzãtor nivelului cel mai de jos (marcat cu
+  numãrul maxim de nivel)</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='line-height:14.0pt;mso-line-height-rule:exactly'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<div align=center>
+
+<table border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <thead>
+  <tr>
+   <td width=217 valign=top style='width:162.9pt;border:solid windowtext .5pt;
+   padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+   exactly'><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt'>Pentru
+   a ascunde<o:p></o:p></span></b></p>
+   </td>
+   <td width=306 valign=top style='width:229.5pt;border:solid windowtext .5pt;
+   border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+   exactly'><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt'>Click/Comandã<o:p></o:p></span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr>
+  <td width=217 valign=top style='width:162.9pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Detaliile dintr-un grup</p>
+  </td>
+  <td width=306 valign=top style='width:229.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Controlul cu &quot;–&quot; de pe bara de nivel respectivã, sau</p>
+  <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Plasarea în grup si comanda <b style='mso-bidi-font-weight:normal'>Hide
+  Detail</b> din submeniul afisat prin <b style='mso-bidi-font-weight:normal'>Group
+  and Outline</b> din meniul <b style='mso-bidi-font-weight:normal'>Data</b>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=217 valign=top style='width:162.9pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Un nivel</p>
+  </td>
+  <td width=306 valign=top style='width:229.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Simbolul de nivel precedent (de exemplu, pentru a ascunde nivelul 3
+  se actioneazã simbolul 2).</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=217 valign=top style='width:162.9pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Toate detaliile dintr-un outline</p>
+  </td>
+  <td width=306 valign=top style='width:229.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText style='text-indent:0in;line-height:14.0pt;mso-line-height-rule:
+  exactly'>Simbolul de nivel corespunzãtor nivelului cel mai de sus (marcat cu
+  numãrul minim de nivel).</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Este
+posibil sã se elimine gruparea corespunzãtoare unei bare de nivel prin</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+selectarea liniilor/coloanelor dorite,</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+comanda <b style='mso-bidi-font-weight:normal'>Group and Outline</b> din meniul
+<b style='mso-bidi-font-weight:normal'>Data</b></p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>–
+comanda <b style='mso-bidi-font-weight:normal'>Ungroup</b> din submeniul
+afisat.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'>Pentru
+eliminarea completã a unei trasãri se<span style="mso-spacerun: yes"> 
+</span>va utiliza comanda <b style='mso-bidi-font-weight:normal'>Clear Outline</b>
+din submeniul afisat prin comanda <b style='mso-bidi-font-weight:normal'>Group
+and Outline</b>. În acest mod se eliminã doar simbolurile de outline, fãrã
+stergerea detaliilor sau a liniilor/coloanelor totalizatoare.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1041" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:157.25pt;margin-top:6.15pt;width:197.25pt;
+ height:108.75pt;z-index:14;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:imagedata src="exoutline2.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/exoutline2.jpg"/>
+ <w:wrap type="square" side="largest" anchorx="page"/>
+</v:shape><![endif]--><![if !vml]><img width=263 height=145 src="exoutline2.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/exoutline2.jpg"
+align=right hspace=12 v:shapes="_x0000_s1041"><![endif]>În imaginea alãturatã
+se poate vedea efectul unor operatiuni de ascundere a detaliilor din outline-ul
+prezentat într-o imagine anterioarã. Sunt vizibile doar liniile/coloanelor
+totalizatoare si se observã transformarea barelor de nivel doar în butoanele
+care permit expandarea grupurilor.</p>
+
+<p class=MsoPlainText style='line-height:14.0pt;mso-line-height-rule:exactly'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>
