@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0044)http://www.netspec.com/helpdesk/wiredoc.html -->
+<HTML><HEAD><TITLE>Wiring Tutorial for 10BaseT Unshielded Twisted Pair (UTP)</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2800.1106" name=GENERATOR></HEAD>
+<BODY bgColor=#fefefe><PRE>Key words:
+        10BaseT - Unshielded Twisted Pair (UTP) - RJ45
+        110 Blocks - Category 5 - Level 5 - EIA 568B
+        Straight Through - Reversed - Cross-over 
+        MDI, MDI-X Hub Ports
+</PRE>
+<HR width="80%" noShade>
+
+<H3>Wiring Tutorial for 10BaseT Unshielded Twisted Pair (UTP)</H3>
+<P><FONT size=+1>O</FONT>ne of the most common and most puzzling problems a 
+network engineer/technician may face is what is the PROPER way to make up a 
+10BaseT cable. Usually, to confound the learning process, someone introduces the 
+need for a <I>reversed or cross-over</I> cable at the same time. What these are 
+and how to make them is the subject of this on-line tutorial. 
+<P><B>Selection of Cabling Category</B> 
+<P><FONT size=+1>S</FONT>ince the overwhelming bulk of network cabling done 
+today uses Unshielded Twisted Pair (UTP) wiring that is what we will discuss. 
+The process begins with the selection of the proper wiring level or category. 
+Today it is basically inexcusable to use or install anything at less than 
+<NOBR>Level V</NOBR> or <NOBR>Category 5</NOBR>. 
+<P>While technically <I>Category 5</I> and <I>Level V</I> are not the same, they 
+are identical in practice. Both support upto 100 megabit per second data 
+transmission, and their physical cable assembly requirements are the same. 
+Throughout this tutorial we will refer to them both as CAT5. 
+<P>When you order CAT5 unshielded twisted pair (UTP) cable you will receive a 
+cable containing 4 twisted pairs of wires, a total of 8 wires. The strands that 
+constitute each wire will either be a single strand or multiple strands, usually 
+referred to as <I>solid</I> or <I>flex</I>. Typically the solid is used to run 
+through walls and ceilings and the flex is used to make drop cables (the cable 
+from the wall plate to the desktop computer) and patch cables (the cable from 
+the patch panel to the hub). Whether the exterior portion of the cable that 
+contains the 4 twisted pairs, the jacket, is <I>Plenum grade</I> or 
+<I>Non-plenum grade</I> is very important, it refers to the Fire Codes, but is 
+outside the scope of this tutorial. 
+<P><B>Ordering Pairs</B> 
+<P>The pairs of wires in UTP cable are colored so that you can identify the same 
+wire at each end. Furthermore, they are usually color coded by pair so that the 
+pairs can also be identified from end to end. Typical CAT5 UTP cables contain 4 
+pairs made up of a solid color and the same solid color striped onto a white 
+background. The most common color scheme is the one that corresponds to the 
+Electronic Industry Association/Telecommunications Industry Association's 
+Standard 568B. 
+<P>The following table demonstrates the proper color scheme. 
+<CENTER>
+<TABLE width="80%" border=1 NOSHADE>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width="25%">Wire pair #1: 
+    <TD width="25%">White/Blue<BR>Blue 
+    <TD width="30%" rowSpan=4><IMG 
+      src="Cum se fac mufele!_files/cblpairs.gif"> 
+  <TR vAlign=top>
+    <TD>Wire pair #2: 
+    <TD>White/Orange<BR>Orange 
+  <TR vAlign=top>
+    <TD>Wire pair #3: 
+    <TD>White/Green<BR>Green 
+  <TR vAlign=top>
+    <TD>Wire pair #4: 
+    <TD>White/Brown<BR>Brown </TR></TBODY></TABLE></CENTER>
+<P><B>Connectors</B> 
+<P>The cable connectors and jacks that are most commonly used with CAT5 UTP 
+cables are RJ45. The RJ simply means <I>Registered Jack</I> and the <I>45</I> 
+designation specifies the pin numbering scheme. The connector is attached to the 
+cable and the jack is the device that the connector plugs into, whether it is in 
+the wall, the network interface card in the computer, or the hub. 
+<P>
+<P>Now that we are ready to insert the cable into the RJ45 plug the wire number 
+and color sequence becomes more complicated.</P>
+<P>The IEEE Specification for Ethernet 10BaseT requires that two twisted pairs 
+be used and that one pair is connected to pins 1 and 2, and that the second pair 
+is connected to pins 3 and 6. Yes that is right - pins 4 and 5 are skipped and 
+are connected to one of the remaining twisted pairs. </P>
+<P><I>According to the EIA/TIA-568B RJ-45 Wiring Scheme:</I></P>
+<P>It gets even more odd because wire Pair#2 (white/orange, orange) and Pair#3 
+(white/green, green) are the only two pairs used for 10BaseT data.</P>
+<CENTER>
+<TABLE cellSpacing=2 cellPadding=2 align=center border=4 COLSPEC="2">
+  <TBODY>
+  <TR>
+    <TD colSpan=2>Pair#2 is connected to pins 1 and 2 like this:</TD></TR>
+  <TR>
+    <TD>Pin 1 wire color: </TD>
+    <TD>white/orange</TD></TR>
+  <TR>
+    <TD>Pin 2 wire color:</TD>
+    <TD>orange</TD></TR>
+  <TR>
+    <TD colSpan=2>Pair#3 is connected to pins 3 and 6 like this:</TD></TR>
+  <TR>
+    <TD>Pin 3 wire color:</TD>
+    <TD>white/green</TD></TR>
+  <TR>
+    <TD>Pin 6 wire color:</TD>
+    <TD>green</TD></TR></B></TBODY></TABLE></CENTER>
+<P></P>
+<P></P>
+<P></P>The remaining two twisted pairs are connected as such: 
+<P></P>
+<P>
+<CENTER>
+<TABLE cellSpacing=2 cellPadding=2 align=center border=4 COLSPEC="2">
+  <TBODY>
+  <TR>
+    <TD colSpan=2>Pair#1</TD></TR>
+  <TR>
+    <TD>Pin 4 wire color:</TD>
+    <TD>blue</TD></TR>
+  <TR>
+    <TD>Pin 5 wire color:</TD>
+    <TD>white/blue</TD></TR>
+  <TR>
+    <TD colSpan=2>Pair#4</TD></TR>
+  <TR>
+    <TD>Pin 7 wire color:</TD>
+    <TD>white/brown</TD></TR>
+  <TR>
+    <TD>Pin 8 wire color:</TD>
+    <TD>brown</TD></TR></TBODY></TABLE></CENTER>
+<P>
+<P>This is illustrated in the following diagram: 
+<CENTER><IMG src="Cum se fac mufele!_files/cblordrd.gif"></CENTER>
+<P>
+<P>Now the wires forming the pairs must be gathered together and trimmed so that 
+they can be inserted into the RJ45 plug. The pairs gathered and trimmed is 
+illustrated in the following diagram: 
+<CENTER><IMG src="Cum se fac mufele!_files/cblflat.gif"></CENTER>
+<P>
+<P>Then when the pairs are inserted into the RJ45 plug they should look like 
+this: 
+<P>
+<CENTER><IMG src="Cum se fac mufele!_files/gdjack.gif"></CENTER>
+<P>
+<P>
+<HR width="80%" noShade>
+
+<P>
+<P>
+<CENTER><FONT size=+2>Crossover Cables</FONT></CENTER>
+<P>
+<P>In order to make what is commonly referred to as a "Crossover" cable one must 
+change the pinout connections on <B>ONE</B> end of the cable. If you do it on 
+both ends of the cable you have crossed-over the crossover and now have a 
+straight-through cable, albeit a very non-standard one. In this case two 
+negatives do make a positive. 
+<P>You need to make a cable where pins 1 &amp; 2 from one end are connected to 
+pins 3 &amp; 6 on the other end, and pins 3 &amp; 6 from the first end are 
+connected to pins 1 &amp; 2 on the other end. Pins 4 &amp; 5 and 7 &amp; 8 are 
+unchanged. 
+<P>
+<P>
+<P><PRE>The two ends look like this:
+
+     Standard End                          Crossover End
+
+       Pin 1 White/Orange                   Pin 1 White/Green
+
+       Pin 2 Orange                         Pin 2 Green
+
+       Pin 3 White/Green                    Pin 3 White/Orange
+
+       Pin 4 Blue                           Pin 4 Blue
+
+       Pin 5 White/Blue                     Pin 5 White/Blue
+
+       Pin 6 Green                          Pin 6 Orange
+
+       Pin 7 White/Brown                    Pin 7 White/Brown
+ 
+       Pin 8 Brown                          Pin 8 Brown
+
+</PRE>
+<P>
+<P>The following is the proper pin out and cable pair/color order for the 
+<BOLD>"crossover"</BOLD> end. 
+<P>
+<P>
+<P>
+<CENTER>
+<TABLE cellSpacing=2 cellPadding=2 align=center border=4 COLSPEC="2">
+  <TBODY>
+  <TR>
+    <TD colSpan=2>Pair#2 is connected to pins 1 and 2 like this:</TD></TR>
+  <TR>
+    <TD>Pin 1 wire color: </TD>
+    <TD>white/green </TD></TR>
+  <TR>
+    <TD>Pin 2 wire color:</TD>
+    <TD>green</TD></TR>
+  <TR>
+    <TD colSpan=2>Pair#3 is connected to pins 3 and 6 like this:</TD></TR>
+  <TR>
+    <TD>Pin 3 wire color:</TD>
+    <TD>white/orange</TD></TR>
+  <TR>
+    <TD>Pin 6 wire color:</TD>
+    <TD>orange</TD></TR></B></TBODY></TABLE></CENTER>
+<P></P>
+<P></P>The crossover pairs are illustrated in the following diagram: 
+<CENTER><IMG src="Cum se fac mufele!_files/xoverord.gif"></CENTER>
+<P>
+<P>Then when the pairs are inserted into the RJ45 plug they should look like 
+this: 
+<P>
+<CENTER><IMG src="Cum se fac mufele!_files/xoverjack.gif"></CENTER>
+<P>
+<P>
+<P>
+<P>Note: Even though we are only interested in attaching the connectors to the 
+cable in this tutorial, we must take into account the wiring of the jacks as 
+well so that we connect the proper wires from the cable to the proper pins in 
+the connectors. And that is determined by the wiring in the jack the connectors 
+will be plugged into. 
+<P>
+<P><I>Work in progress...</I> 
+<HR>
+Copyright 1996, Robert Kerr <A href="http://www.netspec.com/">NetSpec, 
+Inc.</A><BR>All Rights Reserved. </BODY></HTML>
