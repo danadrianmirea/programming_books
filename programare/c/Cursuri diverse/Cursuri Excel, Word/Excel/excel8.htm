@@ -1,0 +1,1571 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="filelist-8.xml" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/Excel8_files/filelist.xml">
+<link rel=Edit-Time-Data href="tppmsgs/msgs1.htm#102" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/Excel8_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Validarea datelor si expertiza foii de calcul</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Valentin Clocotici</o:Author>
+  <o:LastAuthor>Valentin Clocotici</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>496</o:TotalTime>
+  <o:Created>1997-06-14T14:07:00Z</o:Created>
+  <o:LastSaved>1997-06-14T14:07:00Z</o:LastSaved>
+  <o:Pages>8</o:Pages>
+  <o:Words>3146</o:Words>
+  <o:Characters>17937</o:Characters>
+  <o:Company>Informatica</o:Company>
+  <o:Lines>149</o:Lines>
+  <o:Paragraphs>35</o:Paragraphs>
+  <o:CharactersWithSpaces>22027</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DrawingGridHorizontalSpacing>3.6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>3.6 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:DrawingGridHorizontalOrigin>84.95 pt</w:DrawingGridHorizontalOrigin>
+  <w:DrawingGridVerticalOrigin>99.35 pt</w:DrawingGridVerticalOrigin>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:16792199 0 0 0 65791 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l0 level1 lfo1;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	color:darkred;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l0 level2 lfo2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	color:darkblue;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	mso-list:l0 level3 lfo3;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	color:darkgreen;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	mso-list:l0 level4 lfo4;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	color:darkcyan;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	mso-list:l0 level5 lfo5;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+h6
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	mso-list:l0 level6 lfo6;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	mso-list:l0 level7 lfo7;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	mso-list:l0 level8 lfo8;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	mso-list:l0 level9 lfo9;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{margin-top:0in;
+	margin-right:1.0in;
+	margin-bottom:6.0pt;
+	margin-left:1.0in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.ecuatie, li.ecuatie, div.ecuatie
+	{mso-style-name:ecuatie;
+	mso-style-next:Normal;
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-indent:.5in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.ecuatienum, li.ecuatienum, div.ecuatienum
+	{mso-style-name:ecuatie_num;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.figura, li.figura, div.figura
+	{mso-style-name:figura;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.functie, li.functie, div.functie
+	{mso-style-name:functie;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.IO, li.IO, div.IO
+	{mso-style-name:IO;
+	mso-style-parent:"Plain Text";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	letter-spacing:1.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.Observatie, li.Observatie, div.Observatie
+	{mso-style-name:Observatie;
+	mso-style-parent:"Block Text";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:.5in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.parafttab, li.parafttab, div.parafttab
+	{mso-style-name:par_aft_tab;
+	mso-style-next:"Plain Text";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.parbeftab, li.parbeftab, div.parbeftab
+	{mso-style-name:par_bef_tab;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.parbettab, li.parbettab, div.parbettab
+	{mso-style-name:par_bet_tab;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.PlainTextexpanded, li.PlainTextexpanded, div.PlainTextexpanded
+	{mso-style-name:"Plain Text expanded";
+	mso-style-parent:"Plain Text";
+	mso-style-next:"Plain Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.primul, li.primul, div.primul
+	{mso-style-name:primul;
+	mso-style-parent:"Plain Text";
+	mso-style-next:"Plain Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.zona, li.zona, div.zona
+	{mso-style-name:zona;
+	mso-style-parent:"Plain Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.25in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.codVBA, li.codVBA, div.codVBA
+	{mso-style-name:codVBA;
+	mso-style-parent:primul;
+	mso-style-next:primul;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:601911388;
+	mso-list-template-ids:1356081294;}
+@list l0:level1
+	{mso-level-start-at:3;
+	mso-level-number-format:roman-upper;
+	mso-level-style-link:"Heading 1";
+	mso-level-suffix:space;
+	mso-level-text:"Capitolul %1";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level2
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 2";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level3
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 3";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level4
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 4";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level5
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 5";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level6
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 6";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level7
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 7";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level8
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 8";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level9
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 9";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050" strokecolor="#f60">
+  <v:stroke endarrow="open" color="#f60"/>
+  <v:textbox inset=",0,,0"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1 style='mso-list:none'>Validarea datelor si expertiza foii de calcul</h1>
+
+<p class=primul>Prin validarea datelor întelegem procedurile activate
+astfel încât în anumite celule s&atilde; nu se poat&atilde; introduce decât date
+care îndeplinesc conditii impuse. Procesul este local pentru fiecare
+celul&atilde; si poate asigura atât afisarea unui mesaj de ajutor la
+activarea celulei, cât si afisarea unui mesaj de eroare dac&atilde; s-a
+completat o valoare neacceptabil&atilde;.</p>
+
+<p class=MsoPlainText>Prin expertiza (<i style='mso-bidi-font-style:normal'>auditing</i>)
+foii de calcul întelegem procedurile care permit vizualizarea structurilor
+de dependent&atilde; de tip functii–argumente, localizarea valorilor de
+tip eroare etc.</p>
+
+<h2 style='margin-left:0in;text-indent:0in'>Validarea datelor</h2>
+
+<p class=primul>Restrictiile care pot fi impuse pentru continutul
+unei celule se refer&atilde; la</p>
+
+<p class=MsoPlainText>– tipul datei (întreg, zecimal, text etc.);</p>
+
+<p class=MsoPlainText>– limite între care pot fi valorile numerice sau de tip
+dat&atilde; calendaristic&atilde;;</p>
+
+<p class=MsoPlainText>– lungimea unui text;</p>
+
+<p class=MsoPlainText>– formule de validare (utilizate mai ales atunci când
+celula constituie argument pentru un alt calcul, care trebuie s&atilde;
+produc&atilde; un rezultat de o anumit&atilde; magnitudine).</p>
+
+<p class=MsoPlainText>Dup&atilde; introducerea datelor si efectuarea calculelor,
+se poate efectua o expertiz&atilde; a foii pentru a localiza si corecta
+datele eronate.</p>
+
+<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'>Observatie</b>.
+Dac&atilde; documentul este partajat nu se pot modifica restrictiile
+existente sau ad&atilde;uga noi restrictii.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Restrictii pentru datele
+numerice</h3>
+
+<p class=primul>Acestea pot fi impuse pentru valori numerice sau de tip
+calendaristic. </p>
+
+<p class=MsoPlainText>1. Se selecteaz&atilde; celule pentru care se definesc
+restrictiile.</p>
+
+<p class=MsoPlainText><!--[if gte vml 1]><o:wrapblock><v:shapetype id="_x0000_t75"
+  coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+  filled="f" stroked="f">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas>
+  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t"/>
+ </v:shapetype><v:shape id="_x0000_s1026" type="#_x0000_t75" style='position:absolute;
+  left:0;text-align:left;margin-left:99.2pt;margin-top:0;width:254.25pt;
+  height:188.25pt;z-index:1;mso-wrap-distance-top:7.2pt;
+  mso-wrap-distance-bottom:7.2pt' o:allowincell="f">
+  <v:imagedata src="tppmsgs/msgs1.htm#104" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/datavalidset.jpg"/>
+  <w:wrap type="topAndBottom" side="largest"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=132 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=339 height=251 src="datavalidset-1.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/datavalidset.jpg" v:shapes="_x0000_s1026"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+2. Se d&atilde; comanda <b style='mso-bidi-font-weight:normal'>Validation</b> din
+meniul <b style='mso-bidi-font-weight:normal'>Data</b> si se
+activeaz&atilde; fisa <b style='mso-bidi-font-weight:normal'>Settings</b> a
+dialogului afisat. Dialogul este prezentat în figura urm&atilde;toare.</p>
+
+<p class=MsoPlainText>3. În lista <b style='mso-bidi-font-weight:normal'>Allow</b>
+se selecteaz&atilde; tipul de dat&atilde; numeric&atilde; impus: <i style='mso-bidi-font-style:
+normal'>Whole number</i> – num&atilde;r întreg, <i style='mso-bidi-font-style:
+normal'>Decimal</i> – num&atilde;r zecimal, <i style='mso-bidi-font-style:normal'>Date</i>
+– dat&atilde; calendaristic&atilde;, <i style='mso-bidi-font-style:normal'>Time</i>
+– dat&atilde; orar&atilde;.</p>
+
+<p class=MsoPlainText>4. În lista <b style='mso-bidi-font-weight:normal'>Data</b>
+se alege operatorul utilizat la validare (numere între anumite limite, mai mici
+decât, mai mari decât etc.). În functie de operatorul selectat se
+completeaz&atilde; zonele care urmeaz&atilde; (în figur&atilde; <b style='mso-bidi-font-weight:
+normal'>Minimum</b> si <b style='mso-bidi-font-weight:normal'>Maximum</b>
+deoarece s-a ales operatorul <i style='mso-bidi-font-style:normal'>between</i>).
+Aceste zone pot s&atilde; contin&atilde; valori, referinte de celule care
+contin valorile, formule.</p>
+
+<p class=MsoPlainText>Dac&atilde; se permite ca în celula procesat&atilde; s&atilde;
+poat&atilde; ap&atilde;rea blancuri sau se indic&atilde; limite care fac
+referint&atilde; la celule initial goale, atunci se va marca zona <b
+style='mso-bidi-font-weight:normal'>Ignore blank</b>. Dac&atilde; se doreste
+ca restrictiile impuse unei celule goale s&atilde; o trateze ca si cum
+ar contine zero, atunci se anuleaz&atilde; marcajul din <b style='mso-bidi-font-weight:
+normal'>Ignore blank</b>.</p>
+
+<p class=MsoPlainText><!--[if gte vml 1]><v:shape id="_x0000_s1027" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:.95pt;
+ width:186.75pt;height:152.25pt;z-index:2;mso-position-horizontal:right'
+ o:allowincell="f">
+ <v:imagedata src="tppmsgs/msgs1.htm#106" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/datavalidinpmess.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=249 height=203
+src="datavalidinpmess-1.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/datavalidinpmess.jpg" align=right hspace=12 v:shapes="_x0000_s1027"><![endif]>5.
+Pentru afisarea unui mesaj de ajutor/atentionare la activarea unei
+celule pentru care se definesc restrictiile se activeaz&atilde; fisa <b
+style='mso-bidi-font-weight:normal'>Input Message</b> a dialogului <b
+style='mso-bidi-font-weight:normal'>Data Validation</b>.</p>
+
+<p class=MsoPlainText>Marcarea controlului <b style='mso-bidi-font-weight:normal'>Show
+input message when cell is selected</b> produce afisarea mesajului înscris
+în zona Input message. Acesta este afisat fie ca caset&atilde; de tip balon
+lâng&atilde; <b style='mso-bidi-font-weight:normal'>Office Assistant</b>, fie ca
+o caset&atilde; al&atilde;turat&atilde; celulei, doar când aceasta este activ&atilde;.
+Titlul dat în zona <b style='mso-bidi-font-weight:normal'>Title</b> identific&atilde;
+mesajul si este afisat o dat&atilde; cu textul acestuia.</p>
+
+<p class=MsoPlainText>6. Pentru afisarea unui mesaj de eroare, în cazul
+când în celul&atilde; s-a introdus o valoare care nu respect&atilde;
+restrictia impus&atilde;, se activeaz&atilde; fisa <b style='mso-bidi-font-weight:
+normal'>Error Alert</b> a dialogului <b style='mso-bidi-font-weight:normal'>Data
+Validation</b>.</p>
+
+<p class=MsoPlainText><!--[if gte vml 1]><v:shape id="_x0000_s1028" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:5.45pt;
+ width:207.75pt;height:157.5pt;z-index:3;mso-position-horizontal:right'
+ o:allowincell="f">
+ <v:imagedata src="tppmsgs/msgs1.htm#108" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/datavaliderr.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=277 height=210
+src="datavaliderr-1.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/datavaliderr.jpg" align=right hspace=12 v:shapes="_x0000_s1028"><![endif]>Controlul
+<b style='mso-bidi-font-weight:normal'>Show error alert…</b> se marcheaz&atilde;
+dac&atilde; se doreste afisarea mesajului în cazul existentei unei
+erori,</p>
+
+<p class=MsoPlainText>În lista <b style='mso-bidi-font-weight:normal'>Style</b>
+se alege iconita dorit&atilde; (<i style='mso-bidi-font-style:normal'>Stop</i>
+etc.), imaginea selectat&atilde; fiind ar&atilde;tat&atilde; sub list&atilde;. Efectul
+unei alegeri este explicat în continuare.</p>
+
+<p class=MsoPlainText>Prin selectarea stilului <b style='mso-bidi-font-weight:
+normal'>Stop</b> se afiseaz&atilde; un mesaj cu butoanele <i
+style='mso-bidi-font-style:normal'>Retry</i>, care permite întoarcerea la
+editarea celulei, si <i style='mso-bidi-font-style:normal'>Cancel</i>.</p>
+
+<p class=MsoPlainText>Pentru afisarea unui mesaj de informare, care are
+butoanele <i style='mso-bidi-font-style:normal'>OK</i> si <i
+style='mso-bidi-font-style:normal'>Cancel</i> se alege <b style='mso-bidi-font-weight:
+normal'>Information</b>.</p>
+
+<p class=MsoPlainText>Pentru afisarea unui mesaj de atentionare cu textul
+&quot;Continue?&quot; urmat de butoanele <i style='mso-bidi-font-style:normal'>Yes</i>,
+<i style='mso-bidi-font-style:normal'>No</i> si <i style='mso-bidi-font-style:
+normal'>Cancel</i> se alege <b style='mso-bidi-font-weight:normal'>Warning</b>.</p>
+
+<p class=MsoPlainText>Butoanele <i style='mso-bidi-font-style:normal'>OK</i>
+si <i style='mso-bidi-font-style:normal'>Yes</i> accept&atilde; data
+introdus&atilde;, butonul <i style='mso-bidi-font-style:normal'>No</i> nu
+accept&atilde; data si las&atilde; celula în starea de editare iar <i
+style='mso-bidi-font-style:normal'>Cancel</i> reface starea precedent&atilde; a
+celulei.</p>
+
+<p class=MsoPlainText>Se pare c&atilde; mesajul de eroare nu este afisat
+dac&atilde; o dat&atilde; eronat&atilde; este produs&atilde; printr-o
+formul&atilde; sau este plasat&atilde; de un macro.</p>
+
+<p class=MsoPlainText>În zona <b style='mso-bidi-font-weight:normal'>Title</b>
+se trece titlul mesajului de eroare, textul acestuia introducându-se în
+zona editabil&atilde; <b style='mso-bidi-font-weight:normal'>Error message</b>.</p>
+
+<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'>Observatii</b>.
+– Specificarea restrictiilor nu afecteaz&atilde; formatarea celulelor.</p>
+
+<p class=MsoPlainText>– Formulele specificate pentru limitele valorilor pot
+evalua doar date din celule ale aceleeasi foi de calcul. Pentru a utiliza
+date din alte foi sau caiete se vor introduce în foaia activ&atilde;
+referinte la aceste date (prin crearea unei formule simple de genul
+=referinta) sau se creeaz&atilde; în foaia activ&atilde; un nume pentru datele
+externe utilizate.</p>
+
+<p class=MsoPlainText>– Formulele definite nu pot utiliza constante tablouri.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Limitarea intr&atilde;rilor doar la
+elementele unei liste</h3>
+
+<p class=primul>Se poate impune restrictia ca valorile dintr-o
+celul&atilde; s&atilde; apartin&atilde; unei liste predefinite prin:</p>
+
+<p class=MsoPlainText>1. Pe aceeasi foaie de calcul se creeaz&atilde; lista
+cu intr&atilde;rile permise, lista fiind organizat&atilde; pe linie sau pe
+coloan&atilde;, f&atilde;r&atilde; elemente vide.</p>
+
+<p class=MsoPlainText>2. Se selecteaz&atilde; celulele pentru care se
+defineste restrictia.</p>
+
+<p class=MsoPlainText>3. Se d&atilde; comanda uzual&atilde; <b style='mso-bidi-font-weight:
+normal'>Validation</b> din meniul <b style='mso-bidi-font-weight:normal'>Data</b>
+si se activeaz&atilde; fisa <b style='mso-bidi-font-weight:normal'>Settings</b>.</p>
+
+<p class=MsoPlainText>4. În lista derulant&atilde; <b style='mso-bidi-font-weight:
+normal'>Allow</b> se alege <b style='mso-bidi-font-weight:normal'>List</b>.</p>
+
+<p class=MsoPlainText>5. În zona <b style='mso-bidi-font-weight:normal'>Source</b>
+se introduce o referint&atilde; la lista cu intr&atilde;rile permise. Pentru
+ca la activarea unei celule s&atilde; se activeze o list&atilde; derulant&atilde; din
+care se alege valoarea, se va marca zona de control <b style='mso-bidi-font-weight:
+normal'>In-cell dropdown</b> (care va ap&atilde;rea în dialog sub zona <b
+style='mso-bidi-font-weight:normal'>Ignore blank</b>)</p>
+
+<p class=MsoPlainText>6. Pentru mesajele de ajutor si de eroare se vor
+efectua etapele 5 si 6 expuse în sectiunea <i style='mso-bidi-font-style:
+normal'>Restrictii privind datele numerice</i>.</p>
+
+<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'>Observatii</b>.
+– Dac&atilde; lista are putine intr&atilde;ri, acestea pot fi introduse direct
+în caseta Source, desp&atilde;rtind intr&atilde;rile prin caracterul
+recunoscut de <b style='mso-bidi-font-weight:normal'>Windows</b> drept
+separator de list&atilde; (de regul&atilde; &quot;,&quot;).</p>
+
+<p class=MsoPlainText>– Dac&atilde; lista de intr&atilde;ri valabile se poate modifica,
+atunci se recomand&atilde; denumirea ei si trecerea numelui listei în zona <b
+style='mso-bidi-font-weight:normal'>Source</b>.</p>
+
+<p class=MsoPlainText>– Dac&atilde; lista de intr&atilde;ri se afl&atilde; în
+alt&atilde; foaie de calcul sau în alt caiet, atunci se defineste în foaia
+curent&atilde; un nume pentru lista extern&atilde; si se utilizeaz&atilde; acest
+nume în zona <b style='mso-bidi-font-weight:normal'>Source</b>.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Limitarea num&atilde;rului de
+caractere</h3>
+
+<p class=primul>Desi este caracteristic&atilde; datelor de tip text,
+limitarea num&atilde;rului de caractere poate fi utilizat&atilde; si pentru
+alte tipuri de date.</p>
+
+<p class=MsoPlainText>1. Se selecteaz&atilde; celule pentru care se definesc
+restrictiile.</p>
+
+<p class=MsoPlainText>2. Se d&atilde; comanda <b style='mso-bidi-font-weight:
+normal'>Validation</b> din meniul <b style='mso-bidi-font-weight:normal'>Data</b>
+si se activeaz&atilde; fisa <b style='mso-bidi-font-weight:normal'>Settings</b>
+a dialogului afisat.</p>
+
+<p class=MsoPlainText>3. În lista <b style='mso-bidi-font-weight:normal'>Allow</b>
+se selecteaz&atilde; <b style='mso-bidi-font-weight:normal'>Text Length</b>.</p>
+
+<p class=MsoPlainText>4. În lista <b style='mso-bidi-font-weight:normal'>Data</b>
+se alege operatorul dorit si se completeaz&atilde; apoi num&atilde;rul minim
+de caractere, num&atilde;rul maxim de caractere, potrivit operatorului selectat.
+Prin selectarea casetei de control <b style='mso-bidi-font-weight:normal'>Ignore
+blank</b> nu se verific&atilde; restrictia pentru celulele goale sau
+dac&atilde; asemenea celule sunt referite în definirea limitelor.</p>
+
+<p class=MsoPlainText>5. Pentru mesajele de ajutor si de eroare se vor
+efectua etapele 5 si 6 expuse în sectiunea <i style='mso-bidi-font-style:
+normal'>Restrictii privind datele numerice</i>.</p>
+
+<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'>Observatii</b>.
+– Pentru a permite ca o celul&atilde; s&atilde; contin&atilde; texte de orice
+lungime se poate selecta operatorul greather than or equal în <b
+style='mso-bidi-font-weight:normal'>Data</b> si specifica 0 în <b
+style='mso-bidi-font-weight:normal'>Minimum</b>.</p>
+
+<p class=MsoPlainText>– Prin impunerea unei restrictii asupra num&atilde;rului
+de caractere nu se afecteaz&atilde; formatarea celulei.</p>
+
+<p class=MsoPlainText>– Dac&atilde; într-o celul&atilde; cu restrictie
+asupra num&atilde;rului de caractere se introduce o formul&atilde;, verificarea are
+loc pentru rezultatul formulei si nu pentru lungimea formulei.</p>
+
+<p class=MsoPlainText>– Pentru utilizarea în stabilirea limitelor a unor
+informatii externe foii curente se va vedea observatia
+corespunz&atilde;toare din sectiunea <i style='mso-bidi-font-style:normal'>Restrictii
+privind datele numerice</i>.</p>
+
+<p class=MsoPlainText>– Nu se pot utiliza constante tablou în formulele care
+dau limitele num&atilde;rului de caractere.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Restrictii introduse printr-o
+formul&atilde;</h3>
+
+<p class=primul>Pentru cazurile complexe în care intrarea dintr-o
+celul&atilde; trebuie s&atilde; fie în concordant&atilde; cu alte valori din
+foaia de calcul se poate defini o restrictie prin stabilirea unei formule,
+care s&atilde; produc&atilde; valoarea logic&atilde; TRUE atunci când valoarea
+introdus&atilde; satisface cerintele globale ale foii de calcul.</p>
+
+<p class=MsoPlainText>1. Se selecteaz&atilde; celule pentru care se definesc
+restrictiile.</p>
+
+<p class=MsoPlainText>2. Se d&atilde; comanda <b style='mso-bidi-font-weight:
+normal'>Validation</b> din meniul <b style='mso-bidi-font-weight:normal'>Data</b>
+si se activeaz&atilde; fisa <b style='mso-bidi-font-weight:normal'>Settings</b>
+a dialogului afisat.</p>
+
+<p class=MsoPlainText>3. În lista <b style='mso-bidi-font-weight:normal'>Allow</b>
+se selecteaz&atilde; <b style='mso-bidi-font-weight:normal'>Custom</b>.</p>
+
+<p class=MsoPlainText>4. În zona editabil&atilde; <b style='mso-bidi-font-weight:
+normal'>Formula</b> se introduce formula care produce o valoare logic&atilde;
+(TRUE sau FALSE). Intr&atilde;rile din celule cu aceast&atilde; restrictie nu
+sunt acceptate în cazul obtinerii valorii FALSE.</p>
+
+<p class=MsoPlainText>5. Se marcheaz&atilde; zona <b style='mso-bidi-font-weight:
+normal'>Ignore blank</b> atunci când verificarea nu se efectueaz&atilde; pentru
+celulele goale sau când formula face referint&atilde; la o celul&atilde;
+goal&atilde;. </p>
+
+<p class=MsoPlainText>6. Pentru mesajele de ajutor si de eroare se vor
+efectua etapele 5 si 6 expuse în sectiunea <i style='mso-bidi-font-style:
+normal'>Restrictii privind datele numerice</i>.</p>
+
+<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'>Observatii</b>.
+– Formulele se introduc în mod uzual (cu caracterul =).</p>
+
+<p class=MsoPlainText>– Microsoft Excel recalculeaz&atilde; foaia înainte de
+evaluarea formulei.</p>
+
+<p class=MsoPlainText>– Pentru utilizarea în stabilirea limitelor a unor
+informatii externe foii curente se va vedea observatia
+corespunz&atilde;toare din sectiunea <i style='mso-bidi-font-style:normal'>Restrictii
+privind datele numerice</i>.</p>
+
+<p class=MsoPlainText>– Nu se pot utiliza constante tablou.</p>
+
+<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'>Exemplu</b>.
+Dac&atilde; în foaia de calcul exist&atilde; dou&atilde; celule denumite data_init
+si data_sfir (reprezentând data de început si data desfârsit a
+unei lucr&atilde;ri), atunci completarea unei celule denumite data_ex
+(reprezentând data de executie a unei faze) poate fi supus&atilde;
+restrictiei prin formula
+&quot;=AND(data_ex&gt;=data_init,data_ex&lt;=data_sfir)&quot;, acceptându-se
+doar date cuprinse între limitele impuse.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Modificarea parametrilor de
+validare</h3>
+
+<p class=primul>Dup&atilde; stabilirea restrictiilor si a mesajelor
+pentru o celul&atilde;, acestea pot fi modificate prin parcurgerea etapelor
+urm&atilde;toare (similare de fapt repet&atilde;rii procesului, noile valori
+înlocuindu-le pe cele existente).</p>
+
+<p class=MsoPlainText>1. Se ridic&atilde; partajarea caietului (dac&atilde; este
+cazul).</p>
+
+<p class=MsoPlainText>2. Se selecteaz&atilde; celula pentru care se modific&atilde;
+validarea.</p>
+
+<p class=MsoPlainText>3. Se d&atilde; comanda <b style='mso-bidi-font-weight:
+normal'>Validation</b> din meniul <b style='mso-bidi-font-weight:normal'>Data</b>.</p>
+
+<p class=MsoPlainText>4. Se modific&atilde;, pe toate fisele, optiunile
+dorite.</p>
+
+<p class=MsoPlainText>5. Dac&atilde; se doreste ca aceeasi modificare
+s&atilde; fie efectuat&atilde; pentru toate celulele care au aceleasi
+restrictii si mesaje ca si celula curent&atilde;, se va marca zona
+de control <b style='mso-bidi-font-weight:normal'>Apply these changes to all
+other cells with the same settings</b> de pe fisa <b style='mso-bidi-font-weight:
+normal'>Settings</b>.</p>
+
+<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'>Observatie</b>.
+Într-un caiet protejat, chiar dac&atilde; se deblocheaz&atilde; anumite
+celule, restrictiile si mesajele definite pentru acestea nu pot fi
+modificate.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Copierea restrictiilor si
+mesajelor</h3>
+
+<p class=primul>Dac&atilde; validarea efectuat&atilde; pentru o celul&atilde; trebuie
+repetat&atilde; pentru alte celule (de mentionat c&atilde; o selectie
+multipl&atilde; de celule permite stabilirea conditiilor de validare pentru
+întreaga selectie), operatiunea se poate realiza prin procedeul de
+alipire special&atilde;. </p>
+
+<p class=MsoPlainText>1. Se activeaz&atilde; celula care are restrictiile
+si mesajele necesare si se d&atilde; comanda <b style='mso-bidi-font-weight:
+normal'>Copy</b> din meniul <b style='mso-bidi-font-weight:normal'>Edit</b>.</p>
+
+<p class=MsoPlainText>2. Se selecteaz&atilde; celule destinatie.</p>
+
+<p class=MsoPlainText>3. Se d&atilde; comanda <b style='mso-bidi-font-weight:
+normal'>Paste</b> <b style='mso-bidi-font-weight:normal'>Special</b> din meniul
+<b style='mso-bidi-font-weight:normal'>Edit</b>.</p>
+
+<p class=MsoPlainText>4. Se selecteaz&atilde; în grupul <b style='mso-bidi-font-weight:
+normal'>Paste</b> optiunea <b style='mso-bidi-font-weight:normal'>Validation</b>.</p>
+
+<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'>Observatie</b>.
+Prin copierea total&atilde; (optiunea de copiere <b style='mso-bidi-font-weight:
+normal'>All</b> sau <b style='mso-bidi-font-weight:normal'>All except borders</b>)
+se copie de asemenea si restrictiile. Datele deja existente în
+celulele destinatie nu sunt verificate automat cu noile restrictii.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Localizarea celulelor care au
+restrictii sau mesaje</h3>
+
+<p class=primul>Pentru localizarea celulelor care au atasate
+restrictii sau mesaje de validare se utilizeaz&atilde; mecanismul <b
+style='mso-bidi-font-weight:normal'>Go To</b> din meniul <b style='mso-bidi-font-weight:
+normal'>Edit</b>.</p>
+
+<p class=MsoPlainText>1. Pentru localizarea celulelor cu un anumit tip de
+validare se selecteaz&atilde; o celul&atilde; care are tipul respectiv de validare.
+Dac&atilde; se doreste localizarea tuturor celulelor cu restrictii
+indiferent de tipul acestora se activeaz&atilde; doar foaia respectiv&atilde;.</p>
+
+<p class=MsoPlainText>2. Se d&atilde; comanda <b style='mso-bidi-font-weight:
+normal'>Go To</b> din meniul <b style='mso-bidi-font-weight:normal'>Edit</b>.</p>
+
+<p class=MsoPlainText>3. Se actioneaz&atilde; butonul <b style='mso-bidi-font-weight:
+normal'>Special</b> si se marcheaz&atilde; <b style='mso-bidi-font-weight:
+normal'>Data Validation</b>.</p>
+
+<p class=MsoPlainText>4. În subgrupul de optiuni care devine activ, pentru
+localizarea oric&atilde;rei restrictii sau mesaj de validare se alege <b
+style='mso-bidi-font-weight:normal'>All</b> iar pentru localizarea celulelor
+care au aceeasi validare cu celula activ&atilde; se alege <b
+style='mso-bidi-font-weight:normal'>Same</b>.</p>
+
+<h2 style='margin-left:0in;text-indent:0in'>Expertizarea unei foi de calcul</h2>
+
+<p class=primul><!--[if gte vml 1]><v:shape id="_x0000_s1030" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:41.2pt;
+ width:230.25pt;height:87.75pt;z-index:4;mso-position-horizontal:right'>
+ <v:imagedata src="tppmsgs/msgs1.htm#109" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/toolsaudit.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=307 height=117 src="toolsaudit-1.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/toolsaudit.jpg"
+align=right hspace=12 v:shapes="_x0000_s1030"><![endif]>Prin expertizarea foii
+de calcul întelegem operatiunile efectuate pentru identificarea
+intr&atilde;rilor incorecte si evidentierea structurilor de
+dependent&atilde; (celule care depind de valorile altor celule sau celule
+care furnizeaz&atilde; argumente pentru functii din alte celule). Comanda
+principal&atilde; este <b>Auditing</b> din meniul <b>Tools</b> care produce
+afisarea submeniului prezentat în figura al&atilde;turat&atilde;.</p>
+
+<p class=MsoPlainText>Comenzile submeniului sunt ex­pli­ca­te în
+sectiunile urm&atilde;toare, o dat&atilde; cu operatiunile asociate.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Bara de unelte <b>Auditing<o:p></o:p></b></h3>
+
+
+<br style='mso-ignore:vglayout' clear=ALL>
+<p class=primul>Activarea barei de unelte <b>Auditing</b> se efectueaz&atilde; prin comanda <b>Show
+Auditing Toolbar</b> din submeniul afisat la comanda <b>Auditing</b> din
+meniul <b>Tools</b>. Instrumentele <b>Auditing</b> sunt prezentate în figura
+urm&atilde;toare, operatiunile efectuate fiind explicate si în
+sectiunile corespun­z&atilde;­toare.</p>
+
+<p>
+<img width=457 height=161 src="image001-2.gif" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/Excel8_files/image001.gif">
+</p>
+
+<p class=MsoPlainText>Este de remarcat c&atilde; într-o foaie
+protejat&atilde; nu sunt disponibile comenzile de audit.</p>
+
+<p class=zona><i>Trace Precedents</i> – Traseaz&atilde; s&atilde;geti de la
+celulele care furnizeaz&atilde; valori c&atilde;tre formula din celula activ&atilde;.
+Pentru vizualizarea tuturor nivelelor de precedent&atilde; se actioneaz&atilde;
+butonul <b>Trace Precedents</b> de dou&atilde; ori. Celula activ&atilde;
+contine formula care se examineaz&atilde;.</p>
+
+<p class=zona><i>Remove Precedent Arrows</i> – Elimin&atilde; s&atilde;getile
+de precedent&atilde; create prin <b>Trace Precedents</b>.</p>
+
+<p class=zona><i>Trace Dependents </i>– Traseaz&atilde; s&atilde;geti de la
+celula activ&atilde; la celulele care contin formule care depind de celula
+activ&atilde;. Pentru trasarea tuturor nivelelor de dependent&atilde; se
+actioneaz&atilde; <b>Trace Dependents</b> de dou&atilde; ori.</p>
+
+<p class=zona><i>Remove Dependent Arrows</i> – Elimin&atilde; s&atilde;getile
+de dependent&atilde; create prin <b>Trace Dependents</b>.</p>
+
+<p class=zona><i>Remove All Arrows</i> – Elimin&atilde; toate s&atilde;getile de
+precedent&atilde;/dependent&atilde; trasate în foaia de calcul.</p>
+
+<p class=zona><i>Trace Error</i> – În cazul când celula activ&atilde;
+contine o valoare de eroare #VALUE sau #DIV/0 traseaz&atilde;
+s&atilde;geti la celula activ&atilde; din celulele care cauzeaz&atilde; eroarea.</p>
+
+<p class=zona><i>New Comment</i> – Insereaz&atilde; un nou comentariu în celula
+activ&atilde;.</p>
+
+<p class=zona><i>Circle Invalid Data</i> – Identific&atilde; si
+marcheaz&atilde; prin încercuire celulele care contin valori în afara
+limitelor stabilite la validarea datelor (comanda <b>Validation</b> din meniul <b>Data</b>).</p>
+
+<p class=zona><i>Clear Validation Circles</i> – Elimin&atilde; marcajele de
+celule create prin <b>Circle Invalid Data</b>.</p>
+
+<p class=MsoNormal>Observatie. Butoanele barei de unelte Auditing sunt
+inaccesibile dac&atilde; este activ&atilde; optiunea <b>Hide all</b>
+aflat&atilde; pe fisa <b>View</b> a dialogului <b>Options</b> (meniul <b>Tools</b>).
+S&atilde;getile trasate sunt obiecte grafice si nu pot fi afisate
+dac&atilde; obiectele grafice sunt ascunse. Pentru afisare trebuie s&atilde;
+fie selectat&atilde; optiunea <b>Show All </b>sau <b>Show Placeholders</b>
+de pe fisa amintit&atilde;.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Identificarea valorilor incorecte</h3>
+
+<p class=primul>Când se analizeaz&atilde; o foaie de calcul pentru determinarea
+intr&atilde;rilor incorecte, Microsoft Excel identific&atilde; valorile care nu
+satisfac restrictiile definite pentru celule prin comanda <b>Validation</b>
+(meniul <b>Data</b>). Sunt identificate astfel valorile tastate direct de
+utilizator sau introduse prin program (de c&atilde;tre macro-uri) si
+valorile care devin incorecte datorit&atilde; calculelelor unor formule.</p>
+
+<p class=MsoPlainText>Pentru identificarea automat&atilde; a valorilor incorecte
+se parcurg etapele urm&atilde;toare.</p>
+
+<p class=MsoPlainText>1. Se afiseaz&atilde; bara de unelte <b>Auditing</b>
+prin <b>Tools</b>–<b>Auditing</b>–<b>Show Auditing Toolbar</b>.</p>
+
+<p class=MsoPlainText><!--[if gte vml 1]><v:shape id="_x0000_s1051" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:8.75pt;
+ width:81.75pt;height:54pt;z-index:6;mso-position-horizontal:right'>
+ <v:imagedata src="tppmsgs/msgs1.htm#112" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/auditexemp1.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=109 height=72 src="auditexemp1-1.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/auditexemp1.jpg"
+align=right hspace=12 v:shapes="_x0000_s1051"><![endif]>2. Se
+actioneaz&atilde; butonul <b>Circle Invalid Data</b>.</p>
+
+<p class=MsoPlainText>Pe foaia de calcul, celulele care contin valori
+neconforme restrictiilor impuse apar încercuite, dup&atilde; cum este
+ar&atilde;tat în figura al&atilde;turat&atilde;.</p>
+
+<p class=MsoPlainText><b>Observatii</b>. – Sunt marcate concomitent cel
+mult 255 de celule cu date incorecte. Dac&atilde; foaia de calcul contine
+mai mult de 255 de astfel de celule, dup&atilde; o prim&atilde; marcare si
+corectare se repet&atilde; procesul.</p>
+
+<p class=MsoPlainText>– În cazul unor restrictii care implic&atilde; formule
+de calcul ale limitelor, este nevoie s&atilde; se recalculeze foaia înainte de
+localizarea celulelor incorecte. Recalcularea nu este cerut&atilde; dac&atilde;
+este selectat&atilde; optiunea de recalculare automat&atilde;.</p>
+
+<p class=MsoPlainText>– Pentru a vedea restrictiile si mesajele de
+eroare ale unei celule se activeaz&atilde; celula si se d&atilde; comanda <b>Validation</b>
+(meniul <b>Data</b>).</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Vizualizarea dependentelor
+dintre celule</h3>
+
+<p class=primul>În cazul existentei unor formule în celulele foii de
+calcul, Microsoft Excel poate s&atilde; semnaleze grafic leg&atilde;turile dintre
+celulele care contin formule si celulele care furnizeaz&atilde;
+argumente pentru functii. Utilizând uneltele barei <b>Auditing</b> se pot
+localiza celulele care contin argumentele functiei din celula
+activ&atilde; sau celulele care depind de celula activ&atilde;. Dac&atilde; formula
+afiseaz&atilde; o valoare de eroare (cum ar fi #VALUE), se poate localiza
+celula care este cauza erorii.</p>
+
+<p class=MsoPlainText><b>Observatie</b>. Înainte de utilizarea uneltelor <b>Auditing</b>
+se va asigura c&atilde; foaia de calcul afiseaz&atilde; obiectele grafice (în
+fisa <b>View</b> a dialogului <b>Options</b>, meniul <b>Tools</b>, este
+selectat&atilde; în grupul <b>Object</b> optiunea <b>Show all</b> sau <b>Show
+placeholders</b>.</p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Localizarea formulelor care
+utilizeaz&atilde; valoarea din celula activ&atilde; </h4>
+
+<p class=MsoNormal>1. Se afiseaz&atilde; bara de unelte <b>Auditing</b>
+(prin <b>Auditing</b> din meniul <b>Tools</b> si comanda <b>Show Auditing
+Toolbar</b>).</p>
+
+<p class=MsoNormal>2. Se activeaz&atilde; celula pentru care se studiaz&atilde;
+dependentele.</p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1052" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:29.55pt;
+ width:125.25pt;height:93.75pt;z-index:7;mso-position-horizontal:right'>
+ <v:imagedata src="tppmsgs/msgs1.htm#113" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/auditexemp2.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=167 height=125
+src="auditexemp2-1.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/auditexemp2.jpg" align=right hspace=12 v:shapes="_x0000_s1052"><![endif]>3.
+Prin actionarea uneltei <b>Trace Dependents</b> se traseaz&atilde; automat
+s&atilde;geti la celulele care se refer&atilde; la celula activ&atilde;.
+Actionând din nou <b>Trace Dependents</b> se vor trasa toate nivelele de
+dependent&atilde; ascendent&atilde; pornind de la celula activ&atilde;.</p>
+
+<p class=MsoNormal>Configuratia obtinut&atilde; este similar&atilde;
+celei ilustrate în figura al&atilde;turat&atilde;.</p>
+
+<p class=MsoPlainText><b>Observatii</b>. – S&atilde;getile albastre
+arat&atilde; celulele dependente de cea activ&atilde;, s&atilde;getile
+rosii indic&atilde; acele celule care produc erori.</p>
+
+<p class=MsoPlainText>– Pentru selectarea celulei de la cel&atilde;lalt
+cap&atilde;t al s&atilde;getii se poate efectua un dublu click pe s&atilde;geata
+respectiv&atilde;.</p>
+
+<p class=MsoPlainText>– În cazul modific&atilde;rii formulelor, inser&atilde;rii de
+celule, linii/coloane etc. s&atilde;getile trasate sunt eliminate automat de
+pe foaia de calcul. Refacerea lor implic&atilde; reluarea întregului proces de
+vizualizare a dependentelor.</p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Localizarea celulelor care
+contin argumentele unei formule</h4>
+
+<p class=MsoNormal>1. Se afiseaz&atilde; bara de unelte <b>Auditing</b>.</p>
+
+<p class=MsoNormal>2. Se activeaz&atilde; celula care contine formula
+analizat&atilde;.</p>
+
+<p class=MsoPlainText>3. Prin actionarea uneltei <b>Trace Precedents</b>
+se traseaz&atilde; automat s&atilde;geti de la celulele cu argumente la celula
+cu formula. Pentru vizualizarea tuturor nivelelor de precedent&atilde; se
+actioneaz&atilde; de dou&atilde; ori <b>Trace Precedents</b>. </p>
+
+<p class=MsoPlainText><b>Observatie</b>. Pentru semnificatia
+culorilor s&atilde;getilor si navigarea între celulele dependente se
+vor citi observatiile din sectiunea precedent&atilde;.</p>
+
+<h4 align=left style='margin-left:0in;text-align:left;text-indent:0in'>Localizarea
+celulelor situate în alt&atilde; foaie de calcul si <br>
+care contin argumentele unei formule</h4>
+
+<p class=primul>Dac&atilde; argumentele functiei analizate se afl&atilde; în
+celule dintr-o alt&atilde; foaie de calcul, mai întâi se va deschide foaia
+respectiv&atilde;.</p>
+
+<p class=MsoNormal>1. Se afiseaz&atilde; bara de unelte <b>Auditing</b>.</p>
+
+<p class=MsoNormal>2. Se activeaz&atilde; celula care contine formula
+analizat&atilde;.</p>
+
+<p class=MsoPlainText>3. Prin actionarea uneltei <b>Trace Precedents</b>
+se traseaz&atilde; automat s&atilde;geti de la celulele cu argumente la celula
+cu formula. Pentru vizualizarea tuturor nivelelor de precedent&atilde; se
+actioneaz&atilde; de dou&atilde; ori <b>Trace Precedents</b>. Referintele
+la celulele altei foi au la extremitate o pictogram&atilde; reprezentând o foaie
+de calcul. </p>
+
+<p class=MsoPlainText>4. Prin dublu click pe o s&atilde;geat&atilde; care
+punctez&atilde; la alt&atilde; foaie se deschide un dialog <b>Go to</b> prin
+intermediul c&atilde;ruia se poate naviga c&atilde;tre celulele referite.</p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Eliminarea s&atilde;getilor care
+arat&atilde; dependentele dintre celule</h4>
+
+<p class=MsoNormal>1. Se afiseaz&atilde; bara de unelte <b>Auditing</b>.</p>
+
+<p class=MsoPlainText>2. Pentru eliminarea unui nivel de s&atilde;geti
+începând cu celula dependent&atilde; cea mai dep&atilde;rtat&atilde; de celula
+activ&atilde;, se activeaz&atilde; <b>Remove Dependent Arrows</b>. Actionarea
+din nou a uneltei elimin&atilde; urm&atilde;toarele nivele de s&atilde;geti.</p>
+
+<p class=MsoPlainText>3. Pentru eliminarea unui nivel de s&atilde;geti
+începând cu celula precedent&atilde; cea mai dep&atilde;rtat&atilde; de celula
+activ&atilde;, se activeaz&atilde; <b>Remove Precedent Arrows</b>. Actionarea
+din nou a uneltei elimin&atilde; urm&atilde;toarele nivele de s&atilde;geti.</p>
+
+<p class=MsoPlainText>4. Pentru eliminarea tuturor s&atilde;getilor din
+foaia de calcul se actioneaz&atilde; unealta <b>Remove All Arrows.</b> </p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Localizarea sau schimbarea
+referintelor dintr-o formul&atilde;</h4>
+
+<p class=primul>Microsoft Excel dispune si de un instrument direct, Range
+Finder, de localizare a referintelor dintr-o formul&atilde;.</p>
+
+<p class=MsoPlainText>1. Se activeaz&atilde; celula care contine formula
+analizat&atilde;.</p>
+
+<p class=MsoPlainText>2. Prin dublu click pe celul&atilde; se coloreaz&atilde;, în
+mod automat si cu culori diferite, chenarele celulelor care contin
+argumentele functiei.</p>
+
+<p class=MsoPlainText>3. Prin dragarea chenarelor colorate se poate modifica
+referinta c&atilde;tre o alt&atilde; celul&atilde; sau zon&atilde; de celule.
+Utilizând mânerul de dragare din coltul dreapta jos se poate extinde sau
+restrânge domeniul argumentului respectiv.</p>
+
+<p class=MsoPlainText>4. Se termin&atilde; în mod uzual cu ENTER (pentru formule
+simple) sau CTRL+SHIFT+ENTER (pentru formule tablou).</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Localizarea erorilor din
+functii</h3>
+
+<p class=primul>Valorile de eroare apar afisate într-o celul&atilde;
+atunci când formula din acea celul&atilde; nu poate fi evaluat&atilde; în mod
+corect. Microsoft Excel dispune de un mecanism prin care se pot localiza
+celulele care provoac&atilde; eroare în evaluarea unei functii. Valorile de
+eroare afisate sunt enumerate în sectiunea urm&atilde;toare.<u><o:p></o:p></u></p>
+
+<p class=MsoPlainText>1. Se afiseaz&atilde; bara de unelte Auditing.</p>
+
+<p class=MsoPlainText>2. Se activeaz&atilde; celula care afiseaz&atilde;
+eroarea.</p>
+
+<p class=MsoPlainText>3. Se actioneaz&atilde; unealta <b>Trace Error</b>.</p>
+
+<p class=MsoPlainText><b>Observatie</b>. Dac&atilde; exist&atilde; mai mult de
+un drum c&atilde;tre o celul&atilde; care provoac&atilde; eroarea, pentru
+vizualizarea acestora se va actiona de dou&atilde; ori <b>Trace Error</b>.</p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Valori de eroare</h4>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<div align=center>
+
+<table border=1 cellspacing=0 cellpadding=0 style='margin-left:9.9pt;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <thead>
+  <tr>
+   <td width=126 valign=top style='width:94.5pt;border:solid windowtext .5pt;
+   padding:0in 5.4pt 0in 5.4pt'>
+   <p class=primul align=center style='text-align:center'><b><span
+   style='font-size:10.0pt'>Valoare de eroare<o:p></o:p></span></b></p>
+   </td>
+   <td width=220 valign=top style='width:164.7pt;border:solid windowtext .5pt;
+   border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=primul align=center style='text-align:center'><b><span
+   style='font-size:10.0pt'>Semnificatie<o:p></o:p></span></b></p>
+   </td>
+   <td width=232 valign=top style='width:173.7pt;border:solid windowtext .5pt;
+   border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=primul align=center style='text-align:center'><b><span
+   style='font-size:10.0pt'>Observatii<o:p></o:p></span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr>
+  <td width=126 valign=top style='width:94.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>#####</p>
+  </td>
+  <td width=220 valign=top style='width:164.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>Valoarea care se afiseaz&atilde; necesit&atilde; mai multe
+  caractere decât permite l&atilde;timea celulei.</p>
+  </td>
+  <td width=232 valign=top style='width:173.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>Se redimensioneaz&atilde; celula sau se modific&atilde; formatul
+  de afisare.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=126 valign=top style='width:94.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>#VALUE!</p>
+  </td>
+  <td width=220 valign=top style='width:164.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>Este utilizat un tip eronat de argument sau operand (care nu
+  poate fi eventual corectat de instrumentul de autocorectare a formulelor,
+  prin conversii uzuale de tipuri de date).</p>
+  </td>
+  <td width=232 valign=top style='width:173.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=126 valign=top style='width:94.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>#DIV/0!</p>
+  </td>
+  <td width=220 valign=top style='width:164.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>Se încearc&atilde; o împ&atilde;rtire prin zero.</p>
+  </td>
+  <td width=232 valign=top style='width:173.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=126 valign=top style='width:94.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>#NAME?</p>
+  </td>
+  <td width=220 valign=top style='width:164.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>Un text dintr-o formul&atilde; nu este recunoscut ca
+  referint&atilde;.</p>
+  </td>
+  <td width=232 valign=top style='width:173.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>În afar&atilde; de greselile de scriere a denumirilor este
+  posibil ca un nume definit anterior s&atilde; nu mai existe.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=126 valign=top style='width:94.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>#N/A</p>
+  </td>
+  <td width=220 valign=top style='width:164.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>O valoare nu este disponibil&atilde; pentru o functie sau
+  o formul&atilde;.</p>
+  </td>
+  <td width=232 valign=top style='width:173.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>Apare de obicei atunci când se omit argumente obligatorii
+  pentru o functie, când formule tablou se refer&atilde; la argumente cu
+  dimensiuni mai mari sau când o functie definit&atilde; de utilizator nu
+  este g&atilde;sit&atilde;.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=126 valign=top style='width:94.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>#REF!</p>
+  </td>
+  <td width=220 valign=top style='width:164.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>O referint&atilde; nu este valid&atilde;.</p>
+  </td>
+  <td width=232 valign=top style='width:173.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>Prin eliminarea unor celule este posibil ca referintele
+  s&atilde; se deprecieze.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=126 valign=top style='width:94.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>#NUM!</p>
+  </td>
+  <td width=220 valign=top style='width:164.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>Sunt probleme cu un num&atilde;r dintr-o functie sau
+  formul&atilde;.</p>
+  </td>
+  <td width=232 valign=top style='width:173.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>Apare de obicei atunci când se trece o valoare
+  nenumeric&atilde; pentru un argument numeric sau când o functie
+  iterativ&atilde; nu poate ajunge la un rezultat.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=126 valign=top style='width:94.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>#NULL!</p>
+  </td>
+  <td width=220 valign=top style='width:164.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>Intersectia a dou&atilde; domenii este vid&atilde;.</p>
+  </td>
+  <td width=232 valign=top style='width:173.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=primul>Apare frecvent atunci când se omite virgula la specificarea
+  unei reuniuni de domenii.</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoPlainText><b><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
+
+<p class=MsoPlainText><b>Observatie</b>. Pentru o discutie mai
+ampl&atilde; a cazurilor de aparitie a valorilor de eroare se vor studia
+intr&atilde;rile corespunz&atilde;toare din Microsoft Excel Help.</p>
+
+<p class=MsoPlainText><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>
