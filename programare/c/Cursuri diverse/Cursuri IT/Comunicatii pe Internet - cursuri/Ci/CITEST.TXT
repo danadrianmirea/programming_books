@@ -1,0 +1,69 @@
+1.Specificati care sunt erorile in urmatoarele secvente 
+HTML si sugerati solutii corecte:
+
+a)
+<HTML>
+<HEAD>
+<TITLE>Mineriada 99
+</HEAD>
+<BODY>
+<CENTER>Minerii la Bucuresti</CENTER>
+<FONT COLOR=red SIZE=5>Precizati care este in opinia dvs.
+ cel mai probabil loc al desfasurarii manifestatiei 
+minerilor<OL>
+<LI TYPE=square>Piata Universitatii</LI>
+<LI TYPE=square>Piata Unirii</LI>
+<LI TYPE=square>Lacul Herastrau</LI>
+</BODY>
+</HTML>
+
+b)
+<HTML>
+<HEAD>
+<TITLE>Image Map</TITLE>
+<MAP NAME=harta>
+<AREA SHAPE=rect coords="20,20,50,50" href="www.yahoo.com">
+<AREA SHAPE=rect COORDS="40,40,80,80" href="www.infoseek.com">
+</MAP>
+<BODY>
+<IMG SRC="imag.gif" USEMAP="harta">
+</body>
+</HTML>
+
+c)
+<HTML>
+<HEAD>
+<TITLE>Frames</TITLE>
+</HEAD>
+<BODY BACKGROUND=back.gif>
+<FRAMESET ROWS="30,*">
+<FRAME NAME="unu" SRC="b.htm">
+<FRAME NAME="doi" SRC="c.htm">
+</FRAMESET>
+</BODY>
+</HTML>
+
+
+2.Care din urmatoarele tag-uri sunt nevide:
+- html				- br
+- map				- pre
+- img				- a
+- font				- area
+- menu				- hr
+
+3.Ce sunt imaginile JPEG progresive si care sunt avantajele 
+si dezavantajele lor?
+
+4.Ce sunt si la ce folosesc scripturile CGI?
+
+5.Creati o pagina care sa contina o lista ordonata de 3 elemente,
+ fiecare element fiind o referinta catre site-urile urmatoare:
+www.kappa.ro
+www.fx.ro
+www.pcnet.ro
+
+6.Construiti o pagina care sa contina un formular alcatuit din:
+- 2 butoane radio box grupate
+- un check box
+- 3 campuri text input
+- butoanele SUBMIT si RESET
