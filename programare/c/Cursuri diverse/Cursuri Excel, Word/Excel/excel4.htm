@@ -1,0 +1,2132 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="filelist-4.xml" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/Excel4_files/filelist.xml">
+<link rel=Edit-Time-Data href="tppmsgs/msgs0.htm#42" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/Excel4_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Operarea cu principalele obiecte Excel</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Valentin Clocotici</o:Author>
+  <o:LastAuthor>Valentin Clocotici</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>681</o:TotalTime>
+  <o:Created>1997-06-14T17:13:00Z</o:Created>
+  <o:LastSaved>1997-06-14T17:13:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>5568</o:Words>
+  <o:Characters>31741</o:Characters>
+  <o:Company>Informatica</o:Company>
+  <o:Lines>264</o:Lines>
+  <o:Paragraphs>63</o:Paragraphs>
+  <o:CharactersWithSpaces>38980</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l2 level1 lfo1;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	color:darkred;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l2 level2 lfo2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	color:darkblue;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h3
+	{mso-style-next:primul;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	mso-list:l2 level3 lfo3;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	color:darkgreen;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	mso-list:l2 level4 lfo4;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	color:darkcyan;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	mso-list:l2 level5 lfo5;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+h6
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	mso-list:l2 level6 lfo6;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	mso-list:l2 level7 lfo7;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	mso-list:l2 level8 lfo8;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	mso-list:l2 level9 lfo9;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{margin-top:0in;
+	margin-right:1.0in;
+	margin-bottom:6.0pt;
+	margin-left:1.0in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.ecuatie, li.ecuatie, div.ecuatie
+	{mso-style-name:ecuatie;
+	mso-style-next:Normal;
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-indent:.5in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.ecuatienum, li.ecuatienum, div.ecuatienum
+	{mso-style-name:ecuatie_num;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.figura, li.figura, div.figura
+	{mso-style-name:figura;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.functie, li.functie, div.functie
+	{mso-style-name:functie;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.IO, li.IO, div.IO
+	{mso-style-name:IO;
+	mso-style-parent:"Plain Text";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	letter-spacing:1.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.Observatie, li.Observatie, div.Observatie
+	{mso-style-name:Observatie;
+	mso-style-parent:"Block Text";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:.5in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.parafttab, li.parafttab, div.parafttab
+	{mso-style-name:par_aft_tab;
+	mso-style-next:"Plain Text";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.parbeftab, li.parbeftab, div.parbeftab
+	{mso-style-name:par_bef_tab;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.parbettab, li.parbettab, div.parbettab
+	{mso-style-name:par_bet_tab;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.PlainTextexpanded, li.PlainTextexpanded, div.PlainTextexpanded
+	{mso-style-name:"Plain Text expanded";
+	mso-style-parent:"Plain Text";
+	mso-style-next:"Plain Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.primul, li.primul, div.primul
+	{mso-style-name:primul;
+	mso-style-parent:"Plain Text";
+	mso-style-next:"Plain Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.zona, li.zona, div.zona
+	{mso-style-name:zona;
+	mso-style-parent:"Plain Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.25in;
+	line-height:14.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.codVBA, li.codVBA, div.codVBA
+	{mso-style-name:codVBA;
+	mso-style-parent:primul;
+	mso-style-next:primul;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	line-height:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+@page Section1
+	{size:595.45pt 841.7pt;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:255020363;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:468135680;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:601911388;
+	mso-list-template-ids:1356081294;}
+@list l2:level1
+	{mso-level-start-at:3;
+	mso-level-number-format:roman-upper;
+	mso-level-style-link:"Heading 1";
+	mso-level-suffix:space;
+	mso-level-text:"Capitolul %1";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l2:level2
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 2";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l2:level3
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 3";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l2:level4
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 4";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l2:level5
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 5";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l2:level6
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 6";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l2:level7
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 7";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l2:level8
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 8";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l2:level9
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 9";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l3
+	{mso-list-id:1213733557;
+	mso-list-type:simple;
+	mso-list-template-ids:-2112332694;}
+@list l3:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:—;
+	mso-level-tab-stop:45.0pt;
+	mso-level-number-position:left;
+	margin-left:45.0pt;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:1594781076;
+	mso-list-type:simple;
+	mso-list-template-ids:-2112332694;}
+@list l4:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:—;
+	mso-level-tab-stop:45.0pt;
+	mso-level-number-position:left;
+	margin-left:45.0pt;
+	text-indent:-.25in;}
+@list l5
+	{mso-list-id:1781489216;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:1827546172;
+	mso-list-type:simple;
+	mso-list-template-ids:-2099607096;}
+@list l6:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:–;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:"Times New Roman";}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1 style='mso-list:none'>Date si calcule </h1>
+
+<p class=primul>Fiecare celul&atilde; a unei foi de calcul este similar&atilde;
+unei zone de memorie care poate contine informatii de diverse tipuri.
+În aceast&atilde; sectiune se prezint&atilde; principalele tipuri de date,
+acceptate într-o foaie de calcul Excel si modul cum se poate opera
+cu datele înscrise în caiet. </p>
+
+<p class=MsoPlainText>Trebuie retinut, pentru a completa imaginea
+corect&atilde; a unei foi de calcul, c&atilde; o celul&atilde; este din punct de
+vedere al informatiilor continute doar o fereastr&atilde; prin care se
+vede la un moment dat atât cât permite dimensiunea celulei. Prin urmare,
+modificarea dimensiunilor celulei permite afisarea unei
+cantit&atilde;ti mai mari de informatie (dac&atilde; este
+disponibil&atilde; o cantitate nmai mare). Informatia care nu poate fi
+afisat&atilde; nu este pierdut&atilde;, doar nu încape în spatiul
+rezervat de celul&atilde;. Pentru anumite tipuri de date (în general numerice)
+acest fapt este semnalat prin completarea celulei cu caractere #. Pentru alte
+tipuri de date se afiseaz&atilde; atât cât se poate.</p>
+
+<p class=MsoPlainText>Dac&atilde; bara de formule este vizibil&atilde; (prin
+selectarea din meniul <b style='mso-bidi-font-weight:normal'>View</b> a
+optiunii <b style='mso-bidi-font-weight:normal'>Formula Bar</b>), atunci
+continutul celulei active este afisat în partea dreapt&atilde; a barei.
+</p>
+
+<p class=MsoPlainText><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1043" type="#_x0000_t75" style='position:absolute;
+ left:0;text-align:left;margin-left:0;margin-top:6.05pt;width:235.5pt;height:84pt;
+ z-index:1;mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f">
+ <v:imagedata src="textlung.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/textlung.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=314 height=112 src="textlung.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/textlung.jpg"
+align=right hspace=12 v:shapes="_x0000_s1043"><![endif]>În imaginea
+al&atilde;turat&atilde; se vede o asemenea situatie. Celula activ&atilde; C1 nu
+poate afisa decât o portiune a textului continut, text vizibil
+în totalitate pe bara de formule.</p>
+
+<a name="tipuri"></a>
+<h2 style='margin-left:0in;text-indent:0in'>Tipuri de date</h2>
+
+<p class=primul>Într-o foaie de calcul Excel se pot utiliza </p>
+
+<p class=primul>– date numerice, </p>
+
+<p class=primul>– date calendaristice si </p>
+
+<p class=primul>– date de tip text.</p>
+
+<p class=MsoPlainText>Pentru a introduce într-o celul&atilde; o dat&atilde;
+(de orice tip ar fi), se activeaz&atilde; celula prin click sau orice tip de
+pozitionare în foaia de calcul, se tasteaz&atilde; data dorit&atilde; si
+se termin&atilde; operatiunea cu ENTER (cursorul se mut&atilde; pe linia
+urm&atilde;toare a aceleiasi coloane), cu TAB (cursorul se mut&atilde; pe
+coloana urm&atilde;toare a aceleiasi linii) sau click în alt&atilde;
+celul&atilde; a foii. Este de notat c&atilde; nu se poate lucra în alt&atilde;
+celul&atilde; pân&atilde; când nu se termin&atilde; introducerea curent&atilde;.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Constante de tip numeric</h3>
+
+<p class=primul>În Microsoft Excel o constant&atilde; numeric&atilde; poate
+contine doar caracterele:</p>
+
+<p class=MsoPlainText>0<span style="mso-spacerun: yes">  </span>1<span
+style="mso-spacerun: yes">  </span>2<span style="mso-spacerun: yes"> 
+</span>3<span style="mso-spacerun: yes">  </span>4<span style="mso-spacerun:
+yes">  </span>5<span style="mso-spacerun: yes">  </span>6<span
+style="mso-spacerun: yes">  </span>7<span style="mso-spacerun: yes"> 
+</span>8<span style="mso-spacerun: yes">  </span>9<span style="mso-spacerun:
+yes">  </span>+<span style="mso-spacerun: yes">  </span>-<span
+style="mso-spacerun: yes">  </span>(<span style="mso-spacerun: yes"> 
+</span>)<span style="mso-spacerun: yes">  </span>,<span style="mso-spacerun:
+yes">  </span>/<span style="mso-spacerun: yes">  </span>$<span
+style="mso-spacerun: yes">  </span>%<span style="mso-spacerun: yes">  </span>.<span
+style="mso-spacerun: yes">  </span>E<span style="mso-spacerun: yes">  </span>e</p>
+
+<p class=primul>sirul format trebuind s&atilde; aib&atilde; semnificatie
+de valoare numeric&atilde; (de exemplu, 12; -123.45; 123%; 2/3; 10 1/4 etc.).
+Utilizarea caracterului separator între partea întreag&atilde; si partea
+zecimal&atilde; depinde de optiunile efectuate în <b style='mso-bidi-font-weight:
+normal'>Regional Settings</b> din <b style='mso-bidi-font-weight:normal'>Control
+Panel</b>, în mediul <b style='mso-bidi-font-weight:normal'>Windows</b>. Combinatiile
+de caractere nerecunoscute drept numere sunt tratate drept text.</p>
+
+<p class=MsoPlainText>Toate numerele sunt aliniate în mod implicit la dreapta. </p>
+
+<p class=MsoPlainText>În mediul Excel se accept&atilde; (si se recunosc) mai
+multe forme ale datelor numerice, explicate în continuare în sectiunea
+dedicat&atilde; format&atilde;rii datelor. Trebuie îns&atilde; retinut c&atilde;
+formatul unui num&atilde;r, de exemplu, nu afecteaz&atilde; valoarea
+num&atilde;rului, ci doar forma afisat&atilde; a valorii num&atilde;rului.
+Indiferent de forma num&atilde;rului, Excel retine întotdeauna 15 cifre
+semnificative.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Constante de tip dat&atilde;
+calendaristic&atilde;</h3>
+
+<p class=primul><b style='mso-bidi-font-weight:normal'>Observatie</b>.
+Pentru simplificarea exprim&atilde;rii, doar în aceast&atilde; sectiune prin <b
+style='mso-bidi-font-weight:normal'>dat&atilde;</b> se întelege o dat&atilde;
+calendaristic&atilde; (cum ar fi 1/05/1999), iar prin <b style='mso-bidi-font-weight:
+normal'>timp</b> se întelege o dat&atilde; orar&atilde; (cum ar fi 11:45).
+Prin dat&atilde; calendaristic&atilde; se poate întelege uneori si
+combinatia dat&atilde;+timp (cum ar fi 1/05/1999 11:45)</p>
+
+<p class=MsoPlainText>Microsoft Excel trateaz&atilde; datele si timpii din
+punctul de vedere al reprezent&atilde;rii interne drept numere. Data este
+retinut&atilde; în partea întreag&atilde; iar timpul în partea
+fractionar&atilde;. Forma extern&atilde;, cea afisat&atilde; în foaia de
+calcul, depinde de formatul ales pentru respectiva valoare, formatul datelor
+si timpilor fiind prezentat în sectiunea privind formatarea valorilor
+din celule. Din aceast&atilde; cauz&atilde;, cu date si timpi se pot efectua
+unele operatiuni aritmetice (adunare, sc&atilde;dere) dar se pot produce
+si erori în cazul mix&atilde;rii datelor numerice propriu-zise cu cele
+calendaristice si orare.</p>
+
+<p class=MsoNormal>În mod implicit, o dat&atilde; sau timp este aliniat&atilde; în
+celul&atilde; la dreapta, alinierea la stânga (dac&atilde; nu este cerut&atilde;
+explicit) indic&atilde; nerecunoasterea sirului tastat drept dat&atilde;
+sau timp. </p>
+
+<p class=MsoNormal>Exist&atilde; dou&atilde; mari sisteme de
+corespondent&atilde; între numere si date calendaristice:</p>
+
+<p class=MsoNormal>– cel bazat pe 1 ianuarie 1900 (în care 1 reprezint&atilde;
+ziua de 1 ian.1900), utilizat în Microsoft Excel pentru Windows si de
+Lotus 1-2-3;</p>
+
+<p class=MsoNormal>– cel bazat pe 1904 (în care 1 reprezint&atilde; 2 ian. 1904),
+utilizat în Microsoft Excel pentru Macintosh.</p>
+
+<p class=MsoNormal>Selectarea bazei de num&atilde;rare a datelor se
+realizeaz&atilde; prin <b style='mso-bidi-font-weight:normal'>Options</b> din
+meniul <b style='mso-bidi-font-weight:normal'>Tools</b>, fisa <b
+style='mso-bidi-font-weight:normal'>Calculation</b>. Sub <b style='mso-bidi-font-weight:
+normal'>Workbook</b> se selecteaz&atilde;, sau nu, boxa de control <i
+style='mso-bidi-font-style:normal'>1904 date system</i>. Este necesar&atilde;
+aceast&atilde; configurare atunci când se lucreaz&atilde; simultan cu foi de calcul
+care utilizeaz&atilde; aceast&atilde; baz&atilde; (foi provenite eventual de pe
+calculatoare Macintosh).</p>
+
+<p class=MsoPlainText>Constantele de tip dat&atilde; se pot tasta drept
+siruri de caractere de forma </p>
+
+<p class=MsoPlainText>– mm/dd/yyyy, unde mm este num&atilde;rul lunii, dd este
+ziua, yyyy este anul (cu 2-4 cifre); de exemplu 1/12/89 reprezint&atilde; 12 dec
+89, 02/03/1990 reprezint&atilde; 3 feb 1990 etc.</p>
+
+<p class=MsoPlainText>– mmm-dd-yyyy, dd-mmmm-yyyy, unde mmmm reprezint&atilde;
+denumirea lunii, prescurtat&atilde; sau nu, în englez&atilde;, iar dd si yyyy
+au semnificatia de mai sus; de exemplu, 12-jan-1980 reprezint&atilde; 12 ian
+1980, jan-80 reprezint&atilde; ian 1980 etc.</p>
+
+<p class=MsoPlainText>Constantele de timp se introduc separând orele, minute
+si secundele (dac&atilde; exist&atilde;) prin caracterul &quot;:&quot;. De
+exemplu, 12:25, 12:25:30 etc. </p>
+
+<p class=MsoPlainText>Timpul este bazat în mod implicit pe 24 de ore. Pentru a
+utiliza un timp bazat pe 12 ore se las&atilde; un spatiu si se
+tasteaz&atilde; AM sau PM, cum ar fi 3:10 PM sau 11:25 AM.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Constante de tip text</h3>
+
+<p class=primul>Orice combinatie de caractere care nu este recunoscut&atilde;
+drept un num&atilde;r sau o dat&atilde;/timp este tratat&atilde; de Microsoft Excel
+drept o constant&atilde; de tip text. </p>
+
+<p class=MsoPlainText>Un text este aliniat, în mod implicit, la stânga.</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Observatie</b>.
+Atunci când se doreste ca un sir de caractere s&atilde; fie recunoscut
+drept text indiferent de eventuala asem&atilde;nare cu un
+num&atilde;r/dat&atilde;/timp, se va formata celula drept Text si apoi se
+introduce sirul dorit.</p>
+
+<p class=MsoPlainText>Pentru trecerea fortat&atilde; la rândul urm&atilde;tor,
+în aceeasi celul&atilde;, se va tasta ALT+ENTER. Pentru defilarea textului
+în celul&atilde; se va urm&atilde;ri sectiunea urm&atilde;toare.</p>
+
+<a name="format"></a>
+<h2 style='margin-left:0in;text-indent:0in'>Formatarea informatiilor din
+celule</h2>
+
+<p class=primul>Informatia înscris&atilde; într-o celul&atilde;,
+constant&atilde; sau obtinut&atilde; printr-o formul&atilde;, poate fi
+formatat&atilde; atât pentru a avea o imagine corect&atilde; (num&atilde;r de
+zecimale, dat&atilde; calendaristic&atilde; si nu numeric&atilde; etc.), cât
+si pentru a fi receptat&atilde; mai usor de utilizatorul foii de
+calcul. Dup&atilde; cum s-a mai spus, formatarea nu schimb&atilde; valoarea
+informatiei si orice alt&atilde; formatare este posibil&atilde; ulterior.</p>
+
+<p class=MsoPlainText>În întelegerea format&atilde;rii si
+comport&atilde;rii foii de calcul, trebuie s&atilde; se retin&atilde; c&atilde;
+desi formatul se aplic&atilde; informatiei, el este atasat celulei
+care contine informatia. Prin urmare dac&atilde; se sterge doar
+continutul celulei, orice nou continut va primi formatul existent în
+momentul stergerii. Doar eliminarea formatului atasat celulei
+(comanda <b style='mso-bidi-font-weight:normal'>Clear</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Edit</b>, optiunea <b
+style='mso-bidi-font-weight:normal'>All</b> sau <b style='mso-bidi-font-weight:
+normal'>Formats</b>) conduce la refacerea format&atilde;rii implicite. </p>
+
+<p class=MsoPlainText>Comanda principal&atilde; este <b style='mso-bidi-font-weight:
+normal'>Cells</b> din meniul <b style='mso-bidi-font-weight:normal'>Format</b>.
+Cele trei fise de interes pentru aceast&atilde; sectiune (alte
+dou&atilde; au fost prezentate la descrierea si formatarea celulelor) sunt <b
+style='mso-bidi-font-weight:normal'>Number</b>, <b style='mso-bidi-font-weight:
+normal'>Alignment </b>si <b style='mso-bidi-font-weight:normal'>Font</b>,
+descrise în continuare.</p>
+
+<p class=MsoPlainText>Formatarea efectuat&atilde; se aplic&atilde; tuturor
+celulelor selectate în momentul comenzii (deci cel putin celulei active).</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Formatul numerelor</h3>
+
+<p class=primul>Aspectul informatiilor numerice sau calendaristice este
+stabilit de fisa <b style='mso-bidi-font-weight:normal'>Number</b> a
+dialogului <b style='mso-bidi-font-weight:normal'>Format Cells</b> (afisat
+prin comanda <b style='mso-bidi-font-weight:normal'>Cells</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Format</b>). Organizarea general&atilde; este
+aceea a unei liste de clase de formate (<b style='mso-bidi-font-weight:normal'>Category</b>),
+fiecare selectie afisând optiuni specifice clasei respective.
+Imaginea al&atilde;turat&atilde; arat&atilde; optiunea <b style='mso-bidi-font-weight:
+normal'>Number</b> si atributele asociate. </p>
+
+<p>
+<img width=331 height=242 src="number.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/number.jpg"></p>
+
+<p class=MsoPlainText>Optiunile utilizate mai frecvent sunt prezentate pe scurt în continuare.</p>
+
+<p class=zona><b style='mso-bidi-font-weight:normal'>General</b> –
+informatia este afisat&atilde; potrivit formatului implicit, Excel
+stabilind tipul cel mai probabil de dat&atilde;.</p>
+
+<p class=zona><b style='mso-bidi-font-weight:normal'>Number</b> – se
+fixeaz&atilde; num&atilde;rul de zecimale în <i style='mso-bidi-font-style:normal'>Decimal
+places</i>, prezenta separatorilor grupe­lor de trei cifre în <i
+style='mso-bidi-font-style:normal'>Use 1000 Separator</i> si se alege
+forma numerelor negative.</p>
+
+<p class=zona><b style='mso-bidi-font-weight:normal'>Percentage</b> – acest
+format înmulteste continutul celulei cu 100 si adaug&atilde;
+simbolul de procent. De exemplu, 0.1 arat&atilde; cu acest format 10%. Este de
+retinut c&atilde; num&atilde;rul initial este sub form&atilde;
+zecimal&atilde;.</p>
+
+<p class=zona><!--[if gte vml 1]><v:shape id="_x0000_s1045" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:67.8pt;
+ width:247.5pt;height:177.75pt;z-index:3;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:imagedata src="currency.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/currency.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=330 height=237 src="currency.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/currency.jpg"
+align=right hspace=12 v:shapes="_x0000_s1045"><![endif]><b style='mso-bidi-font-weight:
+normal'>Fraction</b> – permite operarea cu numere scrise sub form&atilde; de
+fractii ordinale (2/5, 12 3/4 etc.). Formatul dorit se alege dintr-o
+list&atilde; disponibil&atilde;. O constant&atilde; se poate introduce direct sub
+aceast&atilde; form&atilde; dac&atilde; se tasteaz&atilde; partea întreag&atilde;, un
+spatiu si partea fractionar&atilde;, 2 1/2. Pentru a nu fi
+identificat&atilde; implicit o dat&atilde; calendaristic&atilde;, partea
+întreag&atilde; se trece chiar dac&atilde; este nul&atilde;, deci 0 3/4.</p>
+
+<p class=zona><b style='mso-bidi-font-weight:normal'>Scientific</b> – permite
+scrierea numerelor cu utilizarea notatiei stiintifice: 1e+3 este
+1000 etc.</p>
+
+<p class=zona><b style='mso-bidi-font-weight:normal'>Currency</b> – este un
+format specific datelor financiare. Pe lâng&atilde; stabilirea num&atilde;rului de
+zecimale si a formei nume­relor negative, se poate stabili simbolul
+monetar care este atasat valorii numerice. În lista derulant&atilde; <i
+style='mso-bidi-font-style:normal'>Symbol</i> se poate selecta practic orice
+simbol monetar.</p>
+
+<p class=zona><b style='mso-bidi-font-weight:normal'>Accounting</b> - este un
+format similar celui precedent, dar se realizeaz&atilde; o aliniere
+vertical&atilde; la punctul zecimal a sumelor înscrise</p>
+
+<p class=zona><!--[if gte vml 1]><v:shape id="_x0000_s1046" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:7.25pt;
+ width:252.75pt;height:103.5pt;z-index:4;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:imagedata src="datetime.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/datetime.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=337 height=138 src="datetime.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/datetime.jpg"
+align=right hspace=12 v:shapes="_x0000_s1046"><![endif]><b style='mso-bidi-font-weight:
+normal'>Date</b> – permite alegerea unui format pentru o dat&atilde; calendaristic&atilde;.
+Lista <i style='mso-bidi-font-style:normal'>Type</i> din dreapta figurii
+al&atilde;turate ofer&atilde; o imagine a optiunilor disponibile. Se
+observ&atilde; existenta tipurilor mixte (date + timp).</p>
+
+<p class=zona><b style='mso-bidi-font-weight:normal'>Time</b> – permite
+stabilirea unor formate pentru date orare.</p>
+
+<p class=zona><b style='mso-bidi-font-weight:normal'>Text</b> – stabileste
+formatul de text pentru informatia din celul&atilde;.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Alinierea informatiilor</h3>
+
+<p class=primul>Aspectul general al foii de calcul este dependent de alinierile
+stabilite pentru informatiile din celule (astfel un titlu trebuie s&atilde;
+fie centrat, unele date numerice se vor centra pe vertical&atilde; dac&atilde;
+linia este prea înalt&atilde; etc.). Tot în acest set de probleme se înscrie
+si scrierea informatiei pe mai multe rânduri în aceeasi
+celul&atilde;, ca si orientarea textului. </p>
+
+<p class=MsoPlainText>Comanda principal&atilde; este <b style='mso-bidi-font-weight:
+normal'>Cells</b> din meniul <b style='mso-bidi-font-weight:normal'>Format</b>.
+Fisa <b style='mso-bidi-font-weight:normal'>Alignment</b> a dialogului <b
+style='mso-bidi-font-weight:normal'>Format Cells</b> contine toate
+controalele necesare pentru aliniere, orientare si defilare. </p>
+
+<p><img width=394 height=275 src="alignment.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/alignment.jpg"></p>
+
+<p class=zona>În grupul <b
+style='mso-bidi-font-weight:normal'>Text control</b> se pot fixa defilarea
+textului în celul&atilde; (în&atilde;ltimea liniei se m&atilde;reste
+corespun­z&atilde;­tor pân&atilde; se afiseaz&atilde; tot conti­nu­tul) – <i
+style='mso-bidi-font-style:normal'>Wrap text</i>&nbsp;–, ajustarea
+automat&atilde; a dimensiunii fontului pentru ca toat&atilde; informatia
+s&atilde; fie vizibil&atilde; – <i style='mso-bidi-font-style:normal'>Shrink to fit</i>
+–, fuzionarea celulelor selectate într-o sigur&atilde; celul&atilde; – <i
+style='mso-bidi-font-style:normal'>Merge cells</i>. Ultima optiune este
+util&atilde; atunci când se intentioneaz&atilde; scri­erea unor titluri.</p>
+
+<p class=zona>În zona <b style='mso-bidi-font-weight:normal'>Orientation</b> se
+poate stabili orien­ta­rea textului prin tragerea caroului rosu la o
+alt&atilde; înclinare sau prin indicarea direct&atilde; a num&atilde;rului de grade.</p>
+
+<p class=zona><!--[if gte vml 1]><v:shape id="_x0000_s1048" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:17.45pt;
+ width:168.75pt;height:107.25pt;z-index:6;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:imagedata src="alignhoriz.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/alignhoriz.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=225 height=143 src="alignhoriz.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/alignhoriz.jpg"
+align=right hspace=12 v:shapes="_x0000_s1048"><![endif]>În <b style='mso-bidi-font-weight:
+normal'>Text alignment</b> se poate alege un mod de aliniere pe
+orizontal&atilde;, în lista <i style='mso-bidi-font-style:normal'>Horizontal</i>,
+si un mod de aliniere pe vertical&atilde; în lista <i style='mso-bidi-font-style:
+normal'>Vertical</i>.<span style="mso-spacerun: yes">  </span>Exist&atilde; mai
+multe tipuri de alinieri pe orizontal&atilde;, vezi figura al&atilde;turat&atilde;.
+Dintre acestea, cea mai special&atilde; este <i style='mso-bidi-font-style:normal'>Center
+Across Selection</i>, care produce centrarea textului din prima celul&atilde; pe
+întreaga zon&atilde; selectat&atilde;. Informatia r&atilde;mâne
+continut&atilde; în prima celul&atilde;. Pe vertical&atilde;, informatia
+poate fi centrat&atilde; sau aliniat&atilde; sus/jos.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Stabilirea fontului</h3>
+
+<p class=primul>Comanda Cells din meniul Format deschide dialogul Format Cells.
+Fisa Font din acest dialog permite selectarea fontului utilizat în
+celulele selectate. Dialogul este similar celor de fixare a fontului în alte
+aplicatii Office.</p>
+
+<a name="formule"></a>
+<h2 style='margin-left:0in;text-indent:0in'>Formule</h2>
+
+<p class=primul>Ceea ce confer&atilde; putere unui program de calcul tabelar, cum
+este si Microsoft Excel, sunt multiplele posibilit&atilde;ti de calcul
+având ca operanzi date din foile deschise sau din fisiere externe.
+Biblioteca de functii care poate fi apelat&atilde; în orice loc al foii de
+calcul, fie doar cu scop consultativ, completeaz&atilde; imaginea
+aplicatiei. Se poate astfel gândi un program de calcul tabelar ca fiind un
+calculator puternic dublat de un puternic procesor de texte.</p>
+
+<p class=MsoPlainText>Reamintim si complet&atilde;m anumite aspecte din
+operarea cu foile de calcul, notiunile fiind esentiale pentru
+întelegerea corect&atilde; a utiliz&atilde;rii formulelor în Excel.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Referirea datelor</h3>
+
+<p class=primul>Orice informatie scris&atilde; în foaie poate fi
+referit&atilde; prin adresa celulei care o contine. Adresa unei celule este,
+uzual, format&atilde; din numele coloanei urmat de numele liniei. De exemplu, A2
+reprezint&atilde; celula (implicit si continutul celulei) situat&atilde;
+pe prima coloan&atilde; (coloana A) si linia a doua. (Se poate configura
+sistemul s&atilde; utilizeze modul de referint&atilde; R1C1, adic&atilde; R
+urmat de num&atilde;rul liniei si C urmat de num&atilde;rul coloanei.)</p>
+
+<p class=MsoPlainText>Un domeniu de celule este notat prin indicarea celulelor
+din coltul stânga-sus si coltul dreapta-jos,
+separate prin caracterul “:”. De exemplu, domeniul dreptunghiular determinat de
+coloanele A, B, C si D si liniile de la 3 la 7 se noteaz&atilde; A3:D7.
+Dac&atilde; domeniile sunt cu structuri mai compli­cate, atunci se specific&atilde;
+prin descompuneri în componente dreptunghiulare, separate prin virgule:
+A1,B2:C4,D5 reprezint&atilde; o zon&atilde; compus&atilde; din celula A1,
+dreptunghiul B2:C4 si celula D5.</p>
+
+<p class=MsoPlainText>Acesta este <b style='mso-bidi-font-weight:normal'>modul
+de referint&atilde; relativ. </b>Adresa celulei referite este stabilit&atilde;
+prin pozitia relativ&atilde; fat&atilde; de celula de unde se face
+referinta. Adic&atilde;, dac&atilde; suntem în celula C1, o referire la A2
+înseamn&atilde; celula situat&atilde; cu dou&atilde; coloa­ne la stânga si cu o
+linie mai jos. Atunci când se copie informatia în alte celule,
+referintele relative sunt copiate cu semnificatia lor. Adic&atilde;,
+dac&atilde; în exemplul anterior copiem din C1 informatia în celula D3,
+atunci referinta la A2 se va copia ca înteles, deci va deveni B4
+(celula care se pozitioneaz&atilde; fat&atilde; de D3 în aceeasi
+configuratie cum era pozitionat&atilde; A2 fat&atilde; de C1). La
+pre­zen­tarea functiilor se va da un exemplu.</p>
+
+<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'>Modul de
+referint&atilde; absolut</b> este indicat prin plasarea caracterului $ în
+fata p&atilde;rtii (p&atilde;rtilor) absolute din adres&atilde;. De
+exemplu, $A$1 reprezint&atilde; celula A1 indiferent de unde este referit&atilde;;
+$A1 reprezint&atilde; celula situat&atilde; pe coloana A<span style="mso-spacerun:
+yes">  </span>(referit&atilde; absolut) si în linia interpretat&atilde;
+relativ din locul unde se face referinta; A$1 reprezint&atilde; celula
+situat&atilde; în coloana interpretat&atilde; relativ fat&atilde; de locul unde
+se face referinta si pe linia 1 (indicat&atilde; absolut). Utilizarea
+diferentei dintre referintele relative si cele relative are important&atilde;
+doar la copierea informatiilor (inclusiv prin completarea automat&atilde; de
+serii).</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Selectarea datelor</h3>
+
+<p class=primul>Operatiunea de selectare a unor celule este necesar&atilde;
+atunci când trebuie s&atilde; facem referire la datele respective pentru a le
+denumi sau pentru o prelu­crare. În situatia când zonele de interes sunt
+deja numite, atunci nu este necesar&atilde; selectarea respectivelor zone,
+referirea fiind prin numele zonei. </p>
+
+<p class=MsoPlainText>Selectarea se poate efectua prin:</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l6 level1 lfo13;tab-stops:list .75in'><![if !supportLists]>–<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>pozitionarea într-un colt al domeniului,
+ap&atilde;sarea tastei Shift si actionarea tastelor cu s&atilde;geti
+de pozitionare pân&atilde; la selectarea întregului domeniu;</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l6 level1 lfo13;tab-stops:list .75in'><![if !supportLists]>–<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>pozitionarea mouse-ului într-un colt al
+domeniului, tinerea butonului din stânga ap&atilde;sat si tragerea în
+foaie a selectiei pân&atilde; se acoper&atilde; domeniul dorit.</p>
+
+<p class=MsoPlainText>Dac&atilde; selectarea datelor se face f&atilde;r&atilde; o
+cerint&atilde; expres&atilde; în acest sens din partea sistemului, atunci
+datele selectate în foaia activ&atilde; sunt marcate de c&atilde;tre sistem prin
+schimbarea culorii de fond a celulelor selectate. În cazul când selectia
+este cerut&atilde; de sistem (de exemplu la indicarea parametrilor unei functii),
+domeniul selectat este înconjurat de o bordur&atilde; punctat&atilde;,
+f&atilde;r&atilde; a se schimba culoarea celulelor (operatiunea este
+cunoscut&atilde; si ca selectarea dinamic&atilde; a parametrilor).</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Calcule în Excel</h3>
+
+<p class=primul>Pentru a efectua calcule (transform&atilde;ri) ale datelor
+înscrise în foile de calcul se plaseaz&atilde; cursorul (celula activ&atilde;) în
+locul unde se va înscrie rezultatul, se va tasta formula care efectueaz&atilde;
+calculul si se termin&atilde; operatiunea prin Enter. Sistemul Excel
+recunoaste drept <b style='mso-bidi-font-weight:normal'>formul&atilde;</b>
+orice expresie care începe cu semnul =, construit&atilde; dup&atilde; regulile
+uzuale din prelucrarea datelor din operanzi-constante, operanzi-referinte
+la alte celule, referinte de functii, operatori uzuali. De exemplu:
+=A2+3, =sin(B4)+cos(C3) etc. </p>
+
+<p class=MsoPlainText><!--[if gte vml 1]><v:shape id="_x0000_s1061" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:8.25pt;
+ width:151.5pt;height:105.75pt;z-index:7;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:imagedata src="exformula1.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/exformula1.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=202 height=141 src="exformula1.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/exformula1.jpg"
+align=right hspace=12 v:shapes="_x0000_s1061"><![endif]>În figura
+al&atilde;turat&atilde; se observ&atilde; c&atilde; adunarea numerelor situate în
+celulele C2 si D1 si trecerea rezultatului în celula E4 se
+efectueaz&atilde; prin:</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l6 level1 lfo13;tab-stops:list .75in'><![if !supportLists]>–<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>plasarea în E4;</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l6 level1 lfo13;tab-stops:list .75in'><![if !supportLists]>–<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>scrierea formulei, care începe întotdeauna cu caracterul “=”; </p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l6 level1 lfo13;tab-stops:list .75in'><![if !supportLists]>–<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>terminarea prin ap&atilde;sarea tastei Enter.</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l6 level1 lfo13;tab-stops:list .75in'><![if !supportLists]>–<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>în celula E4 se afiseaz&atilde; rezultatul calculului
+indicat.</p>
+
+<p class=MsoPlainText style='text-indent:0in'>Este de remarcat c&atilde; în bara
+Formula se afiseaz&atilde; expresia formulei scrise în celula activ&atilde;
+(dac&atilde; este cazul). În figur&atilde;, celula activ&atilde; este E4 si se
+afiseaz&atilde;, prin urmare, expresia calculat&atilde;. </p>
+
+<p class=MsoNormal>În configurarea uzual&atilde;, efectuarea calculului este
+imediat&atilde;, dar sistemul se poate configura încât recalcularea formulelor
+s&atilde; se efectueze doar la cererea utilizatorului (pentru economie de timp).
+De mentionat c&atilde; modificarea valorii celulelor referite în
+formul&atilde; nu necesit&atilde; rescrierea formulei: recalcularea foii<span
+style="mso-spacerun: yes">  </span>va reflecta în rezultat(e) noile valori.</p>
+
+<p class=MsoNormal>În operatiunea de scriere a unei formule de calcul,
+operanzii se pot scrie:</p>
+
+<p class=MsoNormal>– direct — este cazul tuturor operanzilor, dar singurul mod
+permis pentru constante;</p>
+
+<p class=MsoNormal>– dinamic — este cazul referintelor la celule (domenii
+de celule); dac&atilde; în locul rezervat unei referinte se efectueaz&atilde;
+un click în celula referit&atilde; (sau se selecteaz&atilde; domeniul necesar),
+atunci referinta este trecut&atilde; automat în formula, dup&atilde; care
+formula poate fi continuat&atilde; în mod uzual; o selectie similar&atilde; se
+poate efectua prin actionarea tastelor directionale;</p>
+
+<p class=MsoNormal>– inserarea unei functii – prin comanda <b
+style='mso-bidi-font-weight:normal'>Function</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Insert</b> se deschide, acolo unde este
+nevoie, dialogul prin care se insereaz&atilde; valoarea unei functii,
+mecanism explicat în continuare.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Utilizarea unei functii</h3>
+
+<p class=primul>Mediul Excel dispune de o vast&atilde; bibliotec&atilde; de
+functii clasificate dup&atilde; domeniul principal de utilizare: matematice
+(calcule generale), financiare (dobânzi), ingineresti etc. O functie
+poate fi utilizat&atilde; prin apelarea ei într-o formul&atilde;. </p>
+
+<p class=MsoNormal>Apelul se face în mod uzual, prin numele functiei urmat
+de parametri. De exemplu, includerea expresiei SUM(A1:A4) într-o
+formul&atilde; are ca efect calculul sumei valorilor din primele patru celule ale
+coloanei A si utilizarea rezultatului în formula respectiv&atilde;.
+Referirea unei functii necesit&atilde; prin urmare cunoasterea numelui
+si a num&atilde;rului de parametri necesari. </p>
+
+<p class=MsoPlainText><!--[if gte vml 1]><v:shape id="_x0000_s1062" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:46.15pt;
+ width:290.25pt;height:221.25pt;z-index:8;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:imagedata src="pastefunction.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/pastefunction.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=387 height=295
+src="pastefunction.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/pastefunction.jpg" align=right hspace=12 v:shapes="_x0000_s1062"><![endif]>În
+cazul în care utilizatorul nu stie pe de rost aceste elemente definitorii
+ale functiei, se poate utiliza meniul adecvat din mediul Excel. Comanda <b
+style='mso-bidi-font-weight:normal'>Function</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Insert</b> realizeaz&atilde; conducerea
+utilizatorului spre o corect&atilde; referire a functiei. Se
+afiseaz&atilde; dialogul <b style='mso-bidi-font-weight:normal'>Paste
+Function</b>, ar&atilde;tat în figura al&atilde;turat&atilde;.</p>
+
+<p class=MsoPlainText>Se observ&atilde; c&atilde; în partea stâng&atilde; se va
+selecta categoria de functii (lista <b style='mso-bidi-font-weight:normal'>Function</b>
+<b style='mso-bidi-font-weight:normal'>category</b>). În functie de clasa
+aleas&atilde;, în partea dreapt&atilde; (lista <b style='mso-bidi-font-weight:normal'>Function
+name</b>) apar denumirile<span style="mso-spacerun: yes">   
+</span>functiilor disponibile în aceast&atilde; clas&atilde;. Este de remarcat
+si textul explicativ atasat functiei selectate în lista din
+dreapta. Continuarea dialogului se face prin ap&atilde;sarea tastei Enter sau a
+butonului OK, dialogul ulterior fiind specific functiei selectate. </p>
+
+<p class=MsoPlainText><br
+style='mso-ignore:vglayout' clear=ALL>
+Dac&atilde;, spre exemplificare, presupunem c&atilde; s-a selectat
+functia de calcul a mediei aritmetice (AVERAGE), dialogul este prezentat
+în figura urm&atilde;toare. </p>
+<p><img width=464 height=243 src="averfunct.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/averfunct.jpg"></p> 
+<p class=MsoPlainText>Se observ&atilde; zonele în care trebuie s&atilde; se
+introduc&atilde; valorile (cazul din zona <b style='mso-bidi-font-weight:normal'>Number2</b>
+– valoare unic&atilde;, sau din zona <b style='mso-bidi-font-weight:normal'>Number3</b>
+– un tablou de valori), sau referintele la valori, pentru care se
+calculeaz&atilde; media aritmetic&atilde;. De remarcat c&atilde; referintele se
+pot da specificând denumirea dat&atilde; domeniului valorilor (cazul ilustrat în
+zona <b style='mso-bidi-font-weight:normal'>Number1</b>) sau zona din foaia de
+calcul (caz ilustrat în zona <b style='mso-bidi-font-weight:normal'>Number4</b>).
+Indicarea zonei se poate efectua prin selectarea dinamic&atilde; (se trage mouse-ul
+peste zona respectiv&atilde;). Pentru selectarea dinamic&atilde; exist&atilde;
+unealta specific&atilde; actionat&atilde; prin butonul din dreapta
+fiec&atilde;rei zone editabile: actionarea acelui buton reduce dialogul la o
+suprafat&atilde; minim&atilde;, astfel încât devine vizibil&atilde; o mai mare
+portiune a foii de calcul. </p>
+
+<p class=MsoPlainText>În acest dialog se observ&atilde; atât textul explicativ,
+cât si butonul din stânga jos care ofer&atilde; posoibilitatea
+obtinerii unor explicatii mai largi (formulele de calcul, utilizare
+etc.) despre functia aleas&atilde;. Rezultatul functiei (pentru
+argumentele fixate în acel moment) este afisat în zona <b
+style='mso-bidi-font-weight:normal'>Formula result</b>. Este de remarcat
+c&atilde; dialogul va afisa întotdeauna o zon&atilde; liber&atilde; prin
+redimensionarea lui, astfel încât se pot completa pân&atilde; la 30 de argumente.</p>
+
+<p class=MsoPlainText>În concluzie, apelul unei functii poate fi realizat
+prin </p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l6 level1 lfo13;tab-stops:list .75in'><![if !supportLists]>–<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>scrierea într-o formul&atilde; a expresiei “<i
+style='mso-bidi-font-style:normal'>functie</i>(<i style='mso-bidi-font-style:
+normal'>argumente</i>)” sau </p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l6 level1 lfo13;tab-stops:list .75in'><![if !supportLists]>–<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>initierea dialogului de inserare a functiei prin
+meniul Insert.</p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Inserarea unei functii de tip
+tablou </h4>
+
+<p class=MsoPlainText style='text-indent:0in'>Pentru functiile care au ca
+rezultat un tablou de date (de exemplu functia care calculeaz&atilde;
+produsul a dou&atilde; matrice) procedura de inserare este oarecum diferit&atilde;:</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l6 level1 lfo13;tab-stops:list .75in'><![if !supportLists]>–<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>se selecteaz&atilde; zona care va contine rezultatele (zona
+trebuie s&atilde; fie suficient de întins&atilde;, în caz contra se vor trece doar
+atâtea rezultate cât se poate);</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l6 level1 lfo13;tab-stops:list .75in'><![if !supportLists]>–<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>se tasteaz&atilde; formula care contine referinta la
+functia tablou;</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l6 level1 lfo13;tab-stops:list .75in'><![if !supportLists]>–<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>se termin&atilde; operatiunea prin ap&atilde;sarea
+combinatiei de taste Ctrl+Shift+Enter.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Calcularea foii de calcul</h3>
+
+<p class=primul>O foaie de calcul devine, prin inserarea de formule, o
+zon&atilde; complex&atilde; de lucru în care este p&atilde;strat&atilde; automat
+evidenta referintelor din formule sau argumente de functii,
+astfel încât foia poate fi adus&atilde; oricând la o stare de
+consistent&atilde; în sensul c&atilde; toate formulele sunt recalculate pentru
+a corespunde valorilor actualizate ale argumentelor. Acest proces este referit
+drept <i style='mso-bidi-font-style:normal'>calcularea foii de calcul</i>. </p>
+
+<p class=MsoPlainText>Pentru foile de mici dimensiuni calcularea se poate face
+în mod automat, cu alte cuvinte orice modificare a foii produce calculele
+necesare pentru ca foaia s&atilde; r&atilde;mân&atilde; consistent&atilde;. Pentru
+foile complexe acest fapt poate produce o operare greoaie, datorit&atilde;
+efectu&atilde;rii repetate a unor calcule partiale neimportante. În asemenea
+cazuri este indicat&atilde; calcularea manual&atilde; a foii, efectuat&atilde; doar
+la dorinta utilizatorului. Aceast&atilde; procedur&atilde; trebuie îns&atilde;
+aplicat&atilde; cu atentie întrucât poate distorsiona receptarea
+informatiilor (un utilizator obisnuit cu calcularea automat&atilde;
+poate avea impresia c&atilde; nu se aplic&atilde; corect formulele din foaie).
+Pentru a vizualiza rezultatele corecte se va cere în prealabil calcularea foii.</p>
+
+<p class=MsoPlainText><!--[if gte vml 1]><o:wrapblock><v:shape id="_x0000_s1064"
+  type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+  margin-left:32.55pt;margin-top:0;width:350.25pt;height:134.25pt;z-index:10;
+  mso-wrap-distance-top:3.6pt;mso-wrap-distance-bottom:3.6pt;
+  mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+  o:allowincell="f">
+  <v:imagedata src="calculation.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/calculation.jpg"/>
+  <w:wrap type="topAndBottom" side="largest"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=43 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=467 height=179 src="calculation.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/calculation.jpg" v:shapes="_x0000_s1064"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+Modul de calcul a caietului se fixeaz&atilde; prin comanda <b style='mso-bidi-font-weight:
+normal'>Options</b> din meniul <b style='mso-bidi-font-weight:normal'>Tools</b>.
+În fisa <b style='mso-bidi-font-weight:normal'>Calculation</b> exist&atilde;
+grupul de optiuni sinonim, ilustrat in figura al&atilde;turat&atilde;.</p>
+
+<p class=zona><b style='mso-bidi-font-weight:normal'>Automatic</b> – se
+fixeaz&atilde; modul automat de recalculare a foii.</p>
+
+<p class=zona><b style='mso-bidi-font-weight:normal'>Automatic except tables</b>
+– se recalculeaz&atilde; automat toate formulelel, cu exceptia tabelelor
+pivotante (un instrument de analiz&atilde; a datelor care este prezentat
+ulterior).</p>
+
+<p class=zona><b style='mso-bidi-font-weight:normal'>Manual</b> – recalcularea
+are loc manual la actionarea tastei F9 (se recalculeaz&atilde; toate foile
+din toate caietele deschise) sau SHIFT+F9 (se recalculeaz&atilde; doar foaia
+activ&atilde;). Aceste actiuni pot fi efectuate si din dialog prin
+ap&atilde;sarea butoanelor <b style='mso-bidi-font-weight:normal'>Calc Now,</b>
+respectiv <b style='mso-bidi-font-weight:normal'>Calc Sheet</b>.</p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Precizia calculelor</h4>
+
+<p class=primul>În mod implicit calculele sunt efectuate la precizia
+maxim&atilde; (15 cifre semnificative exacte), chiar dac&atilde; operanzii sunt
+afisati în foaia de calcul cu mai putine zecimale în urma unor
+operatiuni de formatare. </p>
+
+<p class=MsoPlainText>Dac&atilde; se doreste efectuarea calculelor cu
+precizia afisat&atilde;, deci fiecare operand contribuie exact cu valoarea
+afisat&atilde;<span style="mso-spacerun: yes">  </span>(cu referire în
+special la num&atilde;rul de zecimale), acest lucru se poate fixa prin marcarea
+casetei de control <b style='mso-bidi-font-weight:normal'>Precision as
+displayed</b> din grupul <b style='mso-bidi-font-weight:normal'>Workbook
+options,</b> fisa <b style='mso-bidi-font-weight:normal'>Calculation</b>,
+comanda <b style='mso-bidi-font-weight:normal'>Options</b>, meniul <b
+style='mso-bidi-font-weight:normal'>Tools</b>. Procedeul trebuie utilizat în
+cunostint&atilde; de cauz&atilde; deoarece nu se mai poate reveni la
+alt&atilde; precizie (mai mare), datele fiind modificate definitiv la valorile
+afisate.</p>
+
+<p class=MsoPlainText>Corectitudinea rezultatelor mai depinde de optiunile
+alese în grupul din partea inferioar&atilde; a figurii anterioare, optiuni
+care controleaz&atilde; calculele iterative. Prin marcarea zonei <b
+style='mso-bidi-font-weight:normal'>Iteration</b> foaia de calcul este
+recalculat&atilde; de num&atilde;rul de ori indicat în <b style='mso-bidi-font-weight:
+normal'>zona Maximum iterations</b> sau pân&atilde; când rezultatele din
+dou&atilde; recalcul&atilde;ri succesive difer&atilde; cu mai putin decât este
+indicat în zona <b style='mso-bidi-font-weight:normal'>Maximum change</b>. Este
+evident c&atilde; un num&atilde;r de iteratii mai mare, sau o precizie mai
+bun&atilde; conduce la un timp mai mare de calcul.</p>
+
+<a name="asist"></a>
+<h2 style='margin-left:0in;text-indent:0in'>Completarea asistat&atilde; a
+informatiilor</h2>
+
+<p class=primul>Pe lâng&atilde; posibilitatea de completare individual&atilde; a
+celulelor, mediul Microsoft Excel dispune de mecanisme predefinite care
+ajut&atilde; la completarea automat&atilde; a informatiilor. Procedeul este
+util mai ales atunci când o zon&atilde; a foii de calcul trebuie s&atilde;
+contin&atilde; informatii similare. S&atilde; ne imagin&atilde;m, de
+exemplu, situatia simpl&atilde; în care se numeroteaz&atilde; liniile unui
+tabel. Este evident c&atilde; automatizarea unui asemenea proces reduce durata
+operatiunii si elimin&atilde; erorile de numerotare.</p>
+
+<p class=MsoPlainText><!--[if gte vml 1]><v:shape id="_x0000_s1065" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:32.8pt;
+ width:159.75pt;height:95.25pt;z-index:11;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:imagedata src="fillhandle.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/fillhandle.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=213 height=127 src="fillhandle.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/fillhandle.jpg"
+align=right hspace=12 v:shapes="_x0000_s1065"><![endif]>În utilizarea
+mecanismelor de completare automat&atilde; este important s&atilde; se
+retin&atilde; existenta asa-zisului mâner de completare (<i
+style='mso-bidi-font-style:normal'>fill handle</i>) reprezentat printr-un
+punct situat în coltul dreapta inferior al unei selectii. Figura
+urm&atilde;toare arat&atilde; reprezentarea grafic&atilde; a acestui element.
+Pozitionarea mouse-ului în acest punct produce transformarea
+pointerului într-un pointer cruce, care arat&atilde; c&atilde; mânerul a fost
+ag&atilde;tat. Operatiunile specifice se execut&atilde; prin tragerea
+acestui mâner tinând ap&atilde;sat butonul stâng sau drept al mouse-ului
+si sunt explicate în continuarea acestei sectiuni. </p>
+
+<p class=MsoPlainText>Dac&atilde; în meniul <b style='mso-bidi-font-weight:normal'>Tools</b>,
+comanda <b style='mso-bidi-font-weight:normal'>Options</b>, fisa <b
+style='mso-bidi-font-weight:normal'>Edit</b> se deselecteaz&atilde; caseta de
+control <i style='mso-bidi-font-style:normal'>Allow cell drag and drop,</i>
+atunci dragarea nu mai este permis&atilde; (nu se mai afiseaz&atilde; mânerul
+de completare).</p>
+
+<p class=MsoPlainText>Sunt uzuale dou&atilde; tipuri de complet&atilde;ri automate:
+serii de date si copieri multiple de formate sau continut.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Serii</h3>
+
+<p class=primul>Printr-o <b style='mso-bidi-font-weight:normal'>serie</b>
+se întelege aici o însiruire de termeni care pot fi
+obtinuti dup&atilde; o aceeasi formul&atilde; (pornind, în general,
+de la unul sau doi termeni initiali). Se pot considera serii numerice (1,
+2, 3, …), serii temporale (10:00, 10:30, 11:00 etc.) sau serii de denumiri
+(luni, marti, miercuri etc.).</p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Tipuri de serii</h4>
+
+<h5 style='margin-left:0in;text-indent:0in'>Serii temporale</h5>
+
+<p class=primul>Se pot completa în mod automat diverse serii temporale,
+formatul datelor afisate fiind unitar pentru toti termenii seriei
+(ziua, ziua+denumirea zilei, denumirea lunii etc.):</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l0 level1 lfo14;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Zile, s&atilde;pt&atilde;mâni, luni sau ani cu pas definit
+de utilizator </p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l0 level1 lfo14;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Serii de zile lucr&atilde;toare</p>
+
+<h5 style='margin-left:0in;text-indent:0in'>Serii de numere</h5>
+
+<p class=primul>Exist&atilde; trei tipuri de serii numerice:</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l5 level1 lfo15;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Serii liniare – sunt seriile cu pas aditiv constant
+(progresii aritmetice),</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l5 level1 lfo15;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Serii de crestere – sunt seriile cu pas
+multiplicativ constant (progresii geometrice),</p>
+
+<p class=MsoPlainText style='margin-left:.75in;text-indent:-.25in;mso-list:
+l5 level1 lfo15;tab-stops:list .75in'><![if !supportLists]><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Serii de trend – se realizeaz&atilde; o aproximare
+liniar&atilde; a tendintei identificabile din primii termeni ai seriei
+dup&atilde; care se calculeaz&atilde; potrivit modelului estimat toti termenii
+seriei, inclusiv primii. </p>
+
+<h5 style='margin-left:0in;text-indent:0in'>Serii de termeni </h5>
+
+<p class=primul><!--[if gte vml 1]><o:wrapblock><v:shape id="_x0000_s1066"
+  type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+  margin-left:39pt;margin-top:0;width:343.5pt;height:96.75pt;z-index:12;
+  mso-wrap-distance-top:3.6pt;mso-wrap-distance-bottom:3.6pt;
+  mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+  o:allowincell="f">
+  <v:imagedata src="optlists.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/optlists.jpg"/>
+  <w:wrap type="topAndBottom" side="largest"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=52 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=458 height=129 src="optlists.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/optlists.jpg" v:shapes="_x0000_s1066"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+Utilizatorul poate s&atilde;-si defineasc&atilde; liste (seturi ordonate
+de termeni) proprii prin intermediul fisei <b style='mso-bidi-font-weight:
+normal'>Custom Lists</b> din dialogul <b style='mso-bidi-font-weight:normal'>Options</b>
+(meniul <b style='mso-bidi-font-weight:normal'>Tools</b>). Informatiile
+cerute sunt vizibile în figura al&atilde;turat&atilde;. </p>
+
+<p class=MsoPlainText>În lista din stânga sunt afisate toate listele
+definite (acestea sunt p&atilde;strate în mediul Excel, deci sunt disponibile
+si în utiliz&atilde;rile ulterioare). Pentru definirea unei liste proprii se
+selecteaz&atilde; intrarea <b style='mso-bidi-font-weight:normal'>NEW LIST </b>dup&atilde;
+care se trec termenii noii liste în zona rezervat&atilde; <b style='mso-bidi-font-weight:
+normal'>List entries.</b> Trecerea de la un termen la altul se realizeaz&atilde;
+prin ENTER. La terminarea listei se actioneaz&atilde; butonul <b
+style='mso-bidi-font-weight:normal'>Add</b> si lista definit&atilde; apare
+în zona <b style='mso-bidi-font-weight:normal'>Custom lists</b> din partea
+dreapt&atilde;. Eliminarea unei liste se realizeaz&atilde; prin selectarea în <b
+style='mso-bidi-font-weight:normal'>Custom lists</b> si actionarea
+butonului <b style='mso-bidi-font-weight:normal'>Delete</b>.</p>
+
+<p class=MsoPlainText>Având la baz&atilde; o list&atilde; proprie, utilizatorul
+poate genera o serie de termeni, care se obtine prin indicarea unuia sau
+mai multor termeni initiali dup&atilde; care completarea seriei se realizeaz&atilde;
+prin parcurgerea ciclic&atilde; a listei. De exemplu, având la baz&atilde; lista cu
+denumirile românesti ale zilelor s&atilde;pt&atilde;mânii, se poate genera
+seria <i style='mso-bidi-font-style:normal'>luni, miercuri, vineri,
+duminic&atilde;, marti etc.</i> obtinut&atilde; prin însiruirea
+zilelor din dou&atilde; în dou&atilde;, observându-se parcurgerea
+repetat&atilde; a listei.</p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Completarea seriilor prin comanda
+Series</h4>
+
+<p class=primul>Completarea automat&atilde; a unei serii poate fi cerut&atilde;
+atunci când se porneste de la un domeniu selectat, care se va completa cu
+termenii seriei (cazul în care se cunoaste num&atilde;rul de termeni ai
+seriei generate), sau atunci când procesul de generare se opreste la o
+valoare tint&atilde;.</p>
+
+<p class=MsoPlainText>În ambele cazuri se va înscrie primul termen în celula de
+pornire. Dac&atilde; se selecteaz&atilde; un domeniu, primul termen trebuie s&atilde;
+fie în celula activ&atilde;. </p>
+
+<p class=MsoPlainText><!--[if gte vml 1]><o:wrapblock><v:shape id="_x0000_s1067"
+  type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+  margin-left:71.25pt;margin-top:0;width:294.75pt;height:116.25pt;z-index:13;
+  mso-wrap-distance-top:7.2pt;mso-wrap-distance-bottom:7.2pt;
+  mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+  o:allowincell="f">
+  <v:imagedata src="image001.png" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/Excel4_files/image001.png" o:title="FillSeries"/>
+  <w:wrap type="topAndBottom" side="largest"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=95 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=393 height=155 src="image002.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/Excel4_files/image002.jpg" v:shapes="_x0000_s1067"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+Comanda <b style='mso-bidi-font-weight:normal'>Series</b> din submeniul deschis
+la <b style='mso-bidi-font-weight:normal'>Fill,</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Edit</b>, afiseaz&atilde; dialogul din
+fugura urm&atilde;toare.</p>
+
+<p class=zona>În grupul <i style='mso-bidi-font-style:normal'>Series in</i> se
+fixeaz&atilde; directia de generare: pe linie (<i style='mso-bidi-font-style:
+normal'>Rows</i>) sau pe coloan&atilde; (<i style='mso-bidi-font-style:normal'>Columns</i>).</p>
+
+<p class=zona>În grupul <i style='mso-bidi-font-style:normal'>Type</i> se alege
+tipul de serie: liniar (<i style='mso-bidi-font-style:normal'>Linear</i>), de
+crestere (<i style='mso-bidi-font-style:normal'>Growth</i>), temporal (<i
+style='mso-bidi-font-style:normal'>Date</i>) sau identificat automat (<i
+style='mso-bidi-font-style:normal'>AutoFill</i> – permis doar la selectarea
+prealabil&atilde; a domeniului).</p>
+
+<p class=zona>În grupul <i style='mso-bidi-font-style:normal'>Date unit</i> se
+fixeaz&atilde; unitatea de incrementare: zi (<i style='mso-bidi-font-style:normal'>Day</i>),
+zi lucr&atilde;toare (<i style='mso-bidi-font-style:normal'>Weekday</i>), luna (<i
+style='mso-bidi-font-style:normal'>Month</i>) sau anul (<i style='mso-bidi-font-style:
+normal'>Year</i>).</p>
+
+<p class=zona>Se marcheaz&atilde; <i style='mso-bidi-font-style:normal'>Trend</i>
+dac&atilde; se doreste generarea unei serii de trend.</p>
+
+<p class=zona><i style='mso-bidi-font-style:normal'>Step value</i> – se înscrie
+valoarea pasului de incrementare (poate fi si negativ).</p>
+
+<p class=zona><i style='mso-bidi-font-style:normal'>Stop value</i> – se înscrie
+valoarea de oprire (necesar&atilde; atunci când nu se porneste cu un domeniu
+selectat).</p>
+
+<p class=MsoPlainText><!--[if gte vml 1]><v:shape id="_x0000_s1068" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:13.85pt;
+ width:210.75pt;height:29.25pt;z-index:14;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:imagedata src="autofill1.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/autofill1.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=281 height=39 src="autofill1.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/autofill1.jpg"
+align=right hspace=12 v:shapes="_x0000_s1068"><![endif]><!--[if gte vml 1]><v:shape
+ id="_x0000_s1069" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:0;margin-top:56pt;width:209.25pt;height:26.25pt;
+ z-index:15;mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f">
+ <v:imagedata src="autofill2.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/autofill2.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=279 height=35 src="autofill2.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/autofill2.jpg"
+align=right hspace=12 v:shapes="_x0000_s1069"><![endif]><b style='mso-bidi-font-weight:
+normal'>Observatii</b>. 1. Prin <b style='mso-bidi-font-weight:normal'>AutoFill</b>
+se pot completa serii diverse de informatii, identificate prin analize
+sofisticate. De exemplu, comanda <b style='mso-bidi-font-weight:normal'>Series</b>
+– <b style='mso-bidi-font-weight:normal'>AutoFill</b> pornind de la
+selectia din prima figur&atilde; al&atilde;turat&atilde; produce continuarea
+numerot&atilde;rii sub forma prezentat&atilde; în a doua figur&atilde;.</p>
+
+<p class=MsoPlainText>2. Prin selectarea mai multor linii si coloane se
+pot genera concomitent mai multe serii.</p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Completarea prin drag-and-drop</h4>
+
+<p class=primul>Dac&atilde; se selecteaz&atilde; începutul seriei (primul termen
+sau un num&atilde;r de termeni suficient pentru identificarea tipului seriei)
+si se agat&atilde; mânerul de completare, prin tragerea acestuia se
+completeaz&atilde; seria în domeniul dorit.</p>
+
+<p class=MsoPlainText>Prin acest procedeu se pot completa simultan mai multe
+serii, dac&atilde; se pleac&atilde; de la o selectie care contine mai
+multe linii/coloane.</p>
+
+<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'>Observatie</b>.
+Dac&atilde; tragerea are loc prin tinerea butonului drept al mouse-ului,
+la ridicarea butonului apare un meniu contextual din care se poate alege tipul
+de serie.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Copierea automat&atilde;</h3>
+
+<p class=primul>O operatiune care este foarte asem&atilde;n&atilde;toare cu
+cea de completare a unei serii (poate fi asimilat&atilde; unei serii cu termeni
+constanti) este aceea prin care informatie dintr-o celul&atilde;
+este copiat&atilde; într-un domeniu (pe linie sau pe coloan&atilde;).
+Aceast&atilde; actiune este utilizat&atilde; de obicei la copierea unei
+formule, caz în care prin jocul referintelor relative si absolute se
+calculeaz&atilde; serii de rezultate pornind de la serii de argumente.</p>
+
+<p class=MsoPlainText>Copierea are loc în urma succesiunii de actiuni:</p>
+
+<p class=MsoPlainText>A. se scrie primul termen si se urmeaz&atilde; B1 sau
+B2.</p>
+
+<p class=MsoPlainText style='margin-left:63.0pt;text-indent:-27.0pt'>B1. – se
+selecteaz&atilde;, începând cu celula primului termen, zona în care se
+efectueaz&atilde; copierea,</p>
+
+<p class=MsoPlainText style='margin-left:63.0pt;text-indent:-9.0pt'>– se
+d&atilde; comanda <b style='mso-bidi-font-weight:normal'>Fill</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Edit</b>, alegându-se <b
+style='mso-bidi-font-weight:normal'>Down</b> (în jos), <b style='mso-bidi-font-weight:
+normal'>Up</b> (în sus), <b style='mso-bidi-font-weight:normal'>Right</b> (la
+dreapta), <b style='mso-bidi-font-weight:normal'>Left</b> (la stânga) potrivit
+directiei în care se doreste copierea.</p>
+
+<p class=MsoPlainText style='margin-left:63.0pt;text-indent:-27.0pt'>B2. - se
+agat&atilde; mânerul de completare a celulei primului termen si se
+trage peste zona în care se efectueaz&atilde; copierea.</p>
+
+<p class=MsoPlainText>Procesul poate fi efectuat simultan pentru mai multe
+copieri pe linii/coloane paralele. Pentru aceasta se selecteaz&atilde;
+initial toate celulele care se copie (acestea trebuie s&atilde; fie pe o
+aceeasi linie/coloan&atilde;).</p>
+
+<a name="editare"></a>
+<h2 style='margin-left:0in;text-indent:0in'>Editarea informatiilor</h2>
+
+<p class=primul>Prin editare întelegem modificarea informatiilor
+dup&atilde; ce acestea au fost deja înscrise în celule. Dac&atilde; se
+pozitioneaz&atilde; cursorul Excel pe celula care se doreste
+modificat&atilde; si se tasteaz&atilde; ceva se observ&atilde; c&atilde; noul
+continut înlocuieste în totalitate informatia existent&atilde; în
+celul&atilde;. În cele mai multe cazuri acest mod de actualizare a
+informatiei nu este eficient. </p>
+
+<p class=MsoPlainText>Initierea edit&atilde;rii se poate efectua prin</p>
+
+<p class=MsoPlainText>– dublu click în celula care se modific&atilde;, sau</p>
+
+<p class=MsoPlainText>– activarea celulei care se modific&atilde; (simplu click
+sau pozitionare) si ap&atilde;sarea tastei functionale F2.</p>
+
+<p class=MsoPlainText>În starea de editare, celula se transform&atilde; într-o
+zon&atilde; text uzual&atilde; iar editarea se efectueaz&atilde; prin
+pozitionarea punctului de insertie (prin click sau s&atilde;geti)
+si operatiunile uzuale de tastare.</p>
+
+<p class=MsoPlainText>Terminarea edit&atilde;rii are loc la ap&atilde;sarea tastei
+ENTER sau prin click în alt&atilde; celul&atilde;.</p>
+
+<p class=MsoPlainText>Pentru a renunta la modific&atilde;rile efectuate se
+apas&atilde; tasta ESC si celula revine la continutul anterior.</p>
+
+<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'>Observatie</b>.
+Se va retine diferenta între introducerea unei informatii într-o
+celul&atilde; si editarea continutului acelei celule. </p>
+
+<p class=MsoNormal>Editarea unei informatii se poate efectua în bara de
+formule sau direct în celul&atilde;, potrivit optiunii alese în meniul
+Tools, comanda Options, fisa Edit: selectarea casetei de control Edit
+directly in cell permite editarea direct în celul&atilde;, altminteri editarea
+are loc doar în bara de formule.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Copierea informatiilor</h3>
+
+<p class=primul>Operatiunile de copiere si mutare au în Excel o mai
+mare complexitate datorit&atilde; faptului c&atilde; atributele unei celule sunt
+numeroase.</p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Copierea/mutarea de celule întregi</h4>
+
+<p class=primul>La copierea/mutarea celulelor se realizeaz&atilde;
+operatiunea pentru întreaga zon&atilde;, inclusiv formule, rezultate,
+comentarii si formate. Dac&atilde; zona surs&atilde; sau/si cea
+destinatie are celule ascunse, acestea sunt considerate ca si cum ar
+fi vizibile. Pentru a copia (muta) o zon&atilde; de celule (posibil o
+singur&atilde; celul&atilde;):</p>
+
+<p class=MsoPlainText>– se selecteaz&atilde; zona</p>
+
+<p class=MsoPlainText>– se tasteaz&atilde; CTRL+C (sau CTRL+X pentru mutare)</p>
+
+<p class=MsoPlainText>– se activeaz&atilde; coltul stânga sus a zonei
+receptoare</p>
+
+<p class=MsoPlainText>– se apas&atilde; CTRL+V.</p>
+
+<p class=MsoPlainText>Operatiunea se poate efectua si prin comenzile <b
+style='mso-bidi-font-weight:normal'>Copy</b>+<b style='mso-bidi-font-weight:
+normal'>Paste</b> din meniul <b style='mso-bidi-font-weight:normal'>Edit</b>
+pentru copiere sau <b style='mso-bidi-font-weight:normal'>Move</b>+<b
+style='mso-bidi-font-weight:normal'>Paste</b> pentru mutare. În acelasi
+scop se pot utiliza si uneltele corespunz&atilde;toare.</p>
+
+<p class=MsoPlainText>Grupul de celule pentru care s-a dat comanda de
+copiere apar înconjurate cu o bordur&atilde; punctat&atilde; (semnificând memorarea
+lor în Clipboard) si pot fi lipite în multiple locatii. Chenarul
+dispare la ap&atilde;sarea tastei ESC.</p>
+
+<p class=MsoPlainText>Copierea/mutarea se poate efectua si prin tragerea
+cu mouse-ul:</p>
+
+<p class=MsoPlainText>– se selecteaz&atilde; celulele surs&atilde;,</p>
+
+<p class=MsoPlainText>– se puncteaz&atilde; chenarul selectiei,</p>
+
+<p class=MsoPlainText>– se trage cu mouse-ul la noua locatie (pentru
+mutare) sau se efectueaz&atilde; tragerea ap&atilde;sând simultan tasta CTRL
+(pentru copiere).</p>
+
+<p class=MsoPlainText>În cazul în care operatiunea are loc pe alt&atilde;
+foaie decât cea activ&atilde;, se actioneaz&atilde; Copy/Move, se
+activeaz&atilde; noua foaie si se realizeaz&atilde; alipirea în mod
+obisnuit.</p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Inserarea celulelor copiate/mutate
+între alte celule</h4>
+
+<p class=primul>Pentru a insera celulele copiate/mutate între celulele
+existente în zona destinatie, se actioneaz&atilde; simultan SHIFT
+(pentru mutare) sau SHIFT+CTRL (pentru copiere) în timpul tragerii.</p>
+
+<p class=MsoPlainText>Acelasi efect se obtine din comenzi prin</p>
+
+<p class=MsoPlainText>– se selecteaz&atilde; celule surs&atilde;</p>
+
+<p class=MsoPlainText>– se alege <b style='mso-bidi-font-weight:normal'>Cut</b>
+sau <b style='mso-bidi-font-weight:normal'>Copy </b>(din unelte sau meniul <b
+style='mso-bidi-font-weight:normal'>Edit</b>)</p>
+
+<p class=MsoPlainText>– se selecteaz&atilde; coltul stânga sus al
+destinatiei</p>
+
+<p class=MsoPlainText>– din meniul <b style='mso-bidi-font-weight:normal'>Insert</b>
+se alege comanda <b style='mso-bidi-font-weight:normal'>Cut Cells</b> sau <b
+style='mso-bidi-font-weight:normal'>Copied Cells</b> dup&atilde; care se alege
+directia în care se deplaseaz&atilde; celulelel exitente pentru a face locul
+necesar alipirii noilor celule.</p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Copierea/mutarea unei portiuni
+a continutului</h4>
+
+<p class=primul>Se activeaz&atilde; editarea celulei surs&atilde;, se
+selecteaz&atilde; portiunea dorit&atilde; si operatiunea de
+copiere/mutare se poate efectua în aceeasi celul&atilde; prin
+pozitionarea în locul de destinatie si alipire, sau
+initierea edit&atilde;rii celulei destinatie (dublu click pe ea)
+si alipirea în locul de destinatie.</p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Copierea special&atilde; (valori,
+comentarii, formate)</h4>
+
+<p class=primul>Dac&atilde; în operatiunea de copiere/mutare nu se
+doreste operarea cu celulel întregi ci numai cu anumite componente,
+atunci:</p>
+
+<p class=MsoNormal>– se selecteaz&atilde; sursa</p>
+
+<p class=MsoNormal>– se d&atilde; comanda Copy sau Move</p>
+
+<p class=MsoNormal>– se selecteaz&atilde; zona destinatie</p>
+
+<p class=MsoNormal>– se d&atilde; comanda Paste Special din meniul Edit</p>
+
+<p class=MsoNormal>– se alege optiunea dorit&atilde; din dialogul
+afisat</p>
+
+<p class=MsoNormal>– se termin&atilde; cu OK.</p>
+
+<p class=MsoNormal>Pentru a elimina chenarul de mutare a sursei (care
+r&atilde;mâne activ dup&atilde; copiere) se va actiona ESC înaintea unei alte
+comenzi.</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Observatie</b>.
+Printre optiunile disponibile în dialogul <b style='mso-bidi-font-weight:
+normal'>Paste</b> este si <b style='mso-bidi-font-weight:normal'>Skip
+blanks</b> care previne copierea celulelor goale peste celule, din zona
+destinatie, care contin informatii.</p>
+
+<h4 style='margin-left:0in;text-indent:0in'>Copierea doar a celulelor vizibile</h4>
+
+<p class=primul>În cazul în care anumite linii/coloane sunt ascunse în zona
+surs&atilde;, atunci se pot copia/muta doar celulele vizibile prin
+urm&atilde;toarea succesiune de operatiuni:</p>
+
+<p class=MsoNormal>– se selecteaz&atilde; sursa,</p>
+
+<p class=MsoNormal>– se d&atilde; comanda <b style='mso-bidi-font-weight:normal'>Go
+To</b> din meniul <b style='mso-bidi-font-weight:normal'>Edit</b>,</p>
+
+<p class=MsoNormal>– se alege <b style='mso-bidi-font-weight:normal'>Special</b>,
+<b style='mso-bidi-font-weight:normal'>Visible cells only</b> si <b
+style='mso-bidi-font-weight:normal'>OK</b>,</p>
+
+<p class=MsoNormal>– se d&atilde; comanda <b style='mso-bidi-font-weight:normal'>Copy</b>,</p>
+
+<p class=MsoNormal>– se selecteaz&atilde; coltul stânga sus al
+destinatiei,</p>
+
+<p class=MsoNormal>– se d&atilde; comanda <b style='mso-bidi-font-weight:normal'>Paste</b>.
+</p>
+
+<p class=MsoPlainText>Operatiunea consider&atilde; totusi toate
+celulele din zona destinatie, chiar dac&atilde; unele sunt ascunse. </p>
+
+<a name="gasire"></a>
+<h2 style='margin-left:0in;text-indent:0in'>Operatiunile de reg&atilde;sire
+si înlocuire</h2>
+
+<p class=primul>Procesarea informatiilor necesit&atilde; frecvent
+localizarea unor anumite entit&atilde;ti si eventuala lor înlocuire.
+Microsoft Excel dispune de un puternic instrument de c&atilde;utare si
+înlocuire. Deoarece o parte a acestui proces este specific filtr&atilde;rii
+informatiilor dintr-o list&atilde;, aceasta va fi prezentat&atilde; o
+dat&atilde; cu listele. În aceast&atilde; sectiune se discut&atilde; doar doar
+localizarea si înlocuirea (comenzile <b style='mso-bidi-font-weight:normal'>Find</b>
+si <b style='mso-bidi-font-weight:normal'>Replace</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Edit</b>), ca si selectarea unor
+tipuri de informatii (comanda <b style='mso-bidi-font-weight:normal'>Go To</b>
+din meniul <b style='mso-bidi-font-weight:normal'>Edit</b>).</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>G&atilde;sirea de text sau numere</h3>
+
+<p class=primul><!--[if gte vml 1]><o:wrapblock><v:shape id="_x0000_s1070"
+  type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+  margin-left:34.7pt;margin-top:0;width:321.75pt;height:168pt;z-index:16;
+  mso-wrap-distance-top:7.2pt;mso-wrap-distance-bottom:7.2pt;
+  mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+  o:allowincell="f">
+  <v:imagedata src="editfind.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/editfind.jpg"/>
+  <w:wrap type="topAndBottom" side="largest"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=46 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=429 height=224 src="editfind.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/editfind.jpg" v:shapes="_x0000_s1070"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+Comanda <b style='mso-bidi-font-weight:normal'>Find</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Edit</b> permite localizarea celulelor care
+contin informatia dorit&atilde;. La activarea comenzii se
+afiseaz&atilde; dialogul <b style='mso-bidi-font-weight:normal'>Find</b>,
+prezentat în figura urm&atilde;toare.</p>
+
+<p class=MsoPlainText>Pentru a efectua o c&atilde;utare:</p>
+
+<p class=MsoPlainText>– se selecteaz&atilde; domeniul de celule în care se
+produce c&atilde;utarea (dac&atilde; este selectat&atilde; o singur&atilde;
+celul&atilde;, c&atilde;utarea are loc în toat&atilde; foaia)</p>
+
+<p class=MsoPlainText>– se d&atilde; comanda <b style='mso-bidi-font-weight:normal'>Find</b>
+din meniul <b style='mso-bidi-font-weight:normal'>Edit</b>,</p>
+
+<p class=MsoPlainText>– în zona <b style='mso-bidi-font-weight:normal'>Find
+what</b> se introduce textul sau num&atilde;rul c&atilde;utat,.</p>
+
+<p class=MsoPlainText>– în lista derulant&atilde; <b style='mso-bidi-font-weight:
+normal'>Look in</b> se alege tipul de informatii în care se caut&atilde; (<i
+style='mso-bidi-font-style:normal'>Formulas</i> – doar în formule, <i
+style='mso-bidi-font-style:normal'>Values</i> – în valori, <i style='mso-bidi-font-style:
+normal'>Comments</i> – în comentarii)</p>
+
+<p class=MsoPlainText>– în lista <b style='mso-bidi-font-weight:normal'>Search</b>
+se alege c&atilde;utarea pe linii sau pe coloane</p>
+
+<p class=MsoPlainText>– se actioneaz&atilde; <b style='mso-bidi-font-weight:
+normal'>Find Next</b> pentru a vedea urm&atilde;toarea potrivire
+g&atilde;sit&atilde;.</p>
+
+<p class=MsoPlainText>Dac&atilde; se marcheaz&atilde; caseta <b style='mso-bidi-font-weight:
+normal'>Match case,</b> atunci textul este c&atilde;utat cu diferentierea
+literelor dup&atilde; capitalizare, dac&atilde; se marcheaz&atilde; <b
+style='mso-bidi-font-weight:normal'>Find entire cells only</b>, atunci se
+g&atilde;sesc doar celulele care contin doar entitatea c&atilde;utat&atilde;.</p>
+
+<p class=MsoPlainText>Ap&atilde;sarea tastei ESC termin&atilde; o c&atilde;utare în
+desf&atilde;surare.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>G&atilde;sirea si înlocuirea de
+text si numere</h3>
+
+<p class=primul>Pentru a efectua o înlocuire multipl&atilde; se d&atilde;
+selecteaz&atilde; zona în care se doreste c&atilde;utarea (o singur&atilde;
+celul&atilde; produce c&atilde;utarea în întreaga foaie) si se d&atilde; comanda
+<b style='mso-bidi-font-weight:normal'>Replace</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Edit</b>. Se afiseaz&atilde; dialogul <b
+style='mso-bidi-font-weight:normal'>Replace</b> în care se precizeaz&atilde;:</p>
+
+<p class=MsoPlainText>– informatia c&atilde;utat&atilde; (care va fi
+înlocuit&atilde;) în zona <b style='mso-bidi-font-weight:normal'>Find what</b>,</p>
+
+<p class=MsoPlainText>– informatia cu care se înlocuies1;te în zona <b
+style='mso-bidi-font-weight:normal'>Replace with</b>,</p>
+
+<p class=MsoPlainText>– ordinea de c&atilde;utare (pe linii sau pe coloane) în <b
+style='mso-bidi-font-weight:normal'>Search</b>,</p>
+
+<p class=MsoPlainText><!--[if gte vml 1]><o:wrapblock><v:shape id="_x0000_s1071"
+  type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+  margin-left:47.6pt;margin-top:0;width:308.25pt;height:123.75pt;z-index:17;
+  mso-wrap-distance-top:7.2pt;mso-wrap-distance-bottom:7.2pt;
+  mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+  o:allowincell="f">
+  <v:imagedata src="editreplace.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/editreplace.jpg"/>
+  <w:wrap type="topAndBottom" side="largest"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=63 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=411 height=165 src="editreplace.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/editreplace.jpg" v:shapes="_x0000_s1071"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+– se precizeaz&atilde; parametrii c&atilde;ut&atilde;rii în <b style='mso-bidi-font-weight:
+normal'>Match case </b>si<b style='mso-bidi-font-weight:normal'> Find
+entire cells only </b>(explicati la c&atilde;utare).</p>
+
+<p class=MsoPlainText>– click Find Next pentru a localiza urm&atilde;toarea
+potrivire, dup&atilde; care click pe Replace pentru înlocuire, click pe Replace
+All pentru efectuarea tuturor înlocuirilor, sau click pe Find Next pentru a
+obtine urm&atilde;toarea potrivire (cea curent&atilde; r&atilde;mâne
+neînlocuit&atilde;).</p>
+
+<p class=MsoPlainText>ESC termin&atilde; c&atilde;utarea în desf&atilde;surare.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'><span style="mso-spacerun:
+yes"> </span>G&atilde;sirea celulelor goale, a constantelor, formulelor sau
+comentariilor</h3>
+
+<p class=MsoPlainText>C&atilde;utarea dup&atilde; natura informatiilor din
+celule se realizeaz&atilde; prin comanda <b style='mso-bidi-font-weight:normal'>Go
+To</b> din meniul <b style='mso-bidi-font-weight:normal'>Edit</b>. Ca rezultat
+se obtine o selectie de regiuni multiple. </p>
+
+<p class=MsoPlainText>– se selecteaz&atilde; domeniul în care are loc
+c&atilde;utarea (o celul&atilde; selectat&atilde; înseamn&atilde; c&atilde;utare în foaia
+activ&atilde;)</p>
+
+<p class=MsoPlainText><!--[if gte vml 1]><v:shape id="_x0000_s1072" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:14.65pt;
+ width:207.75pt;height:197.25pt;z-index:18;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:imagedata src="gotospecial.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/gotospecial.jpg"/>
+ <w:wrap type="square" side="largest"/>
+</v:shape><![endif]--><![if !vml]><img width=277 height=263
+src="gotospecial.jpg" tppabs="http://thor.info.uaic.ro/%7eval/ExcelMan/images/gotospecial.jpg" align=right hspace=12 v:shapes="_x0000_s1072"><![endif]>– se
+d&atilde; comanda <b style='mso-bidi-font-weight:normal'>Go To</b> din meniul <b
+style='mso-bidi-font-weight:normal'>Edit</b>,</p>
+
+<p class=MsoPlainText>– se actioneaz&atilde; butonul <b style='mso-bidi-font-weight:
+normal'>Special</b></p>
+
+<p class=MsoPlainText>– se alege optiunea dorit&atilde;,</p>
+
+<p class=MsoPlainText>– se actioneaz&atilde; <b style='mso-bidi-font-weight:
+normal'>OK</b>.</p>
+
+<p class=MsoPlainText>Dialogul <b style='mso-bidi-font-weight:normal'>Go To
+Special</b> este ar&atilde;tat în figura al&atilde;turat&atilde; si
+explic&atilde;m doar câteva optiuni:</p>
+
+<p class=zona><i style='mso-bidi-font-style:normal'>Comments</i> – se
+selecteaz&atilde; celulele care au atasate comentarii,</p>
+
+<p class=zona><i style='mso-bidi-font-style:normal'>Constants</i> – se
+selecteaz&atilde; celulele care au valori constante,</p>
+
+<p class=zona><i style='mso-bidi-font-style:normal'>Formulas</i> – se selecteaz&atilde;
+celulele ccare contin formule de tipul specificat,</p>
+
+<p class=zona><i style='mso-bidi-font-style:normal'>Blanks</i> – se
+selecteaz&atilde; celulele goale.</p>
+
+<p class=zona><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=primul><span style='mso-tab-count:1'>            </span></p>
+
+</div>
+
+</body>
+
+</html>
