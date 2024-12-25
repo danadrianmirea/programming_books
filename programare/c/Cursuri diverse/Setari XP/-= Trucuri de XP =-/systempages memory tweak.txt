@@ -1,0 +1,5 @@
+SystemPages Memory Tweak
+
+Written By: M|KR0N^  |  Authors Website: Visit  | Views: 13322  |  Print Tweak  |  11/24/2001
+
+Hi, I'm not 100% sure if this tweak will yield a great performance boost to the majority of users out there, but for me it seems to have shown very good results. By default, if you look in the [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]key, you'll see the 'SystemPages' DWORD Value set to something around 500 MB (more accurately, 524288 (KB), or something close to that value). Simply reduce the value to something around 128 MB (131072 KB) or 256 MB (262144 KB). Personally, I'm using the 128 MB setting, since my total RAM is 256 MB. It might help to experiment a little, since each machine will most likely yield better or worse results. Good Luck!
