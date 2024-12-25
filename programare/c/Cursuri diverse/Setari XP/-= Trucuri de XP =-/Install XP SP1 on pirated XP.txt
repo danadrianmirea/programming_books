@@ -1,0 +1,21 @@
+to install sp1 on a pirated copy of XP: 
+
+- open regedit 
+- browse to HKEY_LOCAL_MACHINE\software\microsoft\windows nt\currentversion\wpaevents 
+- double-click OOBETimer 
+- remove the 'ca' part from it by pressing HOME and then DEL (on keyboard) 
+- click OK 
+- close regedit 
+- start -> run 
+- type in: C:\windows\system32\oobe\msoobe.exe /a 
+- choose the 2nd option (phone activation) 
+- click Change product key (at the bottom) 
+- enter the product key you got from running the Blue List key generator 
+- press OK 
+- close the window 
+- restart your comp 
+..after restart.. 
+- start -> run 
+- type in: C:\windows\system32\oobe\msoobe.exe /a 
+- verify that it says 'your copy of windows is already activated' 
+- proceed in installing XP SP1 from http://www.windowsxp.nu 
