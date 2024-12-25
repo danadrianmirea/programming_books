@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0046)http://www.infoiasi.ro/~rvlad/curs/kernel.html -->
+<HTML><HEAD><TITLE>Nucleul sistemului de operare</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-2">
+<META content="MSHTML 5.50.4134.600" name=GENERATOR></HEAD>
+<BODY>
+<CENTER>
+<H2>Nucleul sistemului de operare</H2></CENTER>
+<HR color=black>
+
+<P align=justify>Datorita multitudinii si diversitatii sarcinilor pe care le are 
+de indeplinit, sistemul de operare nu poate fi conceput sub forma unui program 
+unitar. Practic, sistemul de operare consta dintr-o multime de secvente de 
+program, fiecare indeplinind o anumita sarcina. 
+<P align=justify>Un argument in favoarea unei asemenea abordari, in afara 
+considerentelor de fiabilitate si usurinta in dezvoltare, il constituie evolutia 
+continua a tehnologiilor utilizate, in special in ceea ce priveste dispozitivele 
+periferice. Daca la un moment dat se pune problema inlocuirii intr-un calculator 
+a unui asemenea periferic (de exemplu mouse) cu unul mai nou, va trebui 
+schimbata secventa de program care se ocupa de gestionarea sa. In cazul in care 
+sistemul de operare ar fi un program unic, acesta ar trebui inlocuit in 
+intregime, ceea ce este inacceptabil in practica. Asupra acestui aspect vom 
+reveni ulterior. 
+<P align=justify>Pe de alta parte, exista o serie de operatiuni fundamentale, 
+care trebuie realizate intotdeauna in acelasi mod, independent de 
+particularitatile hardware-ului. Partile de program care indeplinesc aceste 
+sarcini fundamentale formeaza nucleul sistemului de operare, care dirijeaza si 
+controleaza functionarea sistemului de calcul in ansamblul sau. In continuare, 
+notiunile de sistem de operare si de nucleu al sistemului de operare se vor 
+confunda in mare masura, deoarece celelalte componente ale sistemului de operare 
+sunt utilizate de catre nucleu pentru a-si indeplini sarcinile. 
+<P align=justify>Nu exista intotdeauna o delimitare clara intre nucleu si 
+celelalte componente. Conceptiile diversilor producatori de sisteme de operare 
+difera in ceea ce priveste locul unora dintre functii - in nucleu sau in afara 
+sa. Totusi, practic toate sistemele de operare existente includ in nucleu 
+urmatoarele componente: 
+<UL>
+  <LI>gestiunea proceselor 
+  <LI>gestiunea memoriei 
+  <LI>sistemele de fisiere </LI></UL>
+<P align=justify>Majoritatea activitatilor pe care le desfasoara sistemul de 
+operare nu pot fi realizate exclusiv prin software. Este necesar un sprijin, 
+uneori substantial, din partea componentelor hardware si in special din partea 
+procesorului. Natura exacta a acestui sprijin va fi discutata in continuare. 
+<H3>Sistemul de intreruperi</H3>
+<P align=justify>Principala facilitate oferita de catre procesor o constituie 
+sistemul de intreruperi. Necesitatea acestuia devine evidenta in momentul in 
+care studiem modul in care se executa programele. Uzual, procesorul executa 
+instructiunile intr-o ordine data de urmatoarele reguli: 
+<UL>
+  <LI>daca instructiunea curenta este una de salt, va fi executata in continuare 
+  instructiunea de la adresa la care se face saltul 
+  <LI>in caz contrar, va fi executata in continuare instructiunea aflata in 
+  memorie la adresa imediat urmatoare dupa instructiunea curenta </LI></UL>
+<P align=justify>Ca o concluzie generala, intotdeauna o instructiune care face 
+parte dintr-un program va fi urmata de o alta instructiune din acelasi program. 
+Pana aici nu exista nici o posibilitate de a parasi programul aflat in executie 
+decat daca acesta se termina singur. Acest model corespunde in general 
+cerintelor, deoarece un program aflat in executie ruleaza in majoritatea 
+timpului fara a tine cont de existenta sistemului de operare; totusi, acesta din 
+urma trebuie sa poata interveni in anumite situatii bine definite, cum ar fi: 
+<UL>
+  <LI>incercarea unui program de a efectua o actiune nepermisa 
+  <LI>o cerere explicita adresata de programul de aplicatie, privind efectuarea 
+  unui anumit serviciu de catre sistemul de operare 
+  <LI>alte evenimente aparute in sistem, care pot sa nu aiba legatura cu 
+  programul aflat in executie, dar care trebuie tratate imediat </LI></UL>
+<P align=justify>Sistemul de operare va lasa deci orice program sa se execute 
+fara interferente pana la aparitia uneia din situatiile descrise mai sus, dar in 
+acest moment trebuie sa preia imediat controlul. Solutia este, asa cum am 
+precizat deja, de natura hardware si este reprezentata de sistemul de 
+intreruperi. Concret, acesta ofera tocmai posibilitatea intreruperii executiei 
+programului curent in una din urmatoarele situatii: 
+<UL>
+  <LI>o cerere de intrerupere venita din partea unui dispozitiv periferic; acest 
+  caz poarta denumirea de <I>intrerupere hardware</I> 
+  <LI>o operatie executata de procesor, care a dat un rezultat anormal (de 
+  exemplu o operatie de impartire la 0); asemenea situatii sunt denumite 
+  <I>exceptii</I> 
+  <LI>o cerere explicita venita chiar din partea programului aflat in curs de 
+  executie; asemenea cereri, numite <I>intreruperi software</I>, sunt utilizate 
+  de obicei pentru a cere sistemului de operare efectuarea unui anumit serviciu 
+  pe care programul de aplicatie nu-l poate realiza singur </LI></UL>
+<P align=justify>Indiferent care este cauza care a produs intreruperea, 
+comportarea procesorului este urmatoarea: 
+<UL>
+  <LI>executia programului curent este suspendata si se memoreaza informatiile 
+  necesare pentru a putea relua in viitor executia respectivului program, fara 
+  a-i fi afectata comportarea 
+  <LI>se identifica sursa cererii de intrerupere 
+  <LI>in functie de cauza intreruperii, se apeleaza o anumita rutina care este 
+  responsabila de tratarea respectivei situatii 
+  <LI>la terminarea rutinei, folosind informatiile memorate, se revine la 
+  executia programului intrerupt, exact in punctul in care se afla acesta in 
+  momentul intreruperii </LI></UL>
+<P align=justify>Evident, rutinele care trateaza situatiile generatoare de 
+intreruperi fac parte din sistemul de operare, care poate astfel rezolva 
+problemele aparute. Datorita flexibilitatii sale, mecanismul intreruperilor este 
+folosit astazi de toate procesoarele existente. Asa cum vom vedea in continuare, 
+acest mecanism sta la baza multor facilitati oferite de sistemele de operare. 
+<H3>Apeluri sistem</H3>
+<P align=justify>Una din sursele intreruperilor, prezentate mai sus, o 
+constituie solicitarile formulate in mod explicit de programele de aplicatii 
+catre sistemul de operare, pentru efectuarea anumitor servicii. De ce este insa 
+necesar ca aceste servicii sa fie implementate de catre sistemul de operare si 
+nu pot fi lasate in seama programelor? In primul rand, unele operatii uzuale 
+(afisarea, cautarea pe disc etc.) se desfasoara intotdeauna in acelasi mod; 
+deci, in loc de a scrie practic aceeasi rutina in fiecare program, este mai 
+economic de a o scrie o singura data ca parte a sistemului de operare, astfel ca 
+toate aplicatiile sa o poata utiliza. 
+<P align=justify>Pe de alta parte, o serie de actiuni, in special accesele la 
+dispozitivele periferice, prezinta riscuri considerabile pentru intregul sistem 
+de calcul in cazul in care nu sunt realizate corect. Nu este deci convenabil de 
+a permite programelor de aplicatie sa realizeze singure actiunile din aceasta 
+categorie; se prefera ca activitatile de acest tip sa fie indeplinite numai prin 
+intermediul unor rutine incluse in sistemul de operare. Pentru a pune in 
+practica o asemenea abordare, trebuie sa se poata interzice pur si simplu 
+realizarea anumitor operatii de catre programele de aplicatii. Din nou este 
+necesar un suport hardware. Practic toate procesoarele existente astazi pot 
+functiona in doua moduri distincte: 
+<UL>
+  <LI>modul utilizator (<I>user mode</I>), in care exista anumite restrictii 
+  pentru procesor, in principal nu se pot executa instructiunile de acces la 
+  periferice (incercarea de a executa o asemenea instructiune duce la generarea 
+  unei exceptii) 
+  <LI>modul supervizor sau nucleu (<I>kernel mode</I>), in care procesorul nu 
+  are nici o limitare </LI></UL>
+<P align=justify>In mod uzual, programele de aplicatii se executa in mod 
+utilizator, iar sistemul de operare ruleaza in mod nucleu. In acest fel se 
+asigura controlul sistemului de operare asupra operatiilor critice. Desi 
+aplicatiile pierd din performanta prin limitarile impuse de modul utilizator, 
+cresterea stabilitatii in functionare justifica din plin aceasta abordare. In 
+acest moment putem studia ce se intampla atunci cand un program cere sistemului 
+de operare furnizarea unui anumit serviciu. O asemenea cerere poarta numele de 
+apel sistem (<I>system call</I>) si consta din urmatorii pasi: 
+<UL>
+  <LI>programul, care ruleaza in modul utilizator al procesorului, depune 
+  parametrii apelului sistem pe care il solicita intr-o anumita zona de memorie; 
+  practic, mecanismul este similar apelurilor de proceduri 
+  <LI>se executa o instructiune speciala (in general o intrerupere software), 
+  care trece procesorul in modul nucleu 
+  <LI>se salveaza (in general pe stiva) informatiile legate de programul 
+  intrerupt care sunt necesare pentru reluarea ulterioara a executiei sale din 
+  acelasi punct 
+  <LI>se identifica serviciul cerut si se apeleaza rutina corespunzatoare 
+  <LI>rutina respectiva preia parametrii apelului din zona in care au fost 
+  depusi, ii verifica si, daca nu sunt erori, realizeaza actiunea ceruta; 
+  rezultatele obtinute sunt la randul lor depuse intr-o zona de memorie 
+  cunoscuta programului de aplicatie 
+  <LI>la terminarea rutinei, procesorul revine in mod utilizator si se reia 
+  executia programului din punctul in care a fost intrerupt (utilizand 
+  informatiile memorate anterior in acest scop); programul poate prelua 
+  rezultatele apelului din zona in care au fost depuse </LI></UL>
+<P align=justify>Se poate observa ca executia unui apel sistem este mare 
+consumatoare de timp. Din fericire, puterea de calcul a procesoarelor moderne 
+este suficient de mare incat sa reduca in limite acceptabile pierderea de 
+performanta datorata apelurilor sistem, iar cresterea fiabilitatii sistemului de 
+calcul in ansamblul sau justifica din plin aceasta abordare. Totusi, pentru 
+aplicatiile in care performanta este critica, se cauta solutii de reducere a 
+ponderii apelurilor sistem, pentru a micsora intarzierile produse de acestea. 
+Unele dintre aceste solutii tin de insasi structura sistemului de operare si vor 
+fi discutate mai tarziu. Exista insa o solutie aflata la indemana 
+programatorilor de aplicatii - lucrul cu buffere. 
+<P align=justify>Esenta acestei idei este urmatoarea: pentru majoritatea 
+perifericelor, o mare parte din timpul de comunicare se datoreaza initierii 
+accesului si nu transferului propriu-zis de date. Rezulta de aici ca s-ar putea 
+economisi timp daca ar fi servite mai multe asemenea cereri intr-un singur 
+acces, in loc de a le servi pe fiecare intr-un acces separat. In mod particular 
+accesul la disc are aceasta caracteristica foarte pronuntata. Solutia este deci 
+de a nu incerca servirea imediata a fiecarei cereri de transfer de date cu un 
+periferic, ci de a astepta acumularea mai multor cereri si a le servi pe toate 
+intr-un singur acces. In acest scop, cererile care asteapta sa fie servite 
+trebuie memorate intr-o zona de memorie dedicata, numita <I>buffer</I>. 
+<P align=justify>Ca un exemplu, consideram sistemele din familia Unix, in care 
+aplicatiile sunt scrise in mod traditional in limbajul C. Functia de biblioteca 
+<I>printf</I> se bazeaza pe apelul sistem <I>write</I>, care realizeaza afisarea 
+propriu-zisa. La fiecare apel al functiei <I>printf</I>, sirul de caractere care 
+se doreste a fi afisat este depus intr-un buffer; in plus se verifica daca 
+bufferul s-a umplut, caz in care este realizat un apel sistem <I>write</I>, ce 
+afiseaza toate sirurile din buffer. In acest mod se obtine un castig de viteza 
+care in unele cazuri poate fi substantial. 
+<P align=justify>In multe situatii sistemul de operare foloseste el insusi 
+buffere. In general insa apelurile sistem lucreaza fara buffere, deoarece in 
+unele cazuri aplicatia poate avea nevoie ca un anumit transfer sa fie efectuat 
+cat mai repede posibil, fara a mai astepta sosirea altor cereri care sa umple 
+bufferul. Modul de lucrul cu buffere poate fi implementat la nivelul functiilor 
+de biblioteca sau chiar direct de catre utilizator. 
+<H3>Drivere de dispozitiv</H3>
+<P align=justify>Asa cum s-a aratat deja, gestionarea dispozitivelor periferice 
+se confrunta cu desele schimbari suferite de acestea, ca urmare a progresului 
+tehnologic rapid. Este practic imposibil ca producatorul unui sistem de operare 
+sa poata scrie secventele de program necesare pentru gestionarea tuturor 
+perifericelor existente pe piata, cu atat mai mult cu cat permanent apar noi 
+modele. Situatia este valabila in principal pentru imprimante, dar si pentru 
+celelalte tipuri de periferice (placi video, unitati CD, mouse, placi de retea, 
+placi audio, chipset-urile placilor de baza etc.), cu exceptia partiala a 
+tastaturilor si a discurilor hard, unde maturitatea tehnologica a condus la o 
+standardizare puternica. Din acest motiv se prefera ca gestionarea perifericelor 
+sa fie lasata in seama unor module de program, numite <I>drivere</I>, exterioare 
+nucleului, dar care pot coopera cu acesta. Pentru fiecare dispozitiv periferic 
+existent intr-un calculator trebuie sa existe un driver, altfel respectivul 
+periferic nu va putea fi folosit. In general sistemele de operare contin drivere 
+pentru modelele de periferice cele mai utilizate; in cazul celorlalte, driverele 
+trebuie furnizate de producatorii respectivelor dispozitive. 
+<P align=justify>Utilitatea mecanismului driverelor este evidenta: permite 
+schimbarea usoara a oricarui periferic, fara a fi necesara reinstalarea 
+intregului sistem de operare. De asemenea, depistarea si corectarea erorilor 
+devine mult mai facila. Cu toate acestea, in mod traditional, sistemele de 
+operare din familia Unix au o abordare mai putin flexibila, incluzand driverele 
+in nucleu. Aceasta atitudine se justifica prin faptul ca, pentru majoritatea 
+sistemelor Unix, producatorul este si singurul ofertant de hardware, deci nu 
+trebuie sa faca fata unui numar mare de dispozitive produse de alte firme. 
+Totusi, sistemul Linux si alte sisteme Unix ofera in ultima vreme suport pentru 
+incarcarea dinamica a unor module. </P></BODY></HTML>
