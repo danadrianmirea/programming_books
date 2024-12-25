@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0044)http://www.infoiasi.ro/~rvlad/curs/proc.html -->
+<HTML><HEAD><TITLE>Gestiunea proceselor</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-2">
+<META content="MSHTML 5.50.4134.600" name=GENERATOR></HEAD>
+<BODY>
+<CENTER>
+<H2>Gestiunea proceselor</H2></CENTER>
+<HR color=black>
+
+<P align=justify>In sistemul DOS, ciclul de viata al unui program este 
+urmatorul: 
+<UL>
+  <LI>utilizatorul lanseaza de la tastatura o comanda, care reprezinta numele 
+  unui program 
+  <LI>sistemul de operare identifica programul, il incarca de pe disc in memorie 
+  si il lanseaza in executie, predandu-i acestuia controlul asupra procesorului 
+  si a calculatorului in general 
+  <LI>daca programul se termina in mod corect, sistemul de operare preia din nou 
+  controlul si asteapta introducerea unui noi comenzi </LI></UL>
+<P align=justify>Desigur, modelul este simplificat; de exemplu nu s-a luat in 
+considerare cazul in care comanda data de utilizator este gresita. Cu toate 
+acestea, avem deja o imagine asupra actiunilor pe care le are de efectuat 
+sistemul de operare pentru a asigura executia unui program. Se observa imediat 
+si principala slabiciune a sistemului DOS: programul o data lansat capata 
+practic control total asupra calculatorului, din care cauza nu poate fi oprit 
+daca incearca sa efectueze operatiuni care compromit functionarea sistemului de 
+calcul. Un sistem de operare, pentru a fi stabil, trebuie sa poata interveni 
+intotdeauna atunci cand un program se comporta anormal. Mecanisme deja 
+cunoscute, cum ar fi apelurile sistem, si altele care urmeaza a fi studiate, 
+sunt foarte utile tocmai in acest sens. 
+<P align=justify>Sistemele de operare moderne introduc o serie de facilitati 
+noi, cum ar fi: interfata grafica, posibilitatea de a lansa comenzile cu 
+ajutorul mouse-ului in locul tastaturii etc. Dincolo de aceste imbunatatiri de 
+detaliu, exista o noutate fundamentala: se pot executa in paralel mai multe 
+programe. Implementarea acestei facilitati implica rezolvarea unor probleme cu 
+care sistemul DOS nu se confrunta. 
+<P align=justify>In realitate, un calculator tipic contine un singur procesor, 
+care poate executa o singura instructiune la un moment dat. Devine astfel 
+evident ca nu este vorba cu adevarat de paralelism. Politica adoptata este 
+urmatoarea: daca mai multe programe sunt lansate in paralel, procesorul va 
+executa pe rand cate o secventa de instructiuni din fiecare; datorita vitezei 
+mari a procesoarelor, aceasta executie intrepatrunsa a programelor nu este 
+vizibila pentru utilizator, care are impresia ca paralelismul este real. Numim 
+acest model executie concurenta, deoarece programele sunt in concurenta pentru 
+obtinerea controlului asupra procesorului. Concurenta este utila si in sistemele 
+cu mai multe procesoare, pentru ca intotdeauna se vor putea lansa in executie 
+mai multe programe decat procesoarele disponibile. 
+<P align=justify>Pentru realizarea efectiva a concurentei trebuie sa se previna 
+aparitia interferentelor intre programe; altfel spus, fiecare program in parte 
+trebuie sa se execute ca si cum ar fi singurul existent, fara a fi perturbat in 
+vreun fel de concurenta descrisa mai sus. De fapt, problema fundamentala consta 
+in faptul ca programele isi disputa o serie de resurse comune: procesorul, 
+memoria, dispozitivele periferice. Sarcina sistemului de operare este de a 
+permite programelor accesul intr-un mod strict controlat la aceste resurse, 
+astfel incat sa nu se influenteze intre ele. 
+<P align=justify>Accesul la periferice este strict controlat prin faptul ca nu 
+este posibil decat prin intermediul apelurilor sistem, deci al sistemului de 
+operare. In privinta memoriei, gestiunea sa este asigurata cu ajutorul unor 
+mecanisme care vor fi studiate ulterior. 
+<P align=justify>In cele din urma, resursa comuna cea mai importanta o 
+reprezinta procesorul. Un program ale carui instructiuni sunt executate de 
+procesor trebuie sa poata fi suspendat temporar din executie, pentru ca alte 
+programe sa beneficieze si ele de procesor. Asa cum s-a vazut mai sus, singura 
+modalitate de a opri un program aflat in executie este aparitia unei 
+intreruperi. 
+<P align=justify>Este momentul sa introducem un nou termen, si anume cel de 
+<I>proces</I>. Asa cum utilizatorul poate lansa in executie mai multe programe 
+in paralel, la randul sau un program are posibilitatea de a se imparti in mai 
+multe secvente de instructiuni care se executa tot in paralel. Deoarece aceste 
+secvente concureaza intre ele pentru obtinerea accesului la procesor, rezulta ca 
+notiunea de program nu mai este atat de importanta pentru sistemul de operare. 
+Putem defini un proces ca o secventa de instructiuni care se executa intotdeauna 
+una dupa alta, mereu in aceeasi ordine, si niciodata in paralel sau concurent. 
+Sistemul de operare gestioneaza de fapt procese. Atunci cand se lanseaza in 
+executie un program, se creaza un nou proces, care contine instructiunile si 
+datele programului respectiv; la randul sau, acest proces poate crea alte 
+procese, cu propriile date si instructiuni. Astfel, un program devine o notiune 
+mai putin clara, fiind definit ca un fisier sau o colectie de fisiere existente 
+pe disc. In schimb, fiecare proces este reprezentat in cadrul sistemului de 
+operare sub forma unor structuri de date care contin informatiile necesare 
+pentru a-l putea controla. Asemenea informatii pot fi: 
+<UL>
+  <LI>identificatorul procesului 
+  <LI>zonele de memorie (cod, date, stiva) ocupate 
+  <LI>adresa instructiunii la care a ajuns executia procesului 
+  <LI>drepturile de acces la diverse resurse ale sistemului 
+  <LI>fisierele deschise de respectivul proces 
+  <LI>procesul parinte (cel care a creat procesul curent) 
+  <LI>starea in care se afla procesul (acest aspect va fi discutat in 
+  continuare) </LI></UL>
+<P align=justify>Din punct de vedere al sistemului de operare, fiecare proces 
+existent la un moment dat se gaseste in una din urmatoarele stari: 
+<UL>
+  <LI>in executie (<I>running</I>) - instructiunile sale sunt executate de 
+  procesor la momentul curent 
+  <LI>gata de executie (<I>ready</I>) - asteapta momentul in care va fi 
+  planificat pentru a fi executat de procesor 
+  <LI>in asteptare (<I>wait</I>) - asteapta terminarea unui apel sistem pe care 
+  l-a efectuat anterior; un asemenea proces nu concureaza momentan pentru 
+  planificarea la procesor </LI></UL>
+<P align=justify>Desigur, nu pot fi in executie la un moment dat decat cel mult 
+atatea procese cate procesoare exista in calculator. 
+<P align=justify>Motivul pentru care procesele care au efectuat un apel sistem 
+inca neterminat nu pot fi planificate la procesor este urmatorul: un apel sistem 
+este mare consumator de timp. In plus, in cazul multor periferice (si in 
+principal discul hard) este mai eficient sa nu fie servita imediat fiecare 
+cerere de acces, ci sa se astepte sosirea mai multor cereri care sa fie tratate 
+impreuna. Un proces poate fi deci obligat sa astepte un timp foarte lung pana la 
+terminarea unui apel sistem; intrucat in tot acest timp nu-si poate continua 
+executia, nu are sens sa fie luat in considerare pentru planificarea la 
+procesor. 
+<P align=justify>Conditiile in care un proces poate trece dintr-o stare in alta 
+sunt sintetizate in figura urmatoare: 
+<P align=justify>
+<CENTER><IMG src="Gestiunea proceselor_files/proc1.jpe"></CENTER>
+<P align=justify>Modelul este simplificat, in sensul ca nu sunt luate in 
+considerare perioadele de timp in care procesorul este utilizat chiar de catre 
+sistemul de operare pentru executia unor rutine proprii (de exmplu deservirea 
+unui apel sistem). Aceste perioade insa nu afecteaza generalitatea discutiei, 
+deci pot fi neglijate. 
+<P align=justify>Un proces aflat in executie poate parasi aceasta stare in una 
+din urmatoarele situatii: 
+<UL>
+  <LI>la terminarea sa (normala sau fortata, in urma unei erori) 
+  <LI>la efectuarea unui apel sistem, caz in care este trecut in asteptare 
+  <LI>atunci cand instructiunile sale au fost executate un timp suficient de 
+  lung si este randul altui proces sa fie planificat </LI></UL>
+<P align=justify>Primele doua cazuri sunt evidente: in ambele situatii, sistemul 
+de operare preia controlul chiar la cererea procesului respectiv sau in urma 
+unei erori a acestuia (situatie in care s-a generat o intrerupere). In ultimul 
+caz, tot sistemul de intreruperi vine in ajutor: in orice calculator exista un 
+periferic numit ceas de timp real, a carui sarcina este de a genera cereri de 
+intrerupere la intervale regulate de timp. Sistemul de operare poate deci sa 
+masoare timpul cat un proces se afla in executie si sa-l intrerupa atunci cand a 
+sosit momentul. Fara acest mecanism, implementarea concurentei ar fi practic 
+imposibila. 
+<P align=justify>In oricare din aceste cazuri, sistemul de operare trebuie sa 
+aleaga unul din procesele gata de executie pentru a fi planificat la procesor. 
+Componenta sistemului de operare care indeplineste aceasta sarcina se numeste 
+planificator (<I>scheduler</I>). Exista mai multi algoritmi de planificare. 
+Oricare ar fi cel ales, trebuie sa respecte o cerinta fundamentala: orice proces 
+gata de executie sa nu fie obligat sa astepte decat un timp finit pana la 
+planificarea sa la procesor (altfel spus, nici un proces sa nu astepte un timp 
+nelimitat pana cand procesorul ii va executa instructiunile). </P></BODY></HTML>
