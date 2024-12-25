@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0044)http://www.infoiasi.ro/~rvlad/curs/exec.html -->
+<HTML><HEAD><TITLE>Crearea si lansarea programelor</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-2">
+<META content="MSHTML 5.50.4134.600" name=GENERATOR></HEAD>
+<BODY>
+<CENTER>
+<H2>Crearea si lansarea programelor</H2></CENTER>
+<HR color=black>
+
+<P align=justify>Rolul unui compilator este crearea fisierelor executabile. 
+Totusi, compilarea (traducerea comenzilor scrise intr-un limbaj sursa in 
+instructiuni pentru procesor) reprezinta numai prima etapa in acest proces. 
+Exista si un al doilea pas, numit editarea legaturilor (<I>linking</I>), care 
+trateaza aspecte mai putin evidente privitoare la gestiunea memoriei intr-un 
+program. 
+<P align=justify>Necesitatea fazei de editare a legaturilor apare cel mai clar 
+in cazul realizarii unui fisier executabil din mai multe module (fisiere) sursa, 
+facilitate de altfel foarte utila in scrierea si intretinerea programelor de 
+mari dimensiuni. Sa consideram un program format din doua module, numite A si B, 
+care arata astfel: 
+<P align=justify>
+<CENTER><IMG src="Crearea si lansarea programelor_files/exec1.jpe"></CENTER>
+<P align=justify>Fisierul executabil va arata astfel: 
+<P align=justify>
+<CENTER><IMG src="Crearea si lansarea programelor_files/exec2.jpe"></CENTER>
+<P align=justify>Se observa ca in instructiunea de salt din modulul B adresa de 
+salt nu mai este corecta. Fenomenul se datoreaza faptului ca, modulele fiind 
+compilate independent, fiecare presupune ca incepe la adresa 0, ceea ce nu este 
+posibil. Deoarece in general un fisier executabil contine, in afara modulelor 
+componente, si un antet cu diverse informatii, nici macar primul modul nu va 
+incepe la adresa 0, deci absolut toate instructiunile de salt din program devin 
+incorecte. Mai mult, si instructiunile care acceseaza date (adrese de memorie) 
+vor fi eronate din acelasi motiv. Aceasta problema este numita <I>problema 
+relocarii</I>, deoarece apare ca urmare a deplasarii (relocarii) adreselor la 
+alte adrese decat cele la care se aflau in timpul compilarii. 
+<P align=justify>Mai exista insa si o alta situatie generatoare de erori, 
+referitoare la instructiunea de apel de procedura. La momentul compilarii se 
+cunoaste faptul ca procedura X este definita in alt modul, dar este imposibil de 
+determinat la ce adresa se va afla aceasta in programul final. Numim aceasta 
+situatie <I>problema referintelor externe</I>. 
+<P align=justify>Ambele probleme sunt rezolvate de editorul de legaturi. Ca 
+urmare a compilarii, pentru fiecare modul sursa este creat un fisier obiect; 
+acesta contine, pe langa instructiunile pentru procesor, si o serie de 
+informatii necesare editorului de legaturi. Concret, partile componente ale unui 
+modul obiect sunt urmatoarele: 
+<UL>
+  <LI>un bloc ce contine informatii de identificare: numele modulului, lungimea 
+  celorlalte parti ale modulului etc. 
+  <LI>tabela punctelor de intrare, care contine numele simbolurilor (variabile 
+  si proceduri) din modulul curent care pot fi apelate din alte module 
+  <LI>tabela referintelor externe, in care sunt precizate denumirile 
+  simbolurilor definite in alte module, dar care sunt utilizate in modulul 
+  curent 
+  <LI>codul propriu-zis, rezultat din compilare; aceasta parte este singura care 
+  va aparea in fisierul executabil 
+  <LI>dictionarul de relocare - contine informatii despre localizarea 
+  instructiunilor din partea de cod care necesita modificarea adreselor cu care 
+  lucreaza </LI></UL>
+<P align=justify>Pe baza acestei structuri a modulelor obiect, editorul de 
+legaturi efectueaza urmatoarele actiuni: 
+<UL>
+  <LI>construieste o tabela cu toate modulele obiect si dimensiunile acestora 
+  <LI>pe baza acestei tabele, atribuie adrese de start modulelor obiect 
+  <LI>determina instructiunile care realizeaza accese la memorie si aduna la 
+  fiecare adresa o constanta de relocare, egala cu adresa de start a modulului 
+  din care face parte 
+  <LI>determina instructiunile care apeleaza proceduri sau date din alte module 
+  si insereaza adresele corespunzatoare </LI></UL>
+<P align=justify>Problema relocarii nu este insa complet rezolvata. Asa cum 
+fiecare modul compilat presupunea ca incepe de la adresa 0, la fel si programul 
+final face aceeasi presupunere. In realitate, la lansarea sa, programul este 
+incarcat in memorie de catre sistemul de operare la o adresa ce nu poate fi 
+precizata dinainte, in functie de situatia zonelor de memorie libere si ocupate. 
+In acest mod, referirile la memorie devin din nou incorecte. Aceeasi problema 
+poate interveni la utilizarea memoriei virtuale, cand este posibil ca un program 
+sa fie evacuat temporar pe disc si apoi readus in memorie, dar la alta adresa. 
+Exista mai multe solutii: 
+<OL>
+  <LI>Fisierul executabil contine la randul sau informatii de relocare, pe care 
+  le va folosi sistemul de operare la incarcarea programului in memorie pentru a 
+  actualiza referintele la memorie. Aceasta abordare este folosita de catre 
+  sistemul de operare DOS. 
+  <LI>Utilizarea unui registru de relocare, care va fi intotdeauna incarcat cu 
+  valoarea adresei de inceput a programului curent. De fiecare data cand se 
+  realizeaza un acces la memorie, la adresa precizata prin isntructiune se aduna 
+  valoarea din registrul de relocare. Aceasta solutie este dependenta de 
+  hardware, pentru ca este posibila numai la procesoarele care au un asemenea 
+  registru de relocare. 
+  <LI>Programele sa contina numai referiri la memorie relative la contorul 
+  program. Un program care respecta asemenea cerinte se numeste independent de 
+  pozitie si poate fi incarcat in memorie la orice adresa, fara ca functionarea 
+  sa sa fie afectata. Din pacate asemenea programe sunt foarte greu de scris, 
+  din motive legate de hardware. La majoritatea procesoarelor instructiunile de 
+  salt relative prezinta restrictii care le fac ineficiente in anumite situatii, 
+  iar instructiunile care sa lucreze cu adrese de date relative la contorul 
+  program lipsesc. 
+  <LI>Paginarea memoriei. In acest caz programul poate fi mutat oriunde in 
+  memoria fizica, deoarece el nu lucreaza direct cu acesta, ci are propriul 
+  spatiu virtual de adrese. Altfel spus, programul va crede ca incepe de la 
+  adresa 0, chiar daca in realitate nu este asa. Este sarcina sistemului de 
+  operare sa actualizeze tabelul de paginare al procesului astfel incat 
+  corespondenta dintre adresele virtuale si cele fizice sa fie corecta. La 
+  randul sau, si aceasta solutie este dependenta de suportul hardware, mai exact 
+  de prezenta mecanismului de paginare. </LI></OL>
+<H3>Legare dinamica. Biblioteci partajate</H3>
+<P align=justify>In unele situatii este convenabil ca o parte din procedurile si 
+variabilele necesare unui program sa nu fie incluse permanent in acesta, ci 
+numai atunci cand este nevoie de ele. Exista mai multe motive pentru o asemenea 
+abordare: 
+<UL>
+  <LI>unele proceduri, care trateaza situatii exceptionale intervenite in 
+  program, sunt extrem de rar apelate si nu este eficient sa consume inutil 
+  memorie 
+  <LI>exista proceduri folosite de un numar mare de programe; stocarea lor in 
+  fisiere separate duce la economisirea spatiului pe disc, deoarece este 
+  suficient sa existe o singura copie; de asemenea, este posibil ca o singura 
+  instanta a acestor proceduri sa fie incarcata in memorie si utilizata simultan 
+  de mai multe programe aflate in executie </LI></UL>
+<P align=justify>Este necesar un mecanism care sa permita ca o procedura apelata 
+de un program sa nu fie definita in corpul acestuia la momentul lansarii in 
+executie, ci sa fie incarcata separat la un moment ulterior. Acest mecanism 
+poarta denumirea de legare dinamica. In sistemele de operare moderne este 
+curenta utilizarea bibliotecilor partajate, care sunt stocate in fisiere cu 
+format special, sunt incarcate o singura data in memorie, atunci cand sunt 
+apelate, si pot fi utilizate de mai multe programe simultan. 
+<P align=justify>In functiile de modul de apelare, distingem doua metode de 
+legare dinamica: 
+<UL>
+  <LI>legare implicita 
+  <LI>legare explicita </LI></UL>
+<P align=justify>In primul caz, fisierul executabil include un fisier special 
+(sau mai multe), legat static, numit biblioteca de import. La lansarea 
+programului in executie, sistemul de operare analizeaza bibliotecile de import 
+(daca exista) pentru a determina ce biblioteci partajate sunt necesare 
+programului; se verifica apoi care dintre aceste biblioteci se afla deja in 
+memorie, cele care lipsesc fiind incarcate. Tot sistemul de operare trebuie sa 
+realizeze diverse modificari pentru a lega bibliotecile partajate cu programul 
+executabil. Acest tip de legare este prezent atat in sistemele din familia 
+Windows, cat si in cele Unix. 
+<P align=justify>La legarea explicita, programul face un apel specific, prin 
+care cere legarea unei anumite biblioteci partajate. Sistemul de operare 
+verifica daca respectiva biblioteca exista deja in memorie si in caz contrar o 
+incarca. Spre deosebire de legarea implicita, aici legatura cu o biblioteca 
+partajata poate fi realizata sau distrusa in orice moment, nefiind permanenta pe 
+toata durata executiei programului. Legarea explicita este specifica sistemelor 
+de operare Windows. 
+<P align=justify>In afara avantajelor oferite, legarea dinamica si lucrul cu 
+biblioteci partajate presupun o gestiune complexa, greu de realizat. O 
+biblioteca partajata trebuie inserata in spatiul de adrese virtual al fiecarui 
+program care o foloseste; in plus, utilizarea incorecta a variabilelor globale, 
+care sunt comune tuturor programelor, poate genera interferente nedorite. In 
+Windows, o problema suplimentara a aparut din cauza conflictelor dintre 
+diversele versiuni de biblioteci partajate existente in acelasi sistem, deoarece 
+de multe ori versiunile mai noi nu pastreaza compatibilitatea cu versiunile 
+anterioare. </P></BODY></HTML>
