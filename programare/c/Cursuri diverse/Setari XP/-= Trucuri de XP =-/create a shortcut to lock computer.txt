@@ -1,0 +1,5 @@
+Create a shortcut to lock computer
+
+Written By: Steve  |  Authors Website: Visit  | Views: 13079  |  Print Tweak  |  8/24/2001
+
+Right click on desktop and select new -> shortcut. Then copy and paste this in the program location box "rundll32.exe user32.dll,LockWorkStation" Click next and enter a name for you shortcut and then click finish. Now you can copy and paste that shortcut anywhere you want on your computer.
