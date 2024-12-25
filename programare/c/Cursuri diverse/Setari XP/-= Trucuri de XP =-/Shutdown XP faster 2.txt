@@ -1,0 +1,56 @@
+Shutdown XP faster 2
+
+Like previous versions of windows, it takes long time to restart or shutdown windows xp 
+when the "Exit Windows" sound is enabled. to solve this problem you must disable 
+this useless sound.
+
+click start button then go to settings -> control panel -> Sound,
+Speech and Audio devices -> Sounds and Audio Devices -> Sounds, 
+then under program events and windows menu click on "Exit Windows" sub-menu and highlight it.
+now from sounds you can select,choose "none" and then click apply and ok.
+now you can see some improvements when shutting down your system. 
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
