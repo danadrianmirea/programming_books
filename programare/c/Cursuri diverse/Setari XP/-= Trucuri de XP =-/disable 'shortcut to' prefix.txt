@@ -1,0 +1,16 @@
+disable "shortcut to" prefix without external programs
+
+Written By: BunnYPandA  |  Authors Website: Visit  | Views: 1894  |  Print Tweak  |  12/1/2001
+
+This tweak stops windows creating the annoying "shotcut to" prefix when creating shortcuts to the desktop via either dragging/ dropping or right clicking and selecting send to . This means that you do not need to rename all those shortcuts on your desktop . Here's how -
+
+Start Registry Editor.
+
+Locate the following registry key:
+
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer
+Modify the data value of the Link value to be 00 00 00 00.
+
+NOTE : For Windows 95, the Link value does not exist by default. Create the Link value as a Binary value, with a data value of 00 00 00 00.
+
+Restart the computer.
