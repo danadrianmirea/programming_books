@@ -1,0 +1,11 @@
+An easier way to get rid of error reporting
+
+Written By: gimik  |  Authors Website: Visit  | Views: 8365  |  Print Tweak  |  11/27/2001
+
+To enable or disable error reporting :
+
+1. Open System in Control Panel.
+2. On the Advanced tab, click Error Reporting.
+3. Click Disable error reporting or Enable error reporting.
+
+that's it!
