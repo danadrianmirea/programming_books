@@ -1,0 +1,25 @@
+Enklast
+
+I Wxp:
+kopiera in följande i KÖR på startmenyn och klicka ok:
+RunDll32 advpack.dll,LaunchINFSection %windir%\INF\msmsgs.inf,BLC.Remove
+
+Borta!
+
+
+Hej... Gå in på:
+www.tweakxp.com/tweakdatabase/tweakdb_display.aspx?id=1125&d... 
+
+Där hittar du text som du sedan ska klistra in i ett text-doc... efter det så sparar du det med ändelsen *.bat.
+Kör därefter filen, och starta om datorn.
+Då är MSN borta. 
+
+Re: Netmeeting
+
+1.Kontrollpanelen
+2Lägg till ta bort program
+3Installationsprogram för windows
+4.Kommunikation
+
+Å avmarkera Netmeeting 
+
