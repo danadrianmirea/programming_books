@@ -1,0 +1,4 @@
+If you have that nagging Bios password on any Award BIOS,
+there is a default password you can use:
+
+shift+s y x z
