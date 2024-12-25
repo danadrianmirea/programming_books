@@ -1,0 +1,8 @@
+Turn off autoplay for CDs
+
+Written By: whoisKeel  |  Authors Website: Visit  | Views: 13247  |  Print Tweak  |  9/6/2001
+
+1. Go to Start->Run->gpedit.msc
+2. Computer Config -> Administrative Template -> System
+3. Double clik Turn off Autoplay
+4. Enable it.
