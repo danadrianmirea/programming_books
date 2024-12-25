@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0043)http://www.infoiasi.ro/~rvlad/curs/new.html -->
+<HTML><HEAD><TITLE>Tendinte moderne in proiectarea sistemelor de operare</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-2">
+<META content="MSHTML 5.50.4134.600" name=GENERATOR></HEAD>
+<BODY>
+<CENTER>
+<H2>Tendinte moderne in proiectarea sistemelor de operare</H2></CENTER>
+<HR color=black>
+
+<P align=justify>Conceptele fundamentale ale functionarii sistemelor de operare 
+si-au pastrat o remarcabila stabilitate de-a lungul timpului. Un bun exemplu in 
+acest sens este Unix, aparut in urma cu peste un sfert de secol. Desi a suferit 
+numeroase modificari si cunoaste astazi multe variante, in general incompatibile 
+intre ele, totusi ideile de baza au ramas aceleasi. Exista in schimb un efort 
+sustinut de imbunatatire a caracteristicilor sistemelor de operare, care a dus 
+la impunerea unor tehnologii noi, adaugate celor deja existente. Trei directii 
+sunt in mod special avute in vedere: 
+<UL>
+  <LI>calculul distribuit, adica posibilitatea cooperarii intre sisteme de 
+  calcul aflate la distanta in scopul rezolvarii unor probleme comune 
+  <LI>cresterea performantelor prin reducerea activitatilor mari consumatoare de 
+  timp, legate in general de stabilitatea sistemului 
+  <LI>posibilitatea de a mari functionalitatea sistemului prin adaugarea si 
+  modificarea cat mai facila a modulelor componente </LI></UL>
+<P align=justify>De multe ori aceste cerinte devin contradictorii, ceea ce a dus 
+in general la specializarea sistemelor de operare catre una sau alta din 
+directiile enuntate. 
+<H3>Sisteme de operare distribuite</H3>
+<P align=justify>Calculul distribuit reprezinta colaborarea dintre mai multe 
+masini aflate la distanta pentru atingerea unui scop comun. Acest domeniu 
+cunoaste o dezvoltare deosebita in ultima vreme, datorita extinderii pe scara 
+larga a retelelor de calculatoare. Principiul este asemanator calculului 
+paralel: cresterea puterii de calcul se obtine prin cooperarea mai multor 
+unitati de calcul. Diferenta consta in definirea notiunii de unitate de calcul: 
+<UL>
+  <LI>pentru calculul paralel unitatile de calcul sunt procesoarele dintr-un 
+  calculator 
+  <LI>calculul distribuit priveste calculatoarele din retea ca unitati de calcul 
+  </LI></UL>
+<P align=justify>Actualmente, calculul distribuit este in mod paradoxal mai 
+eficient din punct de vedere economic, datorita bazei de calcul deja instalate: 
+practic orice organizatie are una sau mai multe retele de calculatoare folosite 
+pentru diverse activitati, in timp ce sistemele multiprocesor nu sunt intalnite 
+in mod obisnuit, iar achizitionarea lor presupune cheltuieli importante. 
+Desigur, este posibil ca din retele sa faca parte si sisteme multiprocesor. 
+<P align=justify>Un sistem de operare distribuit trebuie sa indeplineasca cel 
+putin urmatoarele sarcini: 
+<UL>
+  <LI>Sa controleze functionarea tuturor calculatoarelor aflate in retea. 
+  Aceasta cerinta nu este deloc simpla, dat fiind ca retelele pot fi eterogene, 
+  adica alcatuite din calculatoare diferite ca hardware. 
+  <LI>Sa asigure comunicarea intre calculatoare. Este posibil ca din retea sa 
+  faca parte calculatoare care au folosesc reprezentari diferite ale datelor, 
+  ceea ce pune mari probleme de comunicare. Trebuie definit un format unic al 
+  datelor care sunt transmise prin retea, iar fiecare statie trebuie sa 
+  realizeze conversiile intre acest format si modul propriu de reprezentare. 
+  <LI>Sa asigure incarcarea echilibrata a sarcinilor atribuite statiilor din 
+  retea. De exemplu, o aplicatie care ruleaza pe un procesor foarte utilizat 
+  poate fi mutata, astfel incat sa se execute in continuare pe un procesor care 
+  este mai putin incarcat. 
+  <LI>Sa detecteze eventualele caderi ale unor calculatoare si sa redistribuie 
+  sarcinile acestora catre alte statii. Acest punct este esential, deoarece 
+  fiabilitatea unei retele este mult mai redusa decat in cazul unui calculator 
+  individual. </LI></UL>
+<P align=justify>Pana acum, sistemele distribuite nu s-au impus pe piata, ci au 
+ramas mai mult in faza de proiecte universitare. Pe de o parte, performanta este 
+limitata de transmisia datelor prin retea, care se desfasoara la o rata mica in 
+comparatie cu puterea de calcul a procesoarelor. Pe de alta parte, utilizarea in 
+comun a statiilor dintr-o retea nu se justifica decat in rezolvarea unor 
+probleme care necesita un volum de calcul mult peste posibilitatile unui singur 
+calculator. Astfel, calculul distribuit poate fi vazut ca o alternativa mai mult 
+pentru supercalculatoare si mai putin pentru calculatoarele personale sau 
+servere. 
+<P align=justify>Mult mai limitat, dar si mult mai utilizat este modelul 
+client-server. Acesta presupune existenta in retea a unor calculatoare mai 
+puternice, numite servere, capabile sa realizeze anumite activitati pe care 
+statiile obisnuite nu le pot efectua. In momentul in care o statie are nevoie de 
+rezultatele unei asemenea activitati, formuleaza o cerere catre server, iar 
+acesta ii furnizeaza datele cerute. Astfel, statia in cauza devine client pentru 
+serverul respectiv. Notiunea de server nu este foarte clar definita, putandu-se 
+referi, in functie de contextul in care este folosita, atat la calculatoare, cat 
+si la programe; in general, un server este o entitate (hardware sau software) 
+care poate efectua anumite actiuni la cererea altor entitati (clienti) si le 
+furnizeaza acestora rezultatele obtinute. 
+<P align=justify>Sistemele client-server au de rezolvat o mare parte din 
+problemele generale intalnite la sistemele distribuite. Ceea ce dispare este 
+controlul centralizat asupra statiilor, precum si asigurarea incarcarii 
+echilibrate. Comunicarea intre server si client decurge in urmatoarele etape: 
+<UL>
+  <LI>clientul formuleaza cererea 
+  <LI>datele sunt convertite (tot de catre client) la reprezentarea utilizata in 
+  retea si trimise catre server 
+  <LI>serverul preia datele din retea si le converteste la formatul propriu 
+  <LI>se analizeaza cererea si se realizeaza actiunile corespunzatoare 
+  <LI>rezultatele sunt convertite la formatul retelei si trimise catre client 
+  <LI>clientul preia raspunsul si il converteste la reprezentarea proprie 
+</LI></UL>
+<P align=justify>Evident, modelul client-server nu exploateaza in intregime 
+posibilitatile calculului distribuit, dar este mult mai simplu de implementat si 
+raspunde cerintelor in multe situatii. Cea mai cunoscuta materializare a acestui 
+concept o reprezinta serverele Web. Asa cum vom vedea mai tarziu, modelul 
+client-server poate fi intalnit inclusiv in arhitectura unor sisteme de operare. 
+
+<H3>Fire de executie</H3>
+<P align=justify>S-a vazut deja ca sistemul de operare nu intervine in executia 
+aplicatiilor decat atunci cand apar anumite situatii speciale, care nu pot fi 
+rezolvate altfel. Orice asemenea interventie a nucleului este mare consumatoare 
+de timp, deoarece implica intotdeauna o serie de pasi: 
+<UL>
+  <LI>intreruperea executiei programului curent, cu salvarea informatiilor care 
+  sa permita reluarea sa din aceeasi stare 
+  <LI>comutarea din modul utilizator in modul nucleu al procesorului si apoi in 
+  sens invers 
+  <LI>refacerea starii programului aflat anterior in executie (sau a altui 
+  program intrerupt intr-un mod similar) si relansarea sa </LI></UL>
+<P align=justify>Deoarece nu se pune problema renuntarii la aceste mecanisme, 
+care asigura stabilitatea sistemului, se incearca reducerea la minimum a 
+apelurilor catre nucleu. Una din posibilitati o reprezinta gestiunea proceselor. 
+
+<P align=justify>Este posibil ca un proces sa creeze la randul sau alte procese, 
+cu care sa colaboreze pentru atingerea scopului urmarit. Fiecare asemenea nou 
+proces poate executa aceleasi operatii ca si creatorul sau cu totul altele. In 
+realitate insa fiecare proces este o entitate separata, care ocupa propriile 
+zone de memorie pentru date, instructiuni si stiva. 
+<P align=justify>Un concept asemanator, dar mai simplu, il reprezinta firul de 
+executie (<I>thread</I>). Orice proces poate consta din unul sau mai multe fire 
+de executie. Acestea nu sunt noi procese, deoarece au in comun variabilele 
+globale, zona de cod si sunt vazute de sistemul de operare ca un singur proces. 
+Practic, firele de executie pot fi privite ca instante ale aceluiasi proces, 
+aflate in diferite puncte de executie. Din punct de vedere al procesorului, 
+firele aceluiasi proces difera doar prin valoarea contorului program (care, asa 
+cum se stie, retine adresa urmatoarei instructiuni care va fi executata) si a 
+indicatorului varfului stivei (deci implicit are variabile locale proprii). 
+<P align=justify>Utilizarea firelor de executie mareste flexibilitatea 
+programelor. Desigur, un fir nu are toate posibilitatile unui proces diferit si 
+nu-l poate inlocui in orice situatie. In schimb, nu este necesara interventia 
+nucleului in gestiunea firelor de executie (creare, planificare, terminare), 
+ceea ce poate aduce o crestere sensibila de performanta. In plus, comunicarea 
+intre firele de executie este mult mai usoara decat intre procese, prin simpla 
+partajare a variabilelor globale. 
+<P align=justify>Programarea firelor de executie nu este insa simpla. Deoarece 
+exista atat de multa informatie comuna, interferentele nedorite intre fire pot 
+aparea foarte usor. Chiar partajarea variabilelor globale poate fi atat un 
+avantaj, cat si un mare risc. In privinta zonei de cod, interferentele sunt si 
+mai puternice. Orice apel sistem (de exemplu deschiderea sau inchiderea unui 
+fisier) efectuat de un fir de executie are efect asupra procesului in ansamblu, 
+deci si asupra celorlalte fire. In particular, daca un fir decide terminarea 
+intregului proces, aceasta va duce la terminarea tuturor firelor. 
+<P align=justify>In concluzie, firele de executie reprezinta nu atat o 
+alternativa, cat o completare pentru lucrul cu mai multe procese. In general, 
+lucrul cu fire multiple de executie este preferabil atunci cand este necesara o 
+interactiune puternica intre secventele de cod ce se executa in paralel; atunci 
+cand acestea au putine momente in care trebuie sa comunice, iar interferenta nu 
+este dorita, este indicata utilizarea proceselor. Practic toate sistemele de 
+operare ofera astazi facilitatea de multithreading. 
+<H3>Spatiu utilizator - spatiu nucleu</H3>
+<P align=justify>Daca se doreste cresterea performantei sistemului sau adaugarea 
+de noi capabilitati, principalul obstacol il reprezinta apelurile sistem. Pe de 
+o parte, salvarea informatiilor despre procesul curent si comutarile intre 
+modurile de lucru ale procesorului afecteaza viteza de lucru. Pe de alta parte, 
+deoarece rutinele invocate prin apelurile sistem fac parte din nucleu, nu este 
+posibila modificarea/actualizarea lor, din considerente de stabilitate, ceea ce 
+impiedica realizarea unor sisteme flexibile si adaptabile la necesitatile 
+utilizatorului. 
+<P align=justify>Solutia propusa este ca o parte din serviciile oferite de 
+nucleu sa fie trecute in sarcina unor procese specializate. De exemplu, atunci 
+cand un proces doreste sa citeasca date dintr-un fisier, aceasta actiune va fi 
+realizata nu de catre nucleu, ci de catre un proces separat, care are drept 
+sarcina gestionarea acceselor la disc. Un sistem de operare care transfera o 
+parte din functionalitatea nucleului catre procese specializate este numit 
+sistem de tip <I>microkernel</I>, in timp ce un sistem obisnuit poarta denumirea 
+de <I>kernel monolitic</I>. 
+<P align=justify>Arhitectura unui sistem cu microkernel este diferita in anumite 
+privinte de ceea ce am prezentat pana acum. Este evident ca realizarea 
+serviciilor sistemului nu poate fi efectuata de procese obisnuite. Un asemenea 
+proces specializat trebuie sa aiba acces la dispozitivele periferice, deci se 
+executa in modul nucleu al procesorului. Mai mult, un proces din aceasta 
+categorie se comporta asemanator nucleului, adica intervine numai la cererea 
+unui proces obisnuit, care solicita efectuarea unui serviciu. Relatiile 
+stabilite intre procesele obisnuite si cele specializate sunt de tip 
+client-server; de altfel, denumirea de server este des utilizata pentru 
+procesele specializate. 
+<P align=justify>Microkernelul prezinta o serie de avantaje. In primul rand, 
+prin modularizarea serviciilor, este mult mai usor sa se imbunatateasca 
+facilitatile existente sau sa se introduca altele noi; tot ce trebuie facut este 
+inlocuirea sau adaugarea unor module de program. De multe ori, aceste schimbari 
+pot fi realizate chiar din mers, fara a fi necesar ca sistemul sa fie oprit si 
+repornit. In al doilea rand, deoarece modelul client-server este deja 
+implementat, este foarte usoara extinderea sa catre lucrul in sisteme 
+distribuite, deci in retele. 
+<P align=justify>Dupa cum se observa, avantajele sistemelor de tip microkernel 
+se refera la extensibilitate. Dezavantajele, la fel de mari, sunt legate de 
+performanta. Sa vedem care sunt aceste dezavantaje: 
+<UL>
+  <LI>Comunicarea intre un proces obisnuit (client) si un server, fiind pana la 
+  urma o comunicare intre procese, nu se poate realiza direct, ci numai sub 
+  controlul nucleului. Practic, un serviciu solicitat de un client unui server 
+  urmeaza calea Client - Nucleu - Server - Nucleu - Client, ceea ce inseamna ca 
+  numarul apelurilor la nucleu este mai mare decat in cazul kernelului 
+  monolitic. Asa cum s-a vazut, aceste apeluri la nucleu introduc importante 
+  penalizari de viteza. 
+  <LI>Modelul client-server a fost conceput special pentru lucrul in retea, deci 
+  in medii eterogene. S-a vazut mai sus ca in asemenea medii trebuie stabilita o 
+  reprezentare unica a datelor, independenta de reprezentarile utilizate de 
+  fiecare statie in parte, iar statiile sunt raspunzatoare de conversiile intre 
+  reprezentari. Este astfel implicat un volum suplimentar de calcule, absolut 
+  justificat intr-o retea, dar nu si in interiorul aceluiasi calculator. 
+</LI></UL>
+<P align=justify>Datorita performantelor slabe, sistemele cu microkernel nu au 
+reusit sa le inlocuiasca pe cele clasice, cu kernel monolitic, dar unele 
+concepte au fost preluate de acestea. Multe dintre sistemele de operare, in 
+principal Unix si Windows NT, utilizeaza azi procese-server pentru a implementa 
+anumite servicii care nu sunt critice din punct de vedere al vitezei, degrevand 
+astfel nucleul de o parte din sarcini si marindu-si flexibilitatea. 
+<P align=justify>Un concept mai nou si orientat in directie opusa, catre 
+cresterea performantei, este cel de <I>exokernel</I>. Ideea de baza este de fapt 
+aceeasi ca si in cazul microkernelului: unele activitati care pana acum erau 
+realizate de catre nucleu sunt trecute in sarcina proceselor. Spre deosebire 
+insa de microkernel, serviciul respectiv nu mai este efectuat de un proces 
+separat si specializat, ci chiar de procesul care il solicita. Altfel spus, 
+apelurile sistem de pana acum devin functii de biblioteca, ruland in spatiul 
+procesului care le solicita. Rolul nucleului se reduce la urmatoarele elemente: 
+<UL>
+  <LI>Mentine in permanenta evidenta tuturor resurselor sistemului de calcul si 
+  a proceselor care le folosesc. In acest context, este tot sarcina nucleului sa 
+  previna conflictele intre procesele care incearca sa acceseze simultan aceeasi 
+  resursa. Se poate spune ca nucleul este interesat numai de mentinerea 
+  corectitudinii accesului la resurse si nu de modul in care acestea sunt 
+  utilizate. 
+  <LI>Intervine in cazul oricaror operatii ilegale. </LI></UL>
+<P align=justify>Castigul de viteza poate fi considerabil si rezulta din 
+eliminarea apelurilor la nucleu. In schimb, exokernelul ridica mari probleme de 
+implementare. Controlul asupra aplicatiilor slabeste, iar transferul in spatiul 
+utilizator a unor rutine care realizeaza activitati specifice sistemului poate 
+fi foarte riscant. In particular, trebuie luate precautii speciale pentru a 
+evita coruperea codului din bibliotecile de functii. </P></BODY></HTML>
