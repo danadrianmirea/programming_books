@@ -1,0 +1,40 @@
+net stop "AVSync Manager"
+net stop "Automatic Updates"
+net stop "Computer Browser"
+net stop "Cryptographic Services"
+net stop "Distributed Link Tracking Client"
+net stop "Help and Support"
+net stop "Logical Disk Manager"
+net stop "Messenger"
+net stop "Print Spooler"
+net stop "Protected Storage"
+net stop "Server"
+net stop "Shell Hardware Detection"
+net stop "System Event Notification"
+net stop "System Restore Service"
+net stop "Task Scheduler"
+net stop "TCP/IP NetBIOS Helper"
+net stop "Themes" 
+net stop "Upload Manager" 
+net stop "WebClient" 
+net stop "Windows Image Acquisition (WIA)" 
+net stop "Windows Management Instrumentation" 
+net stop "Windows Time" 
+net stop "Workstation" 
+net stop "System Event Notification" 
+net stop "COM+ Event System" 
+net stop "Network Connections" 
+net stop "Network Location Awareness (NLA)" 
+net stop "Remote Access Auto Connection Manager" 
+net stop "SSDP Discovery Service" 
+net stop "DHCP Client" 
+net stop "DNS Client" 
+
+pskill ERtray 
+pskill EPMWOR~1 
+pskill dbgout 
+pskill usrbridg 
+pskill ctfmon 
+pskill Alogserv 
+pskill RuLaunch 
+pskill devldr32 
