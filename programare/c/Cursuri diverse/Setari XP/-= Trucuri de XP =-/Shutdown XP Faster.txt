@@ -1,0 +1,49 @@
+Shutdown XP Faster
+
+When a user shuts down Windows XP, first the system has to kill all services 
+currently running.  Every once in a while the service does not shut down 
+instantly and windows gives it a change to shut down on its own before it kills it.   
+This amount of time that windows waits is stored in the system registry. 
+If you modify this setting, then windows will kill the service earlier. To modify 
+the setting, follow the directions below:
+
+Start Regedit. 
+Navigate to HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Control. 
+Click on the "Control" Folder. 
+Select "WaitToKillServiceTimeout" 
+Right click on it and select Modify. 
+Set it a value lower than 2000 (Mine is set to 200).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
