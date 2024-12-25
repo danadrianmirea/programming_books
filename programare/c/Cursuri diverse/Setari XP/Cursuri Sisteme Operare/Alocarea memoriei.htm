@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0044)http://www.infoiasi.ro/~rvlad/curs/aloc.html -->
+<HTML><HEAD><TITLE>Alocarea memoriei</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-2">
+<META content="MSHTML 5.50.4134.600" name=GENERATOR></HEAD>
+<BODY>
+<CENTER>
+<H2>Alocarea memoriei</H2></CENTER>
+<HR color=black>
+
+<P align=justify>Atat la nivelul sistemului de operare, cat si la cel al 
+aplicatiilor, modul in care se realizeaza alocarea memoriei are un impact 
+puternic asupra performantei. De asemenea, alocatorul de memorie reprezinta 
+intotdeauna o componenta critica, deoarece orice greseala de implementare poate 
+afecta grav buna functionare a programelor. Acest pericol este amplificat de 
+faptul ca gestiunea corecta a zonelor libere si a celor ocupate este in general 
+un proces complex si dificil, in care erorile pot aparea relativ usor. 
+<H3>Alocarea memoriei in limbajele de programare</H3>
+<P align=justify>Din punct de vedere al mecanismelor oferite pentru alocarea 
+memoriei, limbajele se impart in trei mari categorii: 
+<OL type=a>
+  <LI>Limbaje fara alocare dinamica 
+  <P align=justify>Din aceasta clasa fac parte mai ales primele limbajele de 
+  programare aparute (Fortran, Cobol, Basic etc.). Toata memoria necesara 
+  trebuie declarata si alocata de la inceput, nefiind posibile interventii 
+  ulterioare in acest sens.</P>
+  <LI>Limbaje cu alocare/dealocare explicita 
+  <P align=justify>Reprezinta categoria cea mai utilizata, alocarea si dalocarea 
+  explicite fiind caracteristice limbajelor clasice - Pascal, C, C++ etc. 
+  Alocarea dinamica (la momentul executiei) a unor zona de memorie se realizeaza 
+  prin apelul unor functii de biblioteca specializate. Ca o consecinta, 
+  implementarea alocarii este puternic dependenta de compilator, mai exact de 
+  bibliotecile de functii care il insotesc. Principala problema o reprezinta 
+  riscul relativ ridicat de aparitie a erorilor ca urmare a greselilor de 
+  programare, deoarece o parte din gestiune cade in sarcina programatorului.</P>
+  <LI>Limbaje cu colectare de gunoaie (<I>garbage collection</I>) 
+  <P align=justify>Intr-un asemenea limbaj nu este necesar ca utilizatorul sa 
+  dealoce explicit memoria, aceasta actiune cazand in sarcina unui modul runtime 
+  care ruleaza in paralel cu programul si determina care zone alocate nu mai 
+  sunt folosite si pot fi eliberate. Rezulta ca mecanismul de colectare de 
+  gunoaie poate fi intalnit mai mult la unele limbaje interpretate, deoarece 
+  limbajele compilate exclud prezenta modulelor runtime. Exista doua limbaje mai 
+  importante in aceasta clasa: Java, care are o structura mai clasica, si Lisp, 
+  care nu prezinta alocare statica, iar alocarea dinamica este realizata automat 
+  pentru toate variabilele, nefiind necesara o functie explicita in acest sens 
+  (asa cum este cazul in Java). 
+  <P align=justify>Principalul avantaj al colectarii de gunoaie il constituie 
+  eliminarea aparitiei erorilor de programare de tipul accesului la zone de 
+  memorie nealocate. In schimb, eficienta este mai redusa: colectorul de gunoaie 
+  nu poate elibera o anumita zona decat daca stie cu certitudine ca nu va mai fi 
+  folosita, ceea ce de multe ori nu este posibil. Din acest motiv, de multe ori 
+  raman alocate zone care nu mai sunt utilizate. </P></LI></OL>
+<H3>Caracteristicile alocatoarelor</H3>
+<P align=justify>Exista o serie de cerinte impuse unui alocator pentru ca 
+performanta acestuia sa fie la nivelul dorit. Urmatoarele caracteristici sunt 
+considerate importante: 
+<UL>
+  <LI>timpul maxim care poate fi consumat pentru o operatie; uneori cererile de 
+  alocare trebuie deservite intr-un timp foarte scurt, motiv pentru care durata 
+  maxima necesara unei operatii de alocare trebuie sa fie cat mai mica 
+  <LI>timpul mediu - se refera la performanta globala a sistemului; daca durata 
+  unei operatii de alocare poate varia semnificativ in functie de diversi 
+  factori, este de dorit ca situatiile care consuma mult timp sa apara cat mai 
+  rar 
+  <LI>gradul de fragmentare - in functie de algoritmii aplicati de alocator, 
+  poate aparea fragmentare interna sau externa; acest fenomen este cu atat mai 
+  deranjant, cu cat aici nu se poate realiza compactarea memoriei libere, pentru 
+  ca adresele referite prin program ar deveni incorecte 
+  <LI>dimensiunea spatiului de memorie ocupat de alocator pentru propriile 
+  structuri de date; deoarece acest spatiu nu este utilizabil de catre programe, 
+  reducand cantitatea de memorie disponibila pentru acestea, este de dorit sa 
+  fie cat mai mic 
+  <LI>simplitatea in utilizare - presupune existenta unor functii de alocare si 
+  eliberare a memoriei cat mai usor de folosit (un bun exemplu in acest sens 
+  fiind limbajul C, cu perechea <I>malloc/free</I>); limbajele cu colectare de 
+  gunoaie sunt ideale in acest sens </LI></UL>
+<H3>Tipuri de alocare de memorie in nucleul sistemului de operare</H3>
+<OL>
+  <LI>Alocare statica 
+  <P align=justify>Toate zonele de memorie necesare trebuie alocate de la 
+  inceput. Situatia este similara celei a limbajelor fara alocare dinamica, 
+  prezentate anterior. Solutia este lipsita de felxibilitate, ingreunand 
+  gestiunea memoriei. In plus, exista situatii care nu pot fi rezolvate astfel. 
+  De exemplu, la lansarea in executie a unui program, incarcarea sa in memorie 
+  este o problema de alocare dinamica, deoarece acesta va fi plasat in memoria 
+  fizica acolo unde se gaseste loc liber.</P>
+  <LI>Alocatorul cu harta de resurse 
+  <P align=justify>Evidenta zonelor de memorie libere si ocupate este tinuta cu 
+  ajutorul unui tablou, numit harta de resurse. Pentru fiecare zona de memorie 
+  exista o intrare in tabel, continand urmatoarele informatii: 
+  <UL>
+    <LI>adresa de inceput 
+    <LI>dimensiunea 
+    <LI>starea (liber/ocupat) </LI></UL>
+  <P align=justify>Atunci cand se realizeaza o noua alocare, se parcurge harta 
+  de resurse si se alege zona libera cea mai potrivita. Se pot utiliza 
+  algoritmii studiati la segmentarea memoriei: First Fit, Best Fit, Worst Fit. 
+  <P align=justify>Alocatorul cu harta de resurse este foarte simplu in 
+  conceptie. De asemenea, zonele libere adiacente pot fi concatenate intr-o 
+  singura zona mai mare. Dezavantajul principal il constituie spatiul 
+  suplimentar ocupat de harta de resurse, care poate deveni inacceptabil, mai 
+  ales atunci cand gradul de fragmentare (externa) este mare. In plus, timpul 
+  consumat pentru cautare este relativ mare, deoarece trebuie parcurse toate 
+  zonele, inclusiv cele ocupate. In sfarsit, memorarea hartii de resurse sub 
+  forma unui tablou face gestiunea sa mai dificila atunci cand trebuie inserate 
+  noi intrari sau sterse intrari existente. 
+  <P align=justify>Pentru a elimina primul dintre aceste neajunsuri, se poate 
+  utiliza o forma modificata, in care fiecare zona contine, pe langa datele 
+  efective, si propria dimensiune. In acest fel se memoreaza mai putine 
+  informatii in harta de resurse. Castigul apare in cazul zonelor libere, la 
+  care memorarea dimensiunii chiar in interiorul zonei nu implica nici un consum 
+  de memorie, in afara cazului in care zona libera este mai mica decat 4 octeti, 
+  cat este necesar pentru a memora dimensiunea. Celelalte probleme raman insa 
+  valabile.</P>
+  <LI>Alocatorul cu lista 
+  <P align=justify>Este o varianta a alocatorului cu harta de resurse. In acest 
+  caz, fiecare zona libera contine nu numai propria dimensiune, ci si adresa de 
+  inceput a urmatoarei zone libere, formandu-se astfel o lista. Astfel, 
+  dimensiunea hartii de resurse este semnificativ redusa, deoarece vor trebui 
+  retinute de alocator numai informatiile despre zonele ocupate si adresa de 
+  inceput a primei zone libere. In schimb, dimensiunea minima a unei zone libere 
+  este de 8 octeti (pentru a putea retine atat propria dimensiune, cat si adresa 
+  de inceput a urmatoarei zone libere), ceea ce poate fi deranjant, iar timpul 
+  de raspuns ramane la fel de mare.</P>
+  <LI>Alocatorul cu puteri ale lui 2 
+  <P align=justify>Viteza mica de raspuns a variantelor precedente este data de 
+  necesitatea de a cauta intre zonele libere una de dimensiune potrivita. O 
+  solutie este de a permite ca zonele de memorie sa aiba numai anumite 
+  dimensiuni, mai exact puteri ale lui 2. Alocatorul mentine mai multe liste, 
+  fiecare continand zonele libere de o anumita dimensiune, in timp ce fiecare 
+  zona ocupata contine si propria dimensiune. Astfel, atunci cand apare o cerere 
+  pentru o noua zona de memorie de o anumita marime, este imediat servita din 
+  lista cu zonele libere avand ca dimensiune puterea lui 2 imediat superioara. 
+  Daca o asemenea lista devine vida, se poate sparge o zona din lista 
+  superioara. 
+  <P align=justify>Deoarece este eliminata cautarea, timpul de raspuns este mult 
+  redus. In schimb se pierde multa memorie prin fragmentare interna, pentru ca 
+  aproape intotdeauna se aloca mai multa memorie decat s-a cerut. Problema este 
+  cu atat mai serioasa cu cat nucleul contine o serie de structuri a caror 
+  dimensiune este o putere a lui 2; deoarece trebuie memorata si dimensiunea 
+  zonei ocupate, se va aloca de fapt o zona de marime dubla, astfel incat risipa 
+  de memorie este majora. Un alt dezavantaj il constituie imposibilitatea de a 
+  concatena doua zone libere adiacente, in afara cazului cand au aceeasi 
+  dimensiune.</P>
+  <LI>Alocatorul Karels-McKusick 
+  <P align=justify>Dupa cum se observa, principala problema practica a 
+  alocatorului cu puteri ale lui 2 provine din necesitatea de a memora lungimea 
+  unei zone ocupate chiar in cadrul zonei respective. Alocatorul Karels-McKusick 
+  este o varianta imbunatatita tocmai in acest sens. 
+  <P align=justify>Ideea este ca fiecare pagina de memorie sa contina numai zone 
+  de aceeasi dimensiune (evident, putere a lui 2). Concret, alocatorul mentine 
+  un tabel care contine cate un element pentru fiecare pagina de memorie. 
+  Fiecare element retine dimensiunea zonelor de memorie din pagina 
+  corespunzatoare. In acest mod, structurile de date de dimensiune putere a lui 
+  2 nu vor mai genera fragmentare interna. Se consuma spatiu suplimentar pentru 
+  tabel, insa pe ansamblu economia de memorie este susbstantiala. In rest, 
+  alocatoarele cu puteri ale lui 2 si Karels-McKusick sunt similare, avand 
+  aceleasi avanataje si dezavantaje. </P></LI></OL></BODY></HTML>
