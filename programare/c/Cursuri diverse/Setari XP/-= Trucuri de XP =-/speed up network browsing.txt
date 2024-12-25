@@ -1,0 +1,11 @@
+Speed up Network Browsing
+
+Written By: James Penneck  |  Authors Website: Visit  | Views: 57661  |  Print Tweak  |  10/18/2001
+
+There was a bug in windows 2000 that would cause the scheduled tasks folder to be searched when ever the user would browse network drives. Microsoft developed a fix for this bug. The fix fixed the problem and it also had nice side affect of speeding up browsing of Microsoft networks. Below are instructions how to apply the fix.
+
+1. Open up regedit. 
+2. Navigate to HKEY_LOCAL_MACHINE/Software/Microsoft/Windows/Current Version/Explorer/RemoteComputer/ NameSpace. 
+3. Find a key named {D6277990-4C6A-11CF-8D87-00AA0060F5BF}. 
+4. Right click on it and delete it. 
+5. Restart 
