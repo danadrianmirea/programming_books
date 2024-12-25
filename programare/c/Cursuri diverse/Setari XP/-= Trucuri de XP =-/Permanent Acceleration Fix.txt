@@ -1,0 +1,25 @@
+Permanent Acceleration Fix
+
+It seems that even without pointer precision disabled, the mouse under XP is still influenced by an acceleration curve. This is especially noticeable in games. To completely remove mouse acceleration from XP, you will need to go into the registry and adjust the SmoothmouseXYCurve values. Here is how its done.
+
+1. Click Start button
+2. Select Run
+3. Type 'regedit' in the open textbox
+4. Open the tree 'HKEY_CURRENT_USER', select control panel, then select mouse
+5. Right clicking, modify the SmoothMouseXCurve and SmoothMouseYCurve hexidecimal values to the following:
+
+SmoothMouseXCurve:
+00,00,00,00,00,00,00,00
+00,a0,00,00,00,00,00,00
+00,40,01,00,00,00,00,00
+00,80,02,00,00,00,00,00
+00,00,05,00,00,00,00,00
+
+SmoothMouseYCurve:
+00,00,00,00,00,00,00,00
+66,a6,02,00,00,00,00,00
+cd,4c,05,00,00,00,00,00
+a0,99,0a,00,00,00,00,00
+38,33,15,00,00,00,00,00 
+
+If done correctly, you will notice you are holding a markedly more responsive mouse.
