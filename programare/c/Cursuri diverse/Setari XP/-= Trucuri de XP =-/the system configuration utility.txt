@@ -1,0 +1,5 @@
+The System Configuration Utility
+
+Written By: Jaron Molsbee  |  Authors Website: Visit  | Views: 30611  |  Print Tweak  |  9/20/2001
+
+A Handy utility for speeding up system performance in Windows XP (or any version of Win9x/me for that matter as well) is the System Configuration Utility. To access the system configuration utility, go to Start and click Run. Type msconfig and click ok. Click the tab labeled Startup. Uncheck any items for which you do not care if they load when Windows loads or you do not have any idea what they are. In Windows XP, no items that are listed here are essential to Windows running properly, so feel free to experiment. After you removed everything you don't need, click apply and then ok. Say yes when it asks you to restart your system. Enjoy the significantly enhanced performance!
