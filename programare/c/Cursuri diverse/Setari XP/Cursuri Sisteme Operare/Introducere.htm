@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0045)http://www.infoiasi.ro/~rvlad/curs/intro.html -->
+<HTML><HEAD><TITLE>Introducere</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-2">
+<META content="MSHTML 5.50.4134.600" name=GENERATOR></HEAD>
+<BODY>
+<CENTER>
+<H2>Introducere</H2></CENTER>
+<HR color=black>
+
+<P align=justify>Din punct de vedere al utilizatorului, detaliile privitoare la 
+structura fizica a calculatorului nu prezinta importanta. Programele de 
+aplicatii reprezinta singura forma de interactiune intre calculator si 
+utilizator. De fapt, executarea programelor este insusi scopul pentru care sunt 
+create calculatoarele. 
+<P align=justify>Cu toate acestea, chiar daca utilizatorul nu este (si nu 
+trebuie sa fie) interesat de hardware-ul calculatorului, importanta acestuia nu 
+trebuie subestimata. Programele nu pot rula pe un calculator ale carui 
+componente nu functioneaza corect. In acest sens, prima problema care poate 
+aparea este posibilitatea defectarii unor circuite, caz in care acestea 
+trebuiesc reparate sau (cel mai adesea) inlocuite. Totusi, nu este suficient ca 
+toate componentele sa fie in stare fizica buna pentru ca sistemul de calcul in 
+ansamblul sau sa functioneze corespunzator. Trebuie tinut cont de faptul ca 
+fiecare dispozitiv are propriile specificatii, propriile sarcini pe care le 
+poate indeplini, propriul mod de comunicare cu alte dispozitive s.a.m.d. 
+Deoarece calculatorul este format dintr-un numar mare de circuite in general 
+complexe si foarte diferite intre ele, este necesar sa existe un control unic 
+asupra tuturor acestora, pentru a le face sa conlucreze in modul dorit de 
+utilizator. 
+<P align=justify>Din punct de vedere hardware, toate componentele calculatorului 
+sunt controlate de catre procesor. La randul sau, procesorul realizeaza 
+actiunile specificate prin programele pe care le executa. Dar, tocmai datorita 
+structurii extrem de complicate a unui calculator, sarcina gestionarii tuturor 
+componentelor sale nu poate fi lasata in seama programelor de aplicatii. Pe de o 
+parte, programatorul ar trebui sa se concentreze mai mult asupra acestei 
+gestiuni si mai putin asupra problemei propriu-zise pe care isi propune s-o 
+rezolve. Pe de alta parte, programele ar deveni astfel mult mai voluminoase si, 
+implicit, mai expuse la aparitia erorilor. 
+<P align=justify>Ca urmare, s-a ajuns la introducerea unui program intermediar 
+intre nivelul hardware si programele de aplicatii, care sa asigure buna 
+functionare a sistemului de calcul. Acest program, numit <I>sistem de 
+operare</I>, detine controlul asupra resurselor calculatorului si intervine 
+atunci cand apar situatii nedorite sau neprevazute. Ca o prima consecinta, desi 
+reprezinta o componenta software, sistemul de operare este strans legat de 
+hardware, deoarece se ocupa in principal de gestiunea acestuia. 
+<P align=justify>Putem privi din mai multe unghiuri functiile pe care trebuie sa 
+le indeplineasca sistemul de operare. Din punct de vedere al utilizatorului, 
+rolul sau este exclusiv de a asigura rularea in bune conditii a programelor de 
+aplicatii. Se desprinde de aici ideea ca sistemul de operare nu este un scop in 
+sine, ci un mijloc pentru atingerea altor scopuri. 
+<P align=justify>Pentru programatorul de aplicatii, sistemul de operare este in 
+principal un furnizor de servicii la care poate apela pentru rezolvarea 
+problemelor intalnite. Practic, sistemul de operare pune la dispozitia 
+aplicatiilor un set de functii predefinite, care fie sunt dificil de scris si de 
+aceea nu este eficient sa fie implementate de fiecare program in parte, fie pur 
+si simplu nu pot fi lasate in seama aplicatiilor din motive de siguranta in 
+functionare a sistemului in ansamblul sau. Aplicatiile pot folosi aceste 
+servicii, conformandu-se regulilor impuse de sistemul de operare. 
+<P align=justify>Pentru a indeplini aceste cerinte, proiectantul unui sistem de 
+operare trebuie sa realizeze urmatoarele actiuni: 
+<UL>
+  <LI>sa asigure buna functionare a componentelor hardware, precum si 
+  comunicarea si cooperarea intre acestea 
+  <LI>sa previna interferentele nedorite intre diferitele programe de aplicatii, 
+  inclusiv sa impiedice pe cat posibil propagarea efectelor erorilor unui 
+  program asupra celorlalte </LI></UL>
+<H3>Istoric</H3>
+<P align=justify>Primele calculatoare nu aveau sistem de operare. Deoarece 
+tehnologia era abia la inceputuri, structura primelor calculatoare era foarte 
+simpla. Practic, lucrul la calculator se desfasura astfel: 
+<UL>
+  <LI>programul era introdus in calculator prin intermediul cartelelor sau al 
+  benzii perforate 
+  <LI>calculatorul efectua calculele specificate (se observa ca singura 
+  utilizare a calculatoarelor era de a realiza calcule stiintifice) 
+  <LI>rezultatul era afisat la imprimanta (care era mult mai simpla decat cele 
+  de azi, lucrand doar in mod text) sau pe ecran </LI></UL>
+<P align=justify>Datorita acestei structuri atat de simple, existenta unui 
+sistem de operare pur si simplu nu era necesara, deoarece toata gestiunea 
+resurselor se reducea la introducerea instructiunilor si datelor si citirea 
+rezultatelor, iar aceasta cadea in sarcina operatorului uman. Desigur, un 
+asemenea mod de lucru era extrem de greoi si incomod, mai ales in ceea ce 
+priveste depanarea programelor si corectarea erorilor. 
+<P align=justify>Un mare pas inainte l-a constituit aparitia benzii magnetice ca 
+suport de memorare; acesta a fost primul dispozitiv periferic care permitea 
+stocarea persistenta a datelor si programelor, intr-un mod suficient de simplu. 
+Intrucat o banda putea memora mai multe programe, a aparut necesitatea 
+implementarii unor functii de cautare si lansare in executie a programului 
+dorit, fara interventia manuala a operatorului. Astfel, calculatoarele au fost 
+dotate cu programe de tip monitor, care indeplineau tocmai acest gen de functii. 
+Programul monitor era primul incarcat in memoria calculatorului la pornirea 
+acestuia si era activ pe toata durata functionarii acestuia. 
+<P align=justify>In timp, dispozitivele periferice s-au diversificat, ceea ce a 
+impus perfectionarea programelor monitor, care au devenit tot mai complexe. 
+Astfel, aparitia discului hard a fost un nou salt, deoarece permitea accesul 
+aleator la date si programe, spre deosebire de banda magnetica, la care accesul 
+era posibil numai secvential, adica in ordinea in care informatiile fusesera 
+stocate. Implicit modul de memorare a devenit mult mai complicat, astfel incat 
+au fost necesare programe mai complexe pentru stocarea si regasirea datelor. 
+Efecte similare au avut aparitia tastaturii ca dispozitiv de intrare si legarea 
+calculatoarelor in retea. In cele din urma, denumirea de program monitor a 
+devenit nepotrivita datorita complexitatii acestor programe, astfel incat au 
+fost denumite sisteme de operare. 
+<P align=justify>Initial, un singur program putea rula la un moment dat pe un 
+calculator. Au existat mai multe sisteme de operare de acest tip, ultimul dintre 
+ele fiind DOS. Fiind dezvoltat special pentru primele calculatoare personale, 
+care nu se apropiau de puterea marilor calculatoare, sistemul DOS era deja mai 
+simplu si mai primitiv decat multe dintre sistemele de operare care l-au 
+precedat. 
+<P align=justify>O data cu cresterea puterii de calcul (si a cerintelor 
+utilizatorilor), a aparut posibilitatea rularii mai multor programe in paralel 
+pe acelasi calculator. Primele care au oferit aceasta facilitate au fost 
+calculatoarele multiprocesor, apoi au urmat si cele cu un singur procesor. Au 
+aparut astfel si noi probleme pentru sistemele de operare, deoarece programele 
+care ruleaza in paralel isi disputa resursele calculatorului si pot interfera in 
+mod nedorit. Sistemul de operare trebuie sa ia masuri speciale de protectie 
+pentru a preveni aparitia unor asemenea situatii. 
+<H3>Clasificarea sistemelor de operare</H3>
+<P align=justify>Putem clasifica sistemele de operare dupa mai multe criterii. 
+Primul dintre acestea reiese din discutia anterioara; dupa numarul de programe 
+care pot rula simultan, sistemele de operare pot fi: 
+<UL>
+  <LI><I>single-tasking</I> - permit rularea uni singur program la un moment 
+  dat; singurul sistem din aceasta clasa care mai este folosit astazi (dar din 
+  ce in ce mai putin) este DOS 
+  <LI><I>multitasking</I> - Unix, Windows 9x/NT, OS/2 etc. </LI></UL>
+<P align=justify>O alta clasificare se refera la numarul de utilizatori care pot 
+lucra simultan pe un calculator: 
+<UL>
+  <LI>sisteme monoutilizator (<I>single-user</I>) 
+  <LI>sisteme multiutilizator (<I>multiuser</I>) </LI></UL>
+<P align=justify>In mod evident, un sistem multiuser este multitasking. Cele mai 
+cunoscute sisteme de operare multiuser sunt cele din familia Unix, in timp ce 
+sistemele Windows nu au aceasta facilitate. Trebuie retinut ca a da 
+posibilitatea mai multor utilizatori sa lucreze simultan pe acelasi calculator 
+nu este atat o problema de hardware, cat mai ales una specifica sistemului de 
+operare. </P></BODY></HTML>
